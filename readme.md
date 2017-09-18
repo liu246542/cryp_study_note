@@ -5,7 +5,7 @@
 ## 测试测试：
 ```python
 def plusPrint:
-	print('xxxxx')
+  print('xxxxx')
 ```
 
 ```javascript
