@@ -353,8 +353,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-blanton-2008" title="3. Blanton 2008" class="md-nav__link">
-    3. Blanton 2008
+  <a href="#22-blanton-2008" title="2.2 Blanton 2008" class="md-nav__link">
+    2.2 Blanton 2008
   </a>
   
     <nav class="md-nav">
@@ -394,8 +394,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#amo-2008" title="AMO 2008" class="md-nav__link">
-    AMO 2008
+  <a href="#23-amo-2008" title="2.3 AMO 2008" class="md-nav__link">
+    2.3 AMO 2008
   </a>
   
 </li>
@@ -505,8 +505,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-blanton-2008" title="3. Blanton 2008" class="md-nav__link">
-    3. Blanton 2008
+  <a href="#22-blanton-2008" title="2.2 Blanton 2008" class="md-nav__link">
+    2.2 Blanton 2008
   </a>
   
     <nav class="md-nav">
@@ -546,8 +546,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#amo-2008" title="AMO 2008" class="md-nav__link">
-    AMO 2008
+  <a href="#23-amo-2008" title="2.3 AMO 2008" class="md-nav__link">
+    2.3 AMO 2008
   </a>
   
 </li>
@@ -632,7 +632,7 @@
 2.</p>
 </details>
 <p>此方案可以看做第一个真正意义上实现匿名凭证相关协议的方案。在该方案提出一年后 (2002年)， Camenisch 等人设计出了基于该协议的原型，即 Idmix 系统。这种方案使用了大量的零知识证明，后来的许多方案也延续了这种模式。</p>
-<h3 id="3-blanton-2008">3. Blanton 2008</h3>
+<h3 id="22-blanton-2008">2.2 Blanton 2008</h3>
 <p>这篇文章的目的是构造一个匿名获取在线服务的方案，没有直接提及 anonymous credential。此方案使用了<sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup> Camenisch-Lysyanskaya (CL) signature scheme<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup>，这种签名机制依赖于双线性对 (bilinear pairing)。</p>
 <details class="note"><summary>CL-Signature</summary><ol>
 <li><strong>KeyGen:</strong> Generate <span><span class="MathJax_Preview">(q,\mathbb{G},\mathbb{G_T},g,e)</span><script type="math/tex">(q,\mathbb{G},\mathbb{G_T},g,e)</script></span>. Choose <span><span class="MathJax_Preview">s,u\leftarrow_R\mathbb{Z_q}</span><script type="math/tex">s,u\leftarrow_R\mathbb{Z_q}</script></span>. Set secret key <span><span class="MathJax_Preview">sk=(s,u)</span><script type="math/tex">sk=(s,u)</script></span>, public key <span><span class="MathJax_Preview">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u)</span><script type="math/tex">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u)</script></span>.</li>
@@ -679,8 +679,8 @@
 </details>
 <h4 id="_1">总结</h4>
 <p>这个方案虽然只讨论 user 与 server 之间的交互，但由于其具备匿名性等特点，也可以用来构造匿名凭证系统。单纯使用签名机制虽然可以满足可验证性，但是不具备匿名的特点。如果在签名方案的基础上结合零知识证明，可以构造出一个匿名凭证的方案。</p>
-<h3 id="amo-2008">AMO 2008</h3>
-<p>同样是2008年的文章<sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">8</a></sup>，它是基于</p>
+<h3 id="23-amo-2008">2.3 AMO 2008</h3>
+<p>同样是2008年的文章<sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">8</a></sup>，它是基于BLS短签名方案。</p>
 <div class="footnote">
 <hr />
 <ol>
