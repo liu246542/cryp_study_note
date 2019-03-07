@@ -9,6 +9,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <script>(function(d){var config = {kitId: 'mtz1zmf',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
       
       
       
@@ -587,10 +588,28 @@
 <p>(2): To prevent misuse of anonymoity, our scheme is <strong>the first to offer optional anonymity revocation</strong> for particular transactions.</p>
 <p>(3): Our scheme offers <strong>separability</strong>: all organizations can choose their cryptographic keys independently of each other.</p>
 </div>
-<p>这个构造方案使用了大量的 <strong>零知识证明</strong>。首先，简单说下这里用到的 <strong>零知识证明</strong> 的基本结构:<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup></p>
+<p>这个构造方案使用了大量的 <strong>零知识证明</strong>。首先，简单说下 <strong>零知识证明</strong> 的基本表示方法:<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup></p>
 <p><span><span class="MathJax_Preview">PK\{(\alpha, \beta, \gamma):y=g^\alpha h^\beta \wedge \tilde{y}=\tilde{g}^{\alpha}\tilde{h}^{\gamma}\wedge (u\leq \alpha \leq v) \}</span><script type="math/tex">PK\{(\alpha, \beta, \gamma):y=g^\alpha h^\beta \wedge \tilde{y}=\tilde{g}^{\alpha}\tilde{h}^{\gamma}\wedge (u\leq \alpha \leq v) \}</script></span></p>
 <p>这个式子表明对 <span><span class="MathJax_Preview">\alpha, \beta, \gamma</span><script type="math/tex">\alpha, \beta, \gamma</script></span> 满足 <span><span class="MathJax_Preview">y=g^\alpha h^\beta</span><script type="math/tex">y=g^\alpha h^\beta</script></span> 且 <span><span class="MathJax_Preview">\tilde{y}=\tilde{g}^{\alpha}\tilde{h}^{\gamma}</span><script type="math/tex">\tilde{y}=\tilde{g}^{\alpha}\tilde{h}^{\gamma}</script></span> 的零知识证明，其中 <span><span class="MathJax_Preview">u\leq \alpha \leq v</span><script type="math/tex">u\leq \alpha \leq v</script></span>。</p>
-<p>通过使用 Fiat-Shamir heuristic <sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>，可以比较容易地将一个 <strong>零知识证明协议</strong> 转换成一个 <strong>签名机制</strong>。可以简单记作： <span><span class="MathJax_Preview">SPK\{(\alpha):y=g^\alpha\}(m)</span><script type="math/tex">SPK\{(\alpha):y=g^\alpha\}(m)</script></span>。</p>
+<p>这里的 <span><span class="MathJax_Preview">\alpha, \beta, \gamma</span><script type="math/tex">\alpha, \beta, \gamma</script></span> 就是<strong>知识</strong>，<span><span class="MathJax_Preview">y, g, h</span><script type="math/tex">y, g, h</script></span> 都属于公开的信息。</p>
+<p>通过使用 Fiat-Shamir heuristic <sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>，可以将一个 <strong>零知识证明协议</strong> 转换成一个 <strong>签名机制</strong>。可以简单记作：</p>
+<p><span><span class="MathJax_Preview">SPK\{(\alpha):y=g^\alpha\}(m)</span><script type="math/tex">SPK\{(\alpha):y=g^\alpha\}(m)</script></span>。</p>
+<details class="question"><summary>如何实现零知识证明：<span><span class="MathJax_Preview">PK\{(\alpha):y=g^\alpha\}</span><script type="math/tex">PK\{(\alpha):y=g^\alpha\}</script></span></summary><ol>
+<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> chooses <span><span class="MathJax_Preview">v\leftarrow_R \mathbb{Z}_q^*</span><script type="math/tex">v\leftarrow_R \mathbb{Z}_q^*</script></span>, sends <span><span class="MathJax_Preview">t=g^v</span><script type="math/tex">t=g^v</script></span> to <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>.</li>
+<li><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> chooses <span><span class="MathJax_Preview">c\leftarrow_R \mathbb{Z}_q^*</span><script type="math/tex">c\leftarrow_R \mathbb{Z}_q^*</script></span>, sends <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> to <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>.</li>
+<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> computes <span><span class="MathJax_Preview">r=v-cx(\mbox{mod}\ q)</span><script type="math/tex">r=v-cx(\mbox{mod}\ q)</script></span>, sends <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> to <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>.</li>
+<li><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> accepts iff <span><span class="MathJax_Preview">t=g^ry^c</span><script type="math/tex">t=g^ry^c</script></span>.</li>
+</ol>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Fiat-Shamir heuristic</p>
+<p>在最初的零知识证明体系中，第二步中的 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 是由 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 选取的。Fiat-Shamir heuristic 的核心就是利用哈希函数让 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 给出 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>，这样可以减少交互次数<sup id="fnref:9"><a class="footnote-ref" href="#fn:9" rel="footnote">9</a></sup>。</p>
+<ol>
+<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> chooses <span><span class="MathJax_Preview">v\leftarrow_R \mathbb{Z}_q^*</span><script type="math/tex">v\leftarrow_R \mathbb{Z}_q^*</script></span>, computes <span><span class="MathJax_Preview">t=g^v, c=H(t)</span><script type="math/tex">t=g^v, c=H(t)</script></span>.</li>
+<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> computes <span><span class="MathJax_Preview">r=v-cx(\mbox{mod}\ q)</span><script type="math/tex">r=v-cx(\mbox{mod}\ q)</script></span>, sends <span><span class="MathJax_Preview">(t,r)</span><script type="math/tex">(t,r)</script></span> to <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>.</li>
+</ol>
+<p>如果要签名一个消息 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的话，只需要令 <span><span class="MathJax_Preview">c=H(t,m)</span><script type="math/tex">c=H(t,m)</script></span> 即可。</p>
+</div>
 <p>大致有这么三类实体：</p>
 <ul>
 <li>users （签名者，凭证的使用者，signer）</li>
@@ -707,6 +726,9 @@
 </li>
 <li id="fn:8">
 <p>N. Akagi, Y. Manabe, and T. Okamoto, “An efficient anonymous credential system,” in International Conference on Financial Cryptography and Data Security, 2008, pp. 272–286.&#160;<a class="footnote-backref" href="#fnref:8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p><a href="https://www.cs.jhu.edu/~susan/600.641/scribes/lecture11.pdf">https://www.cs.jhu.edu/~susan/600.641/scribes/lecture11.pdf</a>&#160;<a class="footnote-backref" href="#fnref:9" rev="footnote" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
