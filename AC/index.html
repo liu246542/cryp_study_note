@@ -625,7 +625,7 @@
 </div>
 <h4 id="step2">Step2. 生成假名</h4>
 <p>User <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 可以从 <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 那里获取假名 <span><span class="MathJax_Preview">N_{(U,O)}</span><script type="math/tex">N_{(U,O)}</script></span> 以及相对应的 tag <span><span class="MathJax_Preview">P_{(U,O)}</span><script type="math/tex">P_{(U,O)}</script></span>， 其中 <span><span class="MathJax_Preview">P_{(U,O)}=a_O^{x_U}b_O^{s_{(U,O)}}</span><script type="math/tex">P_{(U,O)}=a_O^{x_U}b_O^{s_{(U,O)}}</script></span>。</p>
-<p>这里 <span><span class="MathJax_Preview">x_U</span><script type="math/tex">x_U</script></span> 是 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 的私钥，而 <span><span class="MathJax_Preview">s_{(U,O)}</span><script type="math/tex">s_{(U,O)}</script></span> 则是由 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 和 <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 共同生成的，但只有 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 知道 <span><span class="MathJax_Preview">s_{(U,O)}</span><script type="math/tex">s_{(U,O)}</script></span> 的值。最后 <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 将保存 用户假名 <span><span class="MathJax_Preview">N_{(U,O)}</span><script type="math/tex">N_{(U,O)}</script></span>，tag <span><span class="MathJax_Preview">P_{(U,O)}</span><script type="math/tex">P_{(U,O)}</script></span> 以及 <span><span class="MathJax_Preview">P_{(U,O)}^2</span><script type="math/tex">P_{(U,O)}^2</script></span>； <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 将会得到 <span><span class="MathJax_Preview">N_{(U,O)}</span><script type="math/tex">N_{(U,O)}</script></span>，<span><span class="MathJax_Preview">P_{(U,O)}^2</span><script type="math/tex">P_{(U,O)}^2</script></span>，<span><span class="MathJax_Preview">P_{(U,O)}</span><script type="math/tex">P_{(U,O)}</script></span> 及 <span><span class="MathJax_Preview">s_{(U,O)}</span><script type="math/tex">s_{(U,O)}</script></span>。</p>
+<p>这里 <span><span class="MathJax_Preview">x_U</span><script type="math/tex">x_U</script></span> 是 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 的私钥，而 <span><span class="MathJax_Preview">s_{(U,O)}</span><script type="math/tex">s_{(U,O)}</script></span> 则是由 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 和 <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 共同生成的，但只有 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 知道 <span><span class="MathJax_Preview">s_{(U,O)}</span><script type="math/tex">s_{(U,O)}</script></span> 的值。最后 <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 将保存 用户假名 <span><span class="MathJax_Preview">N_{(U,O)}</span><script type="math/tex">N_{(U,O)}</script></span>，<span><span class="MathJax_Preview">P_{(U,O)}</span><script type="math/tex">P_{(U,O)}</script></span> 以及 <span><span class="MathJax_Preview">P_{(U,O)}^2</span><script type="math/tex">P_{(U,O)}^2</script></span>； <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 将会得到 <span><span class="MathJax_Preview">N_{(U,O)}</span><script type="math/tex">N_{(U,O)}</script></span>，<span><span class="MathJax_Preview">P_{(U,O)}^2</span><script type="math/tex">P_{(U,O)}^2</script></span>，<span><span class="MathJax_Preview">P_{(U,O)}</span><script type="math/tex">P_{(U,O)}</script></span> 及 <span><span class="MathJax_Preview">s_{(U,O)}</span><script type="math/tex">s_{(U,O)}</script></span>。</p>
 <details class="note"><summary>Protocol 1</summary><ol>
 <li><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> chooses <span><span class="MathJax_Preview">N_1</span><script type="math/tex">N_1</script></span>，<span><span class="MathJax_Preview">r_1</span><script type="math/tex">r_1</script></span>,<span><span class="MathJax_Preview">r_2,r_3</span><script type="math/tex">r_2,r_3</script></span>, and sets <span><span class="MathJax_Preview">C_1:=g_O^{r_1}h_O^{r_2}, C_2:=g_O^{x_U}h_O^{r_3}</span><script type="math/tex">C_1:=g_O^{r_1}h_O^{r_2}, C_2:=g_O^{x_U}h_O^{r_3}</script></span>. Then <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> sends <span><span class="MathJax_Preview">N_1, C_1, C_2</span><script type="math/tex">N_1, C_1, C_2</script></span> to <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>.</li>
 <li><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> serves as the prover to verifier <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> in <span><span class="MathJax_Preview">PK\{(\alpha, \beta, \gamma, \delta): C_1^2=(g_O^2)^\alpha (h_O^2)^\beta \wedge C_2^2=(g_O^2)^\gamma (h_O^2)^\delta\}</span><script type="math/tex">PK\{(\alpha, \beta, \gamma, \delta): C_1^2=(g_O^2)^\alpha (h_O^2)^\beta \wedge C_2^2=(g_O^2)^\gamma (h_O^2)^\delta\}</script></span></li>
@@ -651,8 +651,9 @@
 2.</p>
 </details>
 <p>此方案可以看做第一个真正意义上实现匿名凭证相关协议的方案。在该方案提出一年后 (2002年)， Camenisch 等人设计出了基于该协议的原型，即 Idmix 系统。这种方案使用了大量的零知识证明，后来的许多方案也延续了这种模式。</p>
+<hr />
 <h3 id="22-blanton-2008">2.2 Blanton 2008</h3>
-<p>这篇文章的目的是构造一个匿名获取在线服务的方案，没有直接提及 anonymous credential。此方案使用了<sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup> Camenisch-Lysyanskaya (CL) signature scheme<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup>，这种签名机制依赖于双线性对 (bilinear pairing)。</p>
+<p>这篇文章<sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup>的目的是构造一个匿名获取在线服务的方案，没有直接提及 anonymous credential。此方案使用了 Camenisch-Lysyanskaya (CL) signature scheme<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup>，这种签名机制依赖于双线性对 (bilinear pairing)。</p>
 <details class="note"><summary>CL-Signature</summary><ol>
 <li><strong>KeyGen:</strong> Generate <span><span class="MathJax_Preview">(q,\mathbb{G},\mathbb{G_T},g,e)</span><script type="math/tex">(q,\mathbb{G},\mathbb{G_T},g,e)</script></span>. Choose <span><span class="MathJax_Preview">s,u\leftarrow_R\mathbb{Z_q}</span><script type="math/tex">s,u\leftarrow_R\mathbb{Z_q}</script></span>. Set secret key <span><span class="MathJax_Preview">sk=(s,u)</span><script type="math/tex">sk=(s,u)</script></span>, public key <span><span class="MathJax_Preview">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u)</span><script type="math/tex">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u)</script></span>.</li>
 <li><strong>Sign:</strong> For a message <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>, choose <span><span class="MathJax_Preview">\alpha\leftarrow_R\mathbb{Z_R}</span><script type="math/tex">\alpha\leftarrow_R\mathbb{Z_R}</script></span> and set <span><span class="MathJax_Preview">a=g^\alpha</span><script type="math/tex">a=g^\alpha</script></span>. The signature <span><span class="MathJax_Preview">\sigma=(a_1,a_2,a_3)=(a,a^u,a^{s+sum})</span><script type="math/tex">\sigma=(a_1,a_2,a_3)=(a,a^u,a^{s+sum})</script></span>.</li>
@@ -675,7 +676,7 @@
 </li>
 </ul>
 <h4 id="step1_1">Step1. 初始化</h4>
-<p>服务商 (server) <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 初始一个双线性对 <span><span class="MathJax_Preview">(q,\mathbb{G},\mathbb(G_T),g,e)</span><script type="math/tex">(q,\mathbb{G},\mathbb(G_T),g,e)</script></span>，随机生成 <span><span class="MathJax_Preview">s,u,z_1,z_2,z_3</span><script type="math/tex">s,u,z_1,z_2,z_3</script></span>。那么私钥 <span><span class="MathJax_Preview">sk=(s,u,z_1,z_2,z_3)</span><script type="math/tex">sk=(s,u,z_1,z_2,z_3)</script></span>，公钥为<span><span class="MathJax_Preview">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u,g^{z_1},g^{z_2},g^{z_3})</span><script type="math/tex">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u,g^{z_1},g^{z_2},g^{z_3})</script></span>。</p>
+<p>服务商 (server) <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 初始一个双线性对 <span><span class="MathJax_Preview">(q,\mathbb{G},\mathbb{G}_T,g,e)</span><script type="math/tex">(q,\mathbb{G},\mathbb{G}_T,g,e)</script></span>，随机生成 <span><span class="MathJax_Preview">s,u,z_1,z_2,z_3</span><script type="math/tex">s,u,z_1,z_2,z_3</script></span>。那么私钥 <span><span class="MathJax_Preview">sk=(s,u,z_1,z_2,z_3)</span><script type="math/tex">sk=(s,u,z_1,z_2,z_3)</script></span>，公钥为<span><span class="MathJax_Preview">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u,g^{z_1},g^{z_2},g^{z_3})</span><script type="math/tex">pk=(q,\mathbb{G},\mathbb{G_T},g,e,g^s,g^u,g^{z_1},g^{z_2},g^{z_3})</script></span>。</p>
 <h4 id="step2-subscribe">Step2. 订阅 (Subscribe)</h4>
 <ol>
 <li>用户 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 与 服务商 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 首先协商好服务的类型 (subscriptio type) <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 与 失效的日期 (expiration date) <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>。</li>
@@ -683,6 +684,10 @@
 <li><span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 选取 <span><span class="MathJax_Preview">m_S</span><script type="math/tex">m_S</script></span>，将其发送给 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>，并计算 <span><span class="MathJax_Preview">M'=Mg^{mS}</span><script type="math/tex">M'=Mg^{mS}</script></span>。可以看出，<span><span class="MathJax_Preview">M'</span><script type="math/tex">M'</script></span> 就是 <span><span class="MathJax_Preview">m=m_U+m_S</span><script type="math/tex">m=m_U+m_S</script></span>的承诺值。<span><span class="MathJax_Preview">Mg^{m_S}=g^\alpha(g^{z_1})^{\beta}g^{m_S}=g^{m_U+m_S}(g^{z_1})^\beta</span><script type="math/tex">Mg^{m_S}=g^\alpha(g^{z_1})^{\beta}g^{m_S}=g^{m_U+m_S}(g^{z_1})^\beta</script></span></li>
 <li><span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 利用 CL-signature，生成对 <span><span class="MathJax_Preview">m,t,d</span><script type="math/tex">m,t,d</script></span>的签名 <span><span class="MathJax_Preview">\sigma=(a_1,a_2,a_3,a_4,a_5,a_6,a_7,a_8,a_9)</span><script type="math/tex">\sigma=(a_1,a_2,a_3,a_4,a_5,a_6,a_7,a_8,a_9)</script></span>。</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">生成对 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的签名</p>
+<p>这里生成对 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的签名，但 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 实际上并不知道 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的具体内容。但它可以利用 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的承诺值 <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 来计算出签名的结果。（盲签名？？）</p>
+</div>
 <h4 id="step3-access">Step3. 访问 (Access)</h4>
 <p><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 需要做的两件事：</p>
 <ul>
@@ -694,12 +699,26 @@
 <li>一是 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 没有被使用过</li>
 <li>二是 帮助 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 生成一个新的 token</li>
 </ul>
-<details class="question"><summary>这里为什么使用零知识证明？</summary><p>为什么不可以直接用验证的方式呢？</p>
-</details>
+<div class="admonition note">
+<p class="admonition-title">token</p>
+<p>这里的 token 指的就是 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>。<span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 只能用一次，每用完一次需要重新生成。而 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 是由 <span><span class="MathJax_Preview">m_U</span><script type="math/tex">m_U</script></span> 与 <span><span class="MathJax_Preview">m_S</span><script type="math/tex">m_S</script></span> 共同组成的，因此这个过程需要与 server 交互。</p>
+</div>
 <h4 id="_1">总结</h4>
 <p>这个方案虽然只讨论 user 与 server 之间的交互，但由于其具备匿名性等特点，也可以用来构造匿名凭证系统。单纯使用签名机制虽然可以满足可验证性，但是不具备匿名的特点。如果在签名方案的基础上结合零知识证明，可以构造出一个匿名凭证的方案。</p>
+<hr />
 <h3 id="23-amo-2008">2.3 AMO 2008</h3>
-<p>同样是2008年的文章<sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">8</a></sup>，它是基于BLS短签名方案。</p>
+<p>同样是2008年的文章<sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">8</a></sup>，它是基于 Boneh 的短签名方案。<sup id="fnref:12"><a class="footnote-ref" href="#fn:12" rel="footnote">12</a></sup></p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>One of the most efficient existing anonymous credential systems is the CamenischLysyanskaya system<sup id="fnref:10"><a class="footnote-ref" href="#fn:10" rel="footnote">10</a></sup> that is secure under the LRSW assumption for groups with bilinear maps. However, this system lacks a credential revoking protocol.
+...</p>
+</div>
+<p>这篇文章主要着重于 <strong>撤销</strong>，大致把撤销方式分为了两类：</p>
+<ul>
+<li>Blacklisting</li>
+<li>Identity Revealing</li>
+</ul>
+<p>上面提到的第一个构造方案 (CL 2001) 就是采取 identity revealing，使用 blakclist 的方式最早可见 2007年的这篇文章<sup id="fnref:11"><a class="footnote-ref" href="#fn:11" rel="footnote">11</a></sup>。</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -729,6 +748,15 @@
 </li>
 <li id="fn:9">
 <p><a href="https://www.cs.jhu.edu/~susan/600.641/scribes/lecture11.pdf">https://www.cs.jhu.edu/~susan/600.641/scribes/lecture11.pdf</a>&#160;<a class="footnote-backref" href="#fnref:9" rev="footnote" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>J. Camenisch and A. Lysyanskaya, “Signature schemes and anonymous credentials from bilinear maps,” in Annual International Cryptology Conference, 2004, pp. 56–72.&#160;<a class="footnote-backref" href="#fnref:10" rev="footnote" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>P. P. Tsang, M. H. Au, A. Kapadia, and S. W. Smith, “Blacklistable anonymous credentials: blocking misbehaving users without ttps,” in Proceedings of the 14th ACM conference on Computer and communications security, 2007, pp. 72–81.&#160;<a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>D. Boneh, X. Boyen, and H. Shacham, “Short group signatures,” in Annual International Cryptology Conference, 2004, pp. 41–55.&#160;<a class="footnote-backref" href="#fnref:12" rev="footnote" title="Jump back to footnote 12 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
