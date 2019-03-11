@@ -431,8 +431,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step3-prove" title="方案三.Step3. Prove" class="md-nav__link">
-    方案三.Step3. Prove
+  <a href="#step3-prove" title="方案二.Step3. Prove" class="md-nav__link">
+    方案二.Step3. Prove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4-reveal" title="方案二.Step4. Reveal" class="md-nav__link">
+    方案二.Step4. Reveal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="总结" class="md-nav__link">
+    总结
   </a>
   
 </li>
@@ -444,6 +458,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gs-proof-2008" title="3. GS-proof 2008" class="md-nav__link">
+    3. GS-proof 2008
+  </a>
   
 </li>
       
@@ -624,8 +645,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step3-prove" title="方案三.Step3. Prove" class="md-nav__link">
-    方案三.Step3. Prove
+  <a href="#step3-prove" title="方案二.Step3. Prove" class="md-nav__link">
+    方案二.Step3. Prove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4-reveal" title="方案二.Step4. Reveal" class="md-nav__link">
+    方案二.Step4. Reveal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="总结" class="md-nav__link">
+    总结
   </a>
   
 </li>
@@ -637,6 +672,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gs-proof-2008" title="3. GS-proof 2008" class="md-nav__link">
+    3. GS-proof 2008
+  </a>
   
 </li>
       
@@ -795,9 +837,11 @@
 <p><strong>Sign:</strong> choose <span><span class="MathJax_Preview">r,s\leftarrow_R\mathbb{Z}_p^*</span><script type="math/tex">r,s\leftarrow_R\mathbb{Z}_p^*</script></span>, compute <span><span class="MathJax_Preview">\sigma=(g_1^mu_1v_1^s)^{1/(x+r)}</span><script type="math/tex">\sigma=(g_1^mu_1v_1^s)^{1/(x+r)}</script></span>.</p>
 <p><strong>Verify:</strong> check <span><span class="MathJax_Preview">e(\sigma,w_2g_2^r)=e(g_1,g_2^mu_2v_2^s)</span><script type="math/tex">e(\sigma,w_2g_2^r)=e(g_1,g_2^mu_2v_2^s)</script></span></p>
 </details>
+<hr />
 <h4 id="step1-issue">Step1. Issue</h4>
 <p>User <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 与 authority <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 进行交互，其实可以看做是签名的过程。 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 向 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 发送了信息 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>，然后收到 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 返回的签名 <span><span class="MathJax_Preview">(\sigma,r,s)</span><script type="math/tex">(\sigma,r,s)</script></span>。此签名过程为上面提到的 Okamoto Signature 方案，即 <span><span class="MathJax_Preview">\sigma=(g_1^mu_1v_1^s)^{1/(x+r)}</span><script type="math/tex">\sigma=(g_1^mu_1v_1^s)^{1/(x+r)}</script></span>。</p>
 <p>为了方便说明，记 <span><span class="MathJax_Preview">\alpha=w_2g_2^r, \beta=g_2^mu_2v_2^s</span><script type="math/tex">\alpha=w_2g_2^r, \beta=g_2^mu_2v_2^s</script></span>，因此只要验证 <span><span class="MathJax_Preview">e(\sigma,\alpha)=e(g_1,\beta)</span><script type="math/tex">e(\sigma,\alpha)=e(g_1,\beta)</script></span> 是否成立。</p>
+<hr />
 <h4 id="step2-prove">Step2. Prove</h4>
 <p>User <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 与 verifier <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的交互。那么什么是凭证？</p>
 <p>如果把 <span><span class="MathJax_Preview">(\sigma,r,s)</span><script type="math/tex">(\sigma,r,s)</script></span> 看做是 对 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的一个凭证。<span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 要做的就是确保在不告诉 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> 的情况下，通过验证。</p>
@@ -807,6 +851,7 @@
 <p>另外， <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 需要使用 ZPK 来证明 <span><span class="MathJax_Preview">\alpha'</span><script type="math/tex">\alpha'</script></span> 确实是 <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 的 <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> 次方， <span><span class="MathJax_Preview">\beta'</span><script type="math/tex">\beta'</script></span> 是 <span><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span> 的 <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 次方，即</p>
 <p><span><span class="MathJax_Preview">PK\{(\theta,r\theta): \alpha'=w_2^\theta g_2^{r\theta},\theta\neq0\}, PK\{(t,st): \beta'=(g_2^m)^tu_2^gv_2^{st},t\neq0\}</span><script type="math/tex">PK\{(\theta,r\theta): \alpha'=w_2^\theta g_2^{r\theta},\theta\neq0\}, PK\{(t,st): \beta'=(g_2^m)^tu_2^gv_2^{st},t\neq0\}</script></span></p>
 <p>这个构造非常简洁，可以保证一些基本的性质 (Unforgeability, Anonymoity, Unlinkability)，但是没有 revocation 。下面给出了提供 <span><span class="MathJax_Preview">Revocation</span><script type="math/tex">Revocation</script></span> 的方案。</p>
+<hr />
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>One of the most efficient existing anonymous credential systems is the CamenischLysyanskaya system<sup id="fnref:10"><a class="footnote-ref" href="#fn:10" rel="footnote">10</a></sup> that is secure under the LRSW assumption for groups with bilinear maps. However, this system lacks a credential revoking protocol.
@@ -826,6 +871,7 @@
 </details>
 <details class="hint"><summary>Identity revealing</summary><p><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 发现了恶意用户时，向 <span><span class="MathJax_Preview">Opener</span><script type="math/tex">Opener</script></span> 提交信息，然后 <span><span class="MathJax_Preview">Opener</span><script type="math/tex">Opener</script></span> 可以还原出用户的 ID，CA 可以通过 ID 废除该用户的公钥。</p>
 </details>
+<hr />
 <h4 id="step1-keygen">方案二.Step1. Keygen</h4>
 <p><span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 选择　<span><span class="MathJax_Preview">h,\hat{h},a_2\leftarrow_R\mathbb{G_2}</span><script type="math/tex">h,\hat{h},a_2\leftarrow_R\mathbb{G_2}</script></span>，提供证明　<span><span class="MathJax_Preview">PK\{x:w_2=g_2^x\}</span><script type="math/tex">PK\{x:w_2=g_2^x\}</script></span>　来获取一个证书。</p>
 <div class="admonition question">
@@ -834,13 +880,37 @@
 </div>
 <p>由于需要带上 revication 的特性，因此 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 和 <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 都需要自己一对密钥。</p>
 <p><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 的私钥 <span><span class="MathJax_Preview">sk_U</span><script type="math/tex">sk_U</script></span>为 <span><span class="MathJax_Preview">q\leftarrow_R\mathbb{Z}_p^*</span><script type="math/tex">q\leftarrow_R\mathbb{Z}_p^*</script></span>，公钥 <span><span class="MathJax_Preview">pk_U</span><script type="math/tex">pk_U</script></span> 为 <span><span class="MathJax_Preview">g_2^q</span><script type="math/tex">g_2^q</script></span>。</p>
-<p><span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 的私钥为 <span><span class="MathJax_Preview">\xi_1,\xi_2\leftarrow_R\mathbb{Z}_p^*</span><script type="math/tex">\xi_1,\xi_2\leftarrow_R\mathbb{Z}_p^*</script></span>，公钥为 <span><span class="MathJax_Preview">U=g_2^{\xi_1},V=g_2^{\xi_2}</span><script type="math/tex">U=g_2^{\xi_1},V=g_2^{\xi_2}</script></span>。</p>
+<p><span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 的私钥为 <span><span class="MathJax_Preview">\xi_1,\xi_2\leftarrow_R\mathbb{Z}_p^*</span><script type="math/tex">\xi_1,\xi_2\leftarrow_R\mathbb{Z}_p^*</script></span>，公钥为 <span><span class="MathJax_Preview">\mathcal{U}=g_2^{\xi_1},\mathcal{V}=g_2^{\xi_2}</span><script type="math/tex">\mathcal{U}=g_2^{\xi_1},\mathcal{V}=g_2^{\xi_2}</script></span>。</p>
+<hr />
 <h4 id="step2-issue">方案二.Step2. Issue</h4>
 <p><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 从 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 获取凭证，首先对自己的公钥进行签名，发送 <span><span class="MathJax_Preview">(g_2^q,sig_U(g_2^q),m)</span><script type="math/tex">(g_2^q,sig_U(g_2^q),m)</script></span> 给 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span>。</p>
 <p><span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 使用 <span><span class="MathJax_Preview">g_2^q</span><script type="math/tex">g_2^q</script></span> 验证签名的正确性，并对发送过来的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 进行签名，得到 <span><span class="MathJax_Preview">(\sigma,r,s)</span><script type="math/tex">(\sigma,r,s)</script></span> 作为 凭证 发送给 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>。</p>
 <p><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 只要通过验证 <span><span class="MathJax_Preview">e(\sigma,\alpha)=e(g_1,\beta)</span><script type="math/tex">e(\sigma,\alpha)=e(g_1,\beta)</script></span> 是否成立来判断 凭证的有效性。</p>
 <p><span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 就可以把 <span><span class="MathJax_Preview">(\sigma,r,s,m,g_2^q,sig_U(g_2^q))</span><script type="math/tex">(\sigma,r,s,m,g_2^q,sig_U(g_2^q))</script></span> 写入数据库。</p>
-<h4 id="step3-prove">方案三.Step3. Prove</h4>
+<hr />
+<h4 id="step3-prove">方案二.Step3. Prove</h4>
+<p><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 与 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 交互的过程，而且 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 不需直接提供 <span><span class="MathJax_Preview">(\sigma,r,s)</span><script type="math/tex">(\sigma,r,s)</script></span>。</p>
+<p>如果是 blacklisting 的模式， <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 都有一份 black list，这里面记录的是用户的公钥，如 <span><span class="MathJax_Preview">\mathsf{BL}=(b_1,b_2,...,b_l)</span><script type="math/tex">\mathsf{BL}=(b_1,b_2,...,b_l)</script></span>， 其中 <span><span class="MathJax_Preview">b_i=g_2^{q_i}</span><script type="math/tex">b_i=g_2^{q_i}</script></span> <span><span class="MathJax_Preview">(1\leq i\leq l)</span><script type="math/tex">(1\leq i\leq l)</script></span>。</p>
+<p>与简易版的方案类似，只不过多了一些参数。</p>
+<p><span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 选择 <span><span class="MathJax_Preview">t_1,t_2,\theta,\rho\leftarrow_R\mathbb{Z}_p^*</span><script type="math/tex">t_1,t_2,\theta,\rho\leftarrow_R\mathbb{Z}_p^*</script></span>，<span><span class="MathJax_Preview">f,\hat{f}\leftarrow_R\mathbb{G}_1</span><script type="math/tex">f,\hat{f}\leftarrow_R\mathbb{G}_1</script></span>， 发送 <span><span class="MathJax_Preview">(\sigma',\alpha',\beta',d_1,d_2,\chi,f,\hat{f},g_2^\rho)</span><script type="math/tex">(\sigma',\alpha',\beta',d_1,d_2,\chi,f,\hat{f},g_2^\rho)</script></span> 给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>，其中</p>
+<p><span><span class="MathJax_Preview">\sigma'=\sigma\cdot g_1^{t_1+t_2}, \alpha'=\alpha^\theta, \beta'=\beta^\theta\cdot\alpha'^{t_1+t_2}, d_1=\psi(\mathcal{U})^{t_1}, d_2=\psi(\mathcal{V})^{t_2}, \chi=f^q\hat{f}^\rho</span><script type="math/tex">\sigma'=\sigma\cdot g_1^{t_1+t_2}, \alpha'=\alpha^\theta, \beta'=\beta^\theta\cdot\alpha'^{t_1+t_2}, d_1=\psi(\mathcal{U})^{t_1}, d_2=\psi(\mathcal{V})^{t_2}, \chi=f^q\hat{f}^\rho</script></span></p>
+<p>并且需要证明 <span><span class="MathJax_Preview">PK\{(q,\rho,\theta,r\theta,s\theta,t_1,t_2): \chi=f^q\hat{f}^\rho, \alpha'=\alpha^\theta, \beta'=\beta^\theta\cdot\alpha'^{t_1+t_2}, d_1=\psi(\mathcal{U})^{t_1}, d_2=\psi(\mathcal{V})^{t_2}, \theta\neq 0\}</span><script type="math/tex">PK\{(q,\rho,\theta,r\theta,s\theta,t_1,t_2): \chi=f^q\hat{f}^\rho, \alpha'=\alpha^\theta, \beta'=\beta^\theta\cdot\alpha'^{t_1+t_2}, d_1=\psi(\mathcal{U})^{t_1}, d_2=\psi(\mathcal{V})^{t_2}, \theta\neq 0\}</script></span></p>
+<hr />
+<h4 id="step4-reveal">方案二.Step4. Reveal</h4>
+<p><span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 可以通过 <span><span class="MathJax_Preview">(\sigma', d_1, d_2)</span><script type="math/tex">(\sigma', d_1, d_2)</script></span> 来还原 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 的真实身份。</p>
+<p>只需要计算 <span><span class="MathJax_Preview">\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}</span><script type="math/tex">\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}</script></span>，再通过查找数据库就可以得到 <span><span class="MathJax_Preview">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</span><script type="math/tex">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</script></span>。</p>
+<p><span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 只需要向 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 证明其身份的有效性：</p>
+<p><span><span class="MathJax_Preview">PK\{(\xi_1,\xi_2): \mathcal{U}=g_1^{\xi_1}, \mathcal{V}=g_2^{\xi_2},\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}\}</span><script type="math/tex">PK\{(\xi_1,\xi_2): \mathcal{U}=g_1^{\xi_1}, \mathcal{V}=g_2^{\xi_2},\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}\}</script></span></p>
+<p>同时 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 也可以证明 <span><span class="MathJax_Preview">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</span><script type="math/tex">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</script></span> 的有效性。</p>
+<hr />
+<h4 id="_2">总结</h4>
+<p>这篇文章对凭证的理解， 凭证 可以看做一个签名，然后证明这个凭证是有效的，即 <strong>证明一个签名是有效的</strong>， 这个可以通过 零知识证明的方法。</p>
+<p>比如 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 与 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 进行匿名交涉， <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 向 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 证明拥有某个属性的签名， 如 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>。</p>
+<p>这里需要做的就是把 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> 转换成 <span><span class="MathJax_Preview">\sigma'</span><script type="math/tex">\sigma'</script></span>，然后通过零知识证明， 使得 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 相信 <span><span class="MathJax_Preview">\sigma'</span><script type="math/tex">\sigma'</script></span> 的确是由 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> 转换过来的。</p>
+<p>上面所有提到的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 可以看做一个属性， 如 <strong>已经大于18岁</strong>， 而 user 要做的就是从 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 获取对该属性的签名 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>， 然后在不直接展示这个签名的情况下， 来证明自己拥有此签名。</p>
+<hr />
+<h2 id="3-gs-proof-2008">3. GS-proof 2008</h2>
+<p>如何有效地完成 <strong>零知识证明</strong> 呢？ 针对这个问题， 2008 年 Groth 与 Sahai 共同提出了一个针对 双线性对的非交互的零知识证明方案<sup id="fnref:14"><a class="footnote-ref" href="#fn:14" rel="footnote">14</a></sup>。Belenkiy， Chase， Kohlweiss，Lysyanskaya 等人在同年利用此方案提出了新的匿名凭证机制。<sup id="fnref:15"><a class="footnote-ref" href="#fn:15" rel="footnote">15</a></sup></p>
 <div class="footnote">
 <hr />
 <ol>
@@ -882,6 +952,12 @@
 </li>
 <li id="fn:13">
 <p>T. Okamoto, “Efficient blind and partially blind signatures without random oracles,” in Theory of Cryptography Conference, 2006, pp. 80–99.&#160;<a class="footnote-backref" href="#fnref:13" rev="footnote" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>J. Groth and A. Sahai, “Efficient non-interactive proof systems for bilinear groups,” in Annual International Conference on the Theory and Applications of Cryptographic Techniques, 2008, pp. 415–432.&#160;<a class="footnote-backref" href="#fnref:14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>M. Belenkiy, M. Chase, M. Kohlweiss, and A. Lysyanskaya, “P-signatures and noninteractive anonymous credentials,” in Theory of Cryptography Conference, 2008, pp. 356–374.&#160;<a class="footnote-backref" href="#fnref:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
