@@ -468,6 +468,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-p-signature-2008" title="4. P-signature 2008" class="md-nav__link">
+    4. P-signature 2008
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1_2" title="Step1. 初始化" class="md-nav__link">
+    Step1. 初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2_1" title="Step2. 生成密钥" class="md-nav__link">
+    Step2. 生成密钥
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step3_1" title="Step3. 签名" class="md-nav__link">
+    Step3. 签名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4_1" title="Step4. 验证" class="md-nav__link">
+    Step4. 验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -679,6 +720,47 @@
   <a href="#3-gs-proof-2008" title="3. GS-proof 2008" class="md-nav__link">
     3. GS-proof 2008
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-p-signature-2008" title="4. P-signature 2008" class="md-nav__link">
+    4. P-signature 2008
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1_2" title="Step1. 初始化" class="md-nav__link">
+    Step1. 初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2_1" title="Step2. 生成密钥" class="md-nav__link">
+    Step2. 生成密钥
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step3_1" title="Step3. 签名" class="md-nav__link">
+    Step3. 签名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4_1" title="Step4. 验证" class="md-nav__link">
+    Step4. 验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -910,7 +992,39 @@
 <p>上面所有提到的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 可以看做一个属性， 如 <strong>已经大于18岁</strong>， 而 user 要做的就是从 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 获取对该属性的签名 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>， 然后在不直接展示这个签名的情况下， 来证明自己拥有此签名。</p>
 <hr />
 <h2 id="3-gs-proof-2008">3. GS-proof 2008</h2>
-<p>如何有效地完成 <strong>零知识证明</strong> 呢？ 针对这个问题， 2008 年 Groth 与 Sahai 共同提出了一个针对 双线性对的非交互的零知识证明方案<sup id="fnref:14"><a class="footnote-ref" href="#fn:14" rel="footnote">14</a></sup>。Belenkiy， Chase， Kohlweiss，Lysyanskaya 等人在同年利用此方案提出了新的匿名凭证机制。<sup id="fnref:15"><a class="footnote-ref" href="#fn:15" rel="footnote">15</a></sup></p>
+<p>如何有效地完成 <strong>零知识证明</strong> 呢？ 针对这个问题， 2008 年 Groth 与 Sahai 共同提出了一个针对 双线性对的非交互的零知识证明方案<sup id="fnref:14"><a class="footnote-ref" href="#fn:14" rel="footnote">14</a></sup>。Belenkiy， Chase， Kohlweiss，Lysyanskaya 等人在同年利用此方案提出了新的匿名凭证机制<sup id="fnref:15"><a class="footnote-ref" href="#fn:15" rel="footnote">15</a></sup>。</p>
+<hr />
+<h2 id="4-p-signature-2008">4. P-signature 2008</h2>
+<p>基于 GS-proof， Belenkiy 等人构造了 P-signature 的方案<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15" rel="footnote">15</a></sup>。</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>A <strong>P-signature scheme</strong> consists of a signature scheme, a commitment scheme, and </p>
+<ol>
+<li>an interactive protocol for obtaining a signature on a committed value;</li>
+<li>a non-interactive  proof system for proving that the contents of a commitment has been signed;</li>
+<li>a non-interactive proof system for proving that a pair of commitments are commitments to the same value.</li>
+</ol>
+</div>
+<!-- 在匿名凭证中最重要的两个协议就是 Issue 和 Prove， -->
+
+<p>P-signature 就是指 </p>
+<ol>
+<li>在已知 <span><span class="MathJax_Preview">\mathsf{commit}(m)</span><script type="math/tex">\mathsf{commit}(m)</script></span> 的情况下产生一个对 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的签名 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>；</li>
+<li>构建一个对 <span><span class="MathJax_Preview">(\mathsf{commit}(m),\sigma)</span><script type="math/tex">(\mathsf{commit}(m),\sigma)</script></span> 的零知识证明；</li>
+<li>证明不同的 <span><span class="MathJax_Preview">\mathsf{commit}(m)</span><script type="math/tex">\mathsf{commit}(m)</script></span> 都对应的同一个值 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>。</li>
+</ol>
+<h3 id="step1_2">Step1. 初始化</h3>
+<p><span><span class="MathJax_Preview">\mathsf{SigSetup}(1^k)</span><script type="math/tex">\mathsf{SigSetup}(1^k)</script></span>，生成有关 bilinear pairing 的一系列参数：
+<span><span class="MathJax_Preview">(p,G_1,G_2,G_T,e,g,h)</span><script type="math/tex">(p,G_1,G_2,G_T,e,g,h)</script></span>， 令 <span><span class="MathJax_Preview">z=e(g,h)</span><script type="math/tex">z=e(g,h)</script></span>。</p>
+<h3 id="step2_1">Step2. 生成密钥</h3>
+<p><span><span class="MathJax_Preview">\mathsf{Keygen}(params)</span><script type="math/tex">\mathsf{Keygen}(params)</script></span>，随机选取<span><span class="MathJax_Preview">\alpha,\beta\leftarrow_R\mathbb{Z}_p</span><script type="math/tex">\alpha,\beta\leftarrow_R\mathbb{Z}_p</script></span> 作为私钥， 那么公钥为 <span><span class="MathJax_Preview">(v,w,\tilde{v}),\tilde{w}</span><script type="math/tex">(v,w,\tilde{v}),\tilde{w}</script></span>， 其中
+<span><span class="MathJax_Preview">v=h^\alpha,w=h^\beta,\tilde{v}=g^\alpha,\tilde{w}=g^\beta</span><script type="math/tex">v=h^\alpha,w=h^\beta,\tilde{v}=g^\alpha,\tilde{w}=g^\beta</script></span>。</p>
+<h3 id="step3_1">Step3. 签名</h3>
+<p><span><span class="MathJax_Preview">\mathsf{Sign}(params,(\alpha,\beta),m)</span><script type="math/tex">\mathsf{Sign}(params,(\alpha,\beta),m)</script></span>， 随机选取 <span><span class="MathJax_Preview">r\leftarrow_R\mathbb{Z}_p-\{\frac{\alpha-m}{\beta}\}</span><script type="math/tex">r\leftarrow_R\mathbb{Z}_p-\{\frac{\alpha-m}{\beta}\}</script></span>，计算 <span><span class="MathJax_Preview">C_1=g^{1/(\alpha+m+\beta r)},C_2=w^r,C_3=u^r</span><script type="math/tex">C_1=g^{1/(\alpha+m+\beta r)},C_2=w^r,C_3=u^r</script></span>。</p>
+<h3 id="step4_1">Step4. 验证</h3>
+<p><span><span class="MathJax_Preview">\mathsf{VerifySig}(params,(v,w,\tilde{v},\tilde{w}),m,(C_1,C_2,C_3))</span><script type="math/tex">\mathsf{VerifySig}(params,(v,w,\tilde{v},\tilde{w}),m,(C_1,C_2,C_3))</script></span>，计算
+<span><span class="MathJax_Preview">e(C_1,vh^mC_2)=z, e(u,C_2)=e(C_3,w)</span><script type="math/tex">e(C_1,vh^mC_2)=z, e(u,C_2)=e(C_3,w)</script></span> 是否成立。</p>
+<p>要利用这个签名机制来完成 P-signature 还需要结合 GS-proof。</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -957,7 +1071,7 @@
 <p>J. Groth and A. Sahai, “Efficient non-interactive proof systems for bilinear groups,” in Annual International Conference on the Theory and Applications of Cryptographic Techniques, 2008, pp. 415–432.&#160;<a class="footnote-backref" href="#fnref:14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a></p>
 </li>
 <li id="fn:15">
-<p>M. Belenkiy, M. Chase, M. Kohlweiss, and A. Lysyanskaya, “P-signatures and noninteractive anonymous credentials,” in Theory of Cryptography Conference, 2008, pp. 356–374.&#160;<a class="footnote-backref" href="#fnref:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+<p>M. Belenkiy, M. Chase, M. Kohlweiss, and A. Lysyanskaya, “P-signatures and noninteractive anonymous credentials,” in Theory of Cryptography Conference, 2008, pp. 356–374.&#160;<a class="footnote-backref" href="#fnref:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
