@@ -504,6 +504,40 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#special-1" title="Special-1. 获取凭证" class="md-nav__link">
+    Special-1. 获取凭证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-2" title="Special-2. 证明" class="md-nav__link">
+    Special-2. 证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-revocation" title="5. Revocation" class="md-nav__link">
+    5. Revocation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="累加器？" class="md-nav__link">
+    累加器？
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -755,6 +789,40 @@
           <li class="md-nav__item">
   <a href="#step4_1" title="Step4. 验证" class="md-nav__link">
     Step4. 验证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-1" title="Special-1. 获取凭证" class="md-nav__link">
+    Special-1. 获取凭证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-2" title="Special-2. 证明" class="md-nav__link">
+    Special-2. 证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-revocation" title="5. Revocation" class="md-nav__link">
+    5. Revocation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="累加器？" class="md-nav__link">
+    累加器？
   </a>
   
 </li>
@@ -1013,6 +1081,7 @@
 <li>构建一个对 <span><span class="MathJax_Preview">(\mathsf{commit}(m),\sigma)</span><script type="math/tex">(\mathsf{commit}(m),\sigma)</script></span> 的零知识证明；</li>
 <li>证明不同的 <span><span class="MathJax_Preview">\mathsf{commit}(m)</span><script type="math/tex">\mathsf{commit}(m)</script></span> 都对应的同一个值 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>。</li>
 </ol>
+<hr />
 <h3 id="step1_2">Step1. 初始化</h3>
 <p><span><span class="MathJax_Preview">\mathsf{SigSetup}(1^k)</span><script type="math/tex">\mathsf{SigSetup}(1^k)</script></span>，生成有关 bilinear pairing 的一系列参数：
 <span><span class="MathJax_Preview">(p,G_1,G_2,G_T,e,g,h)</span><script type="math/tex">(p,G_1,G_2,G_T,e,g,h)</script></span>， 令 <span><span class="MathJax_Preview">z=e(g,h)</span><script type="math/tex">z=e(g,h)</script></span>。</p>
@@ -1024,7 +1093,39 @@
 <h3 id="step4_1">Step4. 验证</h3>
 <p><span><span class="MathJax_Preview">\mathsf{VerifySig}(params,(v,w,\tilde{v},\tilde{w}),m,(C_1,C_2,C_3))</span><script type="math/tex">\mathsf{VerifySig}(params,(v,w,\tilde{v},\tilde{w}),m,(C_1,C_2,C_3))</script></span>，计算
 <span><span class="MathJax_Preview">e(C_1,vh^mC_2)=z, e(u,C_2)=e(C_3,w)</span><script type="math/tex">e(C_1,vh^mC_2)=z, e(u,C_2)=e(C_3,w)</script></span> 是否成立。</p>
+<hr />
 <p>要利用这个签名机制来完成 P-signature 还需要结合 GS-proof。</p>
+<h3 id="special-1">Special-1. 获取凭证</h3>
+<p><span><span class="MathJax_Preview">comm\leftarrow\mathsf{Commit}(params,m,open)</span><script type="math/tex">comm\leftarrow\mathsf{Commit}(params,m,open)</script></span></p>
+<p><span><span class="MathJax_Preview">\mathsf{ObtainSig}(params,pk,m,comm,open)\leftrightarrow\mathsf{IssueSig}(params,sk,comm)</span><script type="math/tex">\mathsf{ObtainSig}(params,pk,m,comm,open)\leftrightarrow\mathsf{IssueSig}(params,sk,comm)</script></span></p>
+<p>简单说下这三个算法，第一个比较简单，user <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 用来生成 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的承诺值 <span><span class="MathJax_Preview">comm</span><script type="math/tex">comm</script></span>。</p>
+<p>后两个算法是 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 与 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 交互的过程，可以使用 secure two-party computation 来实现。</p>
+<p>通过这个交互， <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 可以获取到关于 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的签名 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>。</p>
+<h3 id="special-2">Special-2. 证明</h3>
+<p><span><span class="MathJax_Preview">(comm,\pi,open)\leftarrow\mathsf{Prove}(params,pk,m,\sigma)</span><script type="math/tex">(comm,\pi,open)\leftarrow\mathsf{Prove}(params,pk,m,\sigma)</script></span></p>
+<p>User <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 根据 <span><span class="MathJax_Preview">m,\sigma</span><script type="math/tex">m,\sigma</script></span> 来生成关于 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> 的零知识证明 <span><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>。</p>
+<p><span><span class="MathJax_Preview">VerifyProof(params,pk,comm,\pi)</span><script type="math/tex">VerifyProof(params,pk,comm,\pi)</script></span></p>
+<p>Verifier <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 根据 <span><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span> 和 <span><span class="MathJax_Preview">comm</span><script type="math/tex">comm</script></span>，来判断此零知识证明是否有效。</p>
+<div class="admonition note">
+<p class="admonition-title">匿名凭证是什么？</p>
+<p>从这个构造里，我们来勾勒一下匿名凭证的轮廓：</p>
+<p>首先，还是三类群体， <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>，<span><span class="MathJax_Preview">Issuer</span><script type="math/tex">Issuer</script></span>，<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>。其中 <span><span class="MathJax_Preview">Issuer</span><script type="math/tex">Issuer</script></span> 有一对密钥，并且使用私钥签名，其它群体可以使用公钥进行验证；</p>
+<p><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 如果想要获取某一凭证，可以向 <span><span class="MathJax_Preview">Issuer</span><script type="math/tex">Issuer</script></span> 获取，凭证就是 <span><span class="MathJax_Preview">(\sigma,m)</span><script type="math/tex">(\sigma,m)</script></span> 的一个元组；</p>
+<p>如果大家都是诚实的， <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 可以跟 <span><span class="MathJax_Preview">Issuer</span><script type="math/tex">Issuer</script></span> 交互，得到 <span><span class="MathJax_Preview">(\sigma,m)</span><script type="math/tex">(\sigma,m)</script></span>；然后 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 可以把 <span><span class="MathJax_Preview">(\sigma,m)</span><script type="math/tex">(\sigma,m)</script></span> 递交给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>， <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 可以使用 <span><span class="MathJax_Preview">Issuer</span><script type="math/tex">Issuer</script></span> 的公钥进行验证；</p>
+<p>直接这样做的话， <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 暴露了太多的信息？ 因此常规的做法是利用 commitment scheme 把 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 转换成 <span><span class="MathJax_Preview">m'</span><script type="math/tex">m'</script></span>，从而利用 <span><span class="MathJax_Preview">m'</span><script type="math/tex">m'</script></span> 来获取一个签名 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>。这里 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> 是在 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 上的签名。</p>
+<p>验证就是为了完成两件事， <span><span class="MathJax_Preview">m'</span><script type="math/tex">m'</script></span> 是 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的一个承诺值； <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> 是 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的一个签名。</p>
+<p>现在只剩下两个问题， <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 既然不知道 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>， 怎么来断定 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 是否满足某种权限？ <span><span class="MathJax_Preview">Issuer</span><script type="math/tex">Issuer</script></span> 既然也不知道 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>， 怎么能保证 <span><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> 没有欺骗他？</p>
+</div>
+<hr />
+<h2 id="5-revocation">5. Revocation</h2>
+<p>2008年以后，关于 anonymous credentials 的文章开始重点关注 revocation。首先是基于累加器的方案<sup id="fnref:16"><a class="footnote-ref" href="#fn:16" rel="footnote">16</a></sup>。</p>
+<h3 id="_3">累加器？</h3>
+<p>累加器 (Accumulator)，由 <span><span class="MathJax_Preview">\mathsf{AccGen},\mathsf{AccAdd},\mathsf{AccUpdate},\mathsf{AccWitUpdate},\mathsf{AccVerify}</span><script type="math/tex">\mathsf{AccGen},\mathsf{AccAdd},\mathsf{AccUpdate},\mathsf{AccWitUpdate},\mathsf{AccVerify}</script></span> 这5个算法组成，这些算法由 the accumulator authority， an untrusted update entity， user，verifier 来使用。</p>
+<p><span><span class="MathJax_Preview">((sk_A,pk_A),acc_{\phi},state_\phi)\leftarrow\mathsf{AccGen}(1^k,n)</span><script type="math/tex">((sk_A,pk_A),acc_{\phi},state_\phi)\leftarrow\mathsf{AccGen}(1^k,n)</script></span></p>
+<p><span><span class="MathJax_Preview">(acc_{V\cup\{i\}},state_{U\cup\{i\}},wit_i)\leftarrow\mathsf{AccAdd}(sk_A,i,acc_V,state_U)</span><script type="math/tex">(acc_{V\cup\{i\}},state_{U\cup\{i\}},wit_i)\leftarrow\mathsf{AccAdd}(sk_A,i,acc_V,state_U)</script></span></p>
+<p><span><span class="MathJax_Preview">acc_V\leftarrow\mathsf{AccUpdate}(pk_A,V,state_U)</span><script type="math/tex">acc_V\leftarrow\mathsf{AccUpdate}(pk_A,V,state_U)</script></span></p>
+<p><span><span class="MathJax_Preview">wit'_i\leftarrow\mathsf{AccWitUpdate(pk_A,wit_i,V_w,acc_V,V,state_U)}</span><script type="math/tex">wit'_i\leftarrow\mathsf{AccWitUpdate(pk_A,wit_i,V_w,acc_V,V,state_U)}</script></span></p>
+<p><span><span class="MathJax_Preview">\mathsf{AccVerify}(pk_A,i,wit_i,acc_V)</span><script type="math/tex">\mathsf{AccVerify}(pk_A,i,wit_i,acc_V)</script></span></p>
 <div class="footnote">
 <hr />
 <ol>
@@ -1072,6 +1173,9 @@
 </li>
 <li id="fn:15">
 <p>M. Belenkiy, M. Chase, M. Kohlweiss, and A. Lysyanskaya, “P-signatures and noninteractive anonymous credentials,” in Theory of Cryptography Conference, 2008, pp. 356–374.&#160;<a class="footnote-backref" href="#fnref:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>J. Camenisch, M. Kohlweiss, and C. Soriente, “An accumulator based on bilinear maps and efficient revocation for anonymous credentials,” in International Workshop on Public Key Cryptography, 2009, pp. 481–500.&#160;<a class="footnote-backref" href="#fnref:16" rev="footnote" title="Jump back to footnote 16 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
