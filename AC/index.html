@@ -981,7 +981,7 @@
 <p>这个方案虽然只讨论 user 与 server 之间的交互，但由于其具备匿名性等特点，也可以用来构造匿名凭证系统。单纯使用签名机制虽然可以满足可验证性，但是不具备匿名的特点。如果在签名方案的基础上结合零知识证明，可以构造出一个匿名凭证的方案。</p>
 <hr />
 <h3 id="23-amo-2008">2.3 AMO 2008</h3>
-<p>同样是2008年的文章<sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">8</a></sup>，它是基于 Okamoto 提出的签名方案<sup id="fnref:13"><a class="footnote-ref" href="#fn:13" rel="footnote">13</a></sup>。</p>
+<p>同样是2008年的文章<sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">8</a></sup>，它是基于 Okamoto 提出的签名方案<sup id="fnref:12"><a class="footnote-ref" href="#fn:12" rel="footnote">12</a></sup>。</p>
 <details class="note"><summary>Okamoto Signature Scheme</summary><p>两个同构的群 <span><span class="MathJax_Preview">\mathbb{G_1},\mathbb{G_2}</span><script type="math/tex">\mathbb{G_1},\mathbb{G_2}</script></span>，且 <span><span class="MathJax_Preview">\psi(g_2)=g_1</span><script type="math/tex">\psi(g_2)=g_1</script></span>。</p>
 <p><strong>Setup:</strong> Choose <span><span class="MathJax_Preview">g_2,u_2,v_2\leftarrow_R \mathbb{G_2}</span><script type="math/tex">g_2,u_2,v_2\leftarrow_R \mathbb{G_2}</script></span>，set <span><span class="MathJax_Preview">g_1\leftarrow\psi(g_2),u_1\leftarrow\psi(u_2),v_1\leftarrow\psi(v_2)</span><script type="math/tex">g_1\leftarrow\psi(g_2),u_1\leftarrow\psi(u_2),v_1\leftarrow\psi(v_2)</script></span>; Choose <span><span class="MathJax_Preview">x\leftarrow_R\mathbb{Z}_p^*</span><script type="math/tex">x\leftarrow_R\mathbb{Z}_p^*</script></span> as the private key, <span><span class="MathJax_Preview">w_2=g_2^x</span><script type="math/tex">w_2=g_2^x</script></span> is the public key, public paprameter is <span><span class="MathJax_Preview">(\mathbb{G_1},\mathbb{G_2},\mathbb{G_T}),\psi,e,g_1,g_2,u_2,v_2</span><script type="math/tex">(\mathbb{G_1},\mathbb{G_2},\mathbb{G_T}),\psi,e,g_1,g_2,u_2,v_2</script></span></p>
 <p><strong>Sign:</strong> choose <span><span class="MathJax_Preview">r,s\leftarrow_R\mathbb{Z}_p^*</span><script type="math/tex">r,s\leftarrow_R\mathbb{Z}_p^*</script></span>, compute <span><span class="MathJax_Preview">\sigma=(g_1^mu_1v_1^s)^{1/(x+r)}</span><script type="math/tex">\sigma=(g_1^mu_1v_1^s)^{1/(x+r)}</script></span>.</p>
@@ -1004,7 +1004,7 @@
 <hr />
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>One of the most efficient existing anonymous credential systems is the CamenischLysyanskaya system<sup id="fnref:10"><a class="footnote-ref" href="#fn:10" rel="footnote">10</a></sup> that is secure under the LRSW assumption for groups with bilinear maps. However, this system lacks a credential revoking protocol.
+<p>One of the most efficient existing anonymous credential systems is the CamenischLysyanskaya system<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup> that is secure under the LRSW assumption for groups with bilinear maps. However, this system lacks a credential revoking protocol.
 ...</p>
 </div>
 <p>这篇文章主要着重于 <strong>撤销</strong>，大致把撤销方式分为了两类：</p>
@@ -1012,7 +1012,7 @@
 <li>Blacklisting</li>
 <li>Identity Revealing</li>
 </ul>
-<p>上面提到的第一个构造方案 (CL 2001) 就是采取 identity revealing，使用 blakclist 的方式最早可见 2007年的这篇文章<sup id="fnref:11"><a class="footnote-ref" href="#fn:11" rel="footnote">11</a></sup>。</p>
+<p>上面提到的第一个构造方案 (CL 2001) 就是采取 identity revealing，使用 blakclist 的方式最早可见 2007年的这篇文章<sup id="fnref:10"><a class="footnote-ref" href="#fn:10" rel="footnote">10</a></sup>。</p>
 <div class="admonition note">
 <p class="admonition-title">两种方案的区别</p>
 <p>最大的区别在于 ID-Reveal 的方案引入了一个新的第三方 Opener (在CL01<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>这篇文章中称作revocation manager)，这个第三方可以还原出用户的真实身份。</p>
@@ -1051,7 +1051,7 @@
 <p>只需要计算 <span><span class="MathJax_Preview">\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}</span><script type="math/tex">\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}</script></span>，再通过查找数据库就可以得到 <span><span class="MathJax_Preview">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</span><script type="math/tex">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</script></span>。</p>
 <p><span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span> 只需要向 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 证明其身份的有效性：</p>
 <p><span><span class="MathJax_Preview">PK\{(\xi_1,\xi_2): \mathcal{U}=g_1^{\xi_1}, \mathcal{V}=g_2^{\xi_2},\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}\}</span><script type="math/tex">PK\{(\xi_1,\xi_2): \mathcal{U}=g_1^{\xi_1}, \mathcal{V}=g_2^{\xi_2},\sigma=\frac{\sigma'}{d_1^{1/\xi_1}d_2^{1/\xi_2}}\}</script></span></p>
-<p>同时 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 也可以证明 <span><span class="MathJax_Preview">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</span><script type="math/tex">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</script></span> 的有效性。</p>
+<p>同时 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 也可以验证 <span><span class="MathJax_Preview">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</span><script type="math/tex">(\sigma, r, s, m, g_2^q, sig_U(g_2^q))</script></span> 的有效性。</p>
 <hr />
 <h4 id="_2">总结</h4>
 <p>这篇文章对凭证的理解， 凭证 可以看做一个签名，然后证明这个凭证是有效的，即 <strong>证明一个签名是有效的</strong>， 这个可以通过 零知识证明的方法。</p>
@@ -1060,10 +1060,10 @@
 <p>上面所有提到的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 可以看做一个属性， 如 <strong>已经大于18岁</strong>， 而 user 要做的就是从 <span><span class="MathJax_Preview">Auth</span><script type="math/tex">Auth</script></span> 获取对该属性的签名 <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>， 然后在不直接展示这个签名的情况下， 来证明自己拥有此签名。</p>
 <hr />
 <h2 id="3-gs-proof-2008">3. GS-proof 2008</h2>
-<p>如何有效地完成 <strong>零知识证明</strong> 呢？ 针对这个问题， 2008 年 Groth 与 Sahai 共同提出了一个针对 双线性对的非交互的零知识证明方案<sup id="fnref:14"><a class="footnote-ref" href="#fn:14" rel="footnote">14</a></sup>。Belenkiy， Chase， Kohlweiss，Lysyanskaya 等人在同年利用此方案提出了新的匿名凭证机制<sup id="fnref:15"><a class="footnote-ref" href="#fn:15" rel="footnote">15</a></sup>。</p>
+<p>如何有效地完成 <strong>零知识证明</strong> 呢？ 针对这个问题， 2008 年 Groth 与 Sahai 共同提出了一个针对 双线性对的非交互的零知识证明方案<sup id="fnref:13"><a class="footnote-ref" href="#fn:13" rel="footnote">13</a></sup>。Belenkiy， Chase， Kohlweiss，Lysyanskaya 等人在同年利用此方案提出了新的匿名凭证机制<sup id="fnref:14"><a class="footnote-ref" href="#fn:14" rel="footnote">14</a></sup>。</p>
 <hr />
 <h2 id="4-p-signature-2008">4. P-signature 2008</h2>
-<p>基于 GS-proof， Belenkiy 等人构造了 P-signature 的方案<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15" rel="footnote">15</a></sup>。</p>
+<p>基于 GS-proof， Belenkiy 等人构造了 P-signature 的方案<sup id="fnref2:14"><a class="footnote-ref" href="#fn:14" rel="footnote">14</a></sup>。</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>A <strong>P-signature scheme</strong> consists of a signature scheme, a commitment scheme, and </p>
@@ -1118,7 +1118,7 @@
 </div>
 <hr />
 <h2 id="5-revocation">5. Revocation</h2>
-<p>2008年以后，关于 anonymous credentials 的文章开始重点关注 revocation。首先是基于累加器的方案<sup id="fnref:16"><a class="footnote-ref" href="#fn:16" rel="footnote">16</a></sup>。</p>
+<p>2008年以后，关于 anonymous credentials 的文章开始重点关注 revocation。首先是基于累加器的方案<sup id="fnref:15"><a class="footnote-ref" href="#fn:15" rel="footnote">15</a></sup>。</p>
 <h3 id="_3">累加器？</h3>
 <p>累加器 (Accumulator)，由 <span><span class="MathJax_Preview">\mathsf{AccGen},\mathsf{AccAdd},\mathsf{AccUpdate},\mathsf{AccWitUpdate},\mathsf{AccVerify}</span><script type="math/tex">\mathsf{AccGen},\mathsf{AccAdd},\mathsf{AccUpdate},\mathsf{AccWitUpdate},\mathsf{AccVerify}</script></span> 这5个算法组成，这些算法由 the accumulator authority， an untrusted update entity， user，verifier 来使用。</p>
 <p><span><span class="MathJax_Preview">((sk_A,pk_A),acc_{\phi},state_\phi)\leftarrow\mathsf{AccGen}(1^k,n)</span><script type="math/tex">((sk_A,pk_A),acc_{\phi},state_\phi)\leftarrow\mathsf{AccGen}(1^k,n)</script></span></p>
@@ -1148,7 +1148,7 @@
 <p>M. Blanton, “Online subscriptions with anonymous access,” in Proceedings of the 2008 ACM symposium on Information, computer and communications security, 2008, pp. 217–227.&#160;<a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p>J. Camenisch and A. Lysyanskaya, “Signature schemes and anonymous credentials from bilinear maps,” in Annual International Cryptology Conference, 2004, pp. 56–72.&#160;<a class="footnote-backref" href="#fnref:7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>J. Camenisch and A. Lysyanskaya, “Signature schemes and anonymous credentials from bilinear maps,” in Annual International Cryptology Conference, 2004, pp. 56–72.&#160;<a class="footnote-backref" href="#fnref:7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:8">
 <p>N. Akagi, Y. Manabe, and T. Okamoto, “An efficient anonymous credential system,” in International Conference on Financial Cryptography and Data Security, 2008, pp. 272–286.&#160;<a class="footnote-backref" href="#fnref:8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a></p>
@@ -1157,25 +1157,22 @@
 <p><a href="https://www.cs.jhu.edu/~susan/600.641/scribes/lecture11.pdf">https://www.cs.jhu.edu/~susan/600.641/scribes/lecture11.pdf</a>&#160;<a class="footnote-backref" href="#fnref:9" rev="footnote" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:10">
-<p>J. Camenisch and A. Lysyanskaya, “Signature schemes and anonymous credentials from bilinear maps,” in Annual International Cryptology Conference, 2004, pp. 56–72.&#160;<a class="footnote-backref" href="#fnref:10" rev="footnote" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p>P. P. Tsang, M. H. Au, A. Kapadia, and S. W. Smith, “Blacklistable anonymous credentials: blocking misbehaving users without ttps,” in Proceedings of the 14th ACM conference on Computer and communications security, 2007, pp. 72–81.&#160;<a class="footnote-backref" href="#fnref:10" rev="footnote" title="Jump back to footnote 10 in the text">&#8617;</a></p>
 </li>
 <li id="fn:11">
-<p>P. P. Tsang, M. H. Au, A. Kapadia, and S. W. Smith, “Blacklistable anonymous credentials: blocking misbehaving users without ttps,” in Proceedings of the 14th ACM conference on Computer and communications security, 2007, pp. 72–81.&#160;<a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+<p>D. Boneh, X. Boyen, and H. Shacham, “Short group signatures,” in Annual International Cryptology Conference, 2004, pp. 41–55.&#160;<a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 11 in the text">&#8617;</a></p>
 </li>
 <li id="fn:12">
-<p>D. Boneh, X. Boyen, and H. Shacham, “Short group signatures,” in Annual International Cryptology Conference, 2004, pp. 41–55.&#160;<a class="footnote-backref" href="#fnref:12" rev="footnote" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+<p>T. Okamoto, “Efficient blind and partially blind signatures without random oracles,” in Theory of Cryptography Conference, 2006, pp. 80–99.&#160;<a class="footnote-backref" href="#fnref:12" rev="footnote" title="Jump back to footnote 12 in the text">&#8617;</a></p>
 </li>
 <li id="fn:13">
-<p>T. Okamoto, “Efficient blind and partially blind signatures without random oracles,” in Theory of Cryptography Conference, 2006, pp. 80–99.&#160;<a class="footnote-backref" href="#fnref:13" rev="footnote" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+<p>J. Groth and A. Sahai, “Efficient non-interactive proof systems for bilinear groups,” in Annual International Conference on the Theory and Applications of Cryptographic Techniques, 2008, pp. 415–432.&#160;<a class="footnote-backref" href="#fnref:13" rev="footnote" title="Jump back to footnote 13 in the text">&#8617;</a></p>
 </li>
 <li id="fn:14">
-<p>J. Groth and A. Sahai, “Efficient non-interactive proof systems for bilinear groups,” in Annual International Conference on the Theory and Applications of Cryptographic Techniques, 2008, pp. 415–432.&#160;<a class="footnote-backref" href="#fnref:14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+<p>M. Belenkiy, M. Chase, M. Kohlweiss, and A. Lysyanskaya, “P-signatures and noninteractive anonymous credentials,” in Theory of Cryptography Conference, 2008, pp. 356–374.&#160;<a class="footnote-backref" href="#fnref:14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a></p>
 </li>
 <li id="fn:15">
-<p>M. Belenkiy, M. Chase, M. Kohlweiss, and A. Lysyanskaya, “P-signatures and noninteractive anonymous credentials,” in Theory of Cryptography Conference, 2008, pp. 356–374.&#160;<a class="footnote-backref" href="#fnref:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a></p>
-</li>
-<li id="fn:16">
-<p>J. Camenisch, M. Kohlweiss, and C. Soriente, “An accumulator based on bilinear maps and efficient revocation for anonymous credentials,” in International Workshop on Public Key Cryptography, 2009, pp. 481–500.&#160;<a class="footnote-backref" href="#fnref:16" rev="footnote" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+<p>J. Camenisch, M. Kohlweiss, and C. Soriente, “An accumulator based on bilinear maps and efficient revocation for anonymous credentials,” in International Workshop on Public Key Cryptography, 2009, pp. 481–500.&#160;<a class="footnote-backref" href="#fnref:15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
