@@ -37,7 +37,7 @@
     
     
       
-        <title>盲签名 - My Notes</title>
+        <title>累加器 - My Notes</title>
       
     
     
@@ -103,7 +103,7 @@
               My Notes
             </span>
             <span class="md-header-nav__topic">
-              盲签名
+              累加器
             </span>
           
         </div>
@@ -202,12 +202,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
       数字签名
@@ -223,56 +221,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        盲签名
-      </label>
-    
-    <a href="./" title="盲签名" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../blind/" title="盲签名" class="md-nav__link">
       盲签名
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#blind-signature" title="Blind Signature" class="md-nav__link">
-    Blind Signature
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fair-blind-signature" title="Fair Blind Signature" class="md-nav__link">
-    Fair Blind Signature
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -321,11 +274,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../accu/" title="累加器" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="累加器" class="md-nav__link md-nav__link--active">
       累加器
     </a>
+    
   </li>
 
         
@@ -351,29 +313,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#blind-signature" title="Blind Signature" class="md-nav__link">
-    Blind Signature
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fair-blind-signature" title="Fair Blind Signature" class="md-nav__link">
-    Fair Blind Signature
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -385,20 +324,7 @@
               
                 
                 
-                <h1 id="_1">盲签名</h1>
-<hr />
-<p>盲签名 (blind signature) 是一种保护个人隐私的签名。简单地说，签名者在不知道签名内容的前提下，可以生成对该内容的合法签名。正因为盲签名具有“盲”的特性，往往也会被拿来滥用（比如，黑市交易，洗钱等等）。</p>
-<h2 id="blind-signature">Blind Signature</h2>
-<h2 id="fair-blind-signature">Fair Blind Signature</h2>
-<p>Fair Blind Signature<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> 的概念是在 1995 年提出的，主要是引入了一个第三方的信任机构 judge，由它可以连接 (link) 签名与签名信息 (message-signature pair)。</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>M. Stadler, J.-M. Piveteau, and J. Camenisch, “Fair Blind Signatures,” in Advances in Cryptology — EUROCRYPT ’95, 1995, pp. 209–219.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+                <h1 id="_1">累加器的构造</h1>
                 
                   
                 
@@ -419,7 +345,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../AC/" title="匿名凭证" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -428,25 +354,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                匿名凭证
               </span>
             </div>
           </a>
         
-        
-          <a href="../group/" title="群签名" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                群签名
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
