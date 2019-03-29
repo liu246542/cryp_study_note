@@ -1,0 +1,668 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <script>(function(d){var config = {kitId: 'mtz1zmf',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Garbled Circuits - Liu's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/mystyle.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#garbled-circuit" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Liu's Notes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Liu's Notes
+            </span>
+            <span class="md-header-nav__topic">
+              Garbled Circuits
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Liu's Notes" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Liu's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      密码学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        密码学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      数字签名
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        数字签名
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../blind/" title="盲签名" class="md-nav__link">
+      盲签名
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../group/" title="群签名" class="md-nav__link">
+      群签名
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ring/" title="环签名" class="md-nav__link">
+      环签名
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AC/" title="匿名凭证" class="md-nav__link">
+      匿名凭证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../accu/" title="累加器" class="md-nav__link">
+      累加器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-4">
+      安全多方证明
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        安全多方证明
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Garbled Circuits
+      </label>
+    
+    <a href="./" title="Garbled Circuits" class="md-nav__link md-nav__link--active">
+      Garbled Circuits
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 百万富翁问题" class="md-nav__link">
+    1. 百万富翁问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2. 概念" class="md-nav__link">
+    2. 概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="3. 举个栗子" class="md-nav__link">
+    3. 举个栗子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" title="4. 总结" class="md-nav__link">
+    4. 总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 百万富翁问题" class="md-nav__link">
+    1. 百万富翁问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2. 概念" class="md-nav__link">
+    2. 概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="3. 举个栗子" class="md-nav__link">
+    3. 举个栗子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" title="4. 总结" class="md-nav__link">
+    4. 总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="garbled-circuit">混淆电路 (Garbled Circuit)</h1>
+<hr />
+<h2 id="1">1. 百万富翁问题</h2>
+<p>这个问题是姚期智先生提出的，就是说两个富翁比较谁的财富多，但同时又不想让另一方知道自己财富的具体数额。</p>
+<p>这个问题后来就演变成安全两方计算问题(Secure Two-Party Computation)，也就是有 A 和 B 两方，他们分别掌握问题的输入，通过执行这个安全计算的协议，二人都可以获得一个输出，但是互相并不知道对方的输入值。</p>
+<p>Garbled Circuit 就是用于实现这样一种协议的。</p>
+<hr />
+<h2 id="2">2. 概念</h2>
+<p>首先我们需要明确的是，任何的计算机操作都可以使用逻辑门的形式来表示，逻辑门的基本单元有“与”门，“或”门，“非”门，任何其他的复杂逻辑电路都可以由这几个基本单元进行构造。</p>
+<p>我们以 <strong>一个</strong> “与”门为例，</p>
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">A 与 B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>在这里，A 与 B 的输入为 0 或 1，下面我们介绍如何使用 Garbled Circuit 来实现这样一个过程的：</p>
+<ul>
+<li>Alice 分别用 <span><span class="MathJax_Preview">Z_0</span><script type="math/tex">Z_0</script></span> 和 <span><span class="MathJax_Preview">Z_1</span><script type="math/tex">Z_1</script></span> 来表示 <strong>真值表</strong> 中的 0 和 1，然后 Alice 随机选取4个密钥，分别记为 <span><span class="MathJax_Preview">k_{0a},\ k_{1a},\ k_{0b},\ k_{1b}</span><script type="math/tex">k_{0a},\ k_{1a},\ k_{0b},\ k_{1b}</script></span>，并使用这四个密钥来加密 <span><span class="MathJax_Preview">Z_0</span><script type="math/tex">Z_0</script></span> 和 <span><span class="MathJax_Preview">Z_1</span><script type="math/tex">Z_1</script></span>，</li>
+</ul>
+<div>
+<div class="MathJax_Preview">
+C_{00} = E_{k_{0a}}(E_{k_{0b}(Z_0)}) \\
+C_{01} = E_{k_{0a}}(E_{k_{1b}(Z_0)}) \\
+C_{10} = E_{k_{1a}}(E_{k_{0b}(Z_0)}) \\
+C_{11} = E_{k_{1a}}(E_{k_{1b}(Z_1)})
+</div>
+<script type="math/tex; mode=display">
+C_{00} = E_{k_{0a}}(E_{k_{0b}(Z_0)}) \\
+C_{01} = E_{k_{0a}}(E_{k_{1b}(Z_0)}) \\
+C_{10} = E_{k_{1a}}(E_{k_{0b}(Z_0)}) \\
+C_{11} = E_{k_{1a}}(E_{k_{1b}(Z_1)})
+</script>
+</div>
+<details class="note"><summary>加密 <span><span class="MathJax_Preview">Z_0</span><script type="math/tex">Z_0</script></span> 还是 <span><span class="MathJax_Preview">Z_1</span><script type="math/tex">Z_1</script></span> ？</summary><p>加密哪个值，取决于使用的 key，以及在真值表对应的关系。根据真值表中 <span><span class="MathJax_Preview">0\wedge 0=0</span><script type="math/tex">0\wedge 0=0</script></span>，所以使用 <span><span class="MathJax_Preview">k_{0a}</span><script type="math/tex">k_{0a}</script></span> 和 <span><span class="MathJax_Preview">k_{0b}</span><script type="math/tex">k_{0b}</script></span> 加密的是 <span><span class="MathJax_Preview">Z_0</span><script type="math/tex">Z_0</script></span></p>
+</details>
+<ul>
+<li>Alice 将这四个密文 <strong>顺序打乱</strong> 并发送给 Bob，并将自己 <strong>输入对应的</strong> 密钥也发送给 Bob。假设这里 Alice 的输入为 0，那么 Bob 就得到了 <span><span class="MathJax_Preview">(C_{00},C_{01},C_{10},C_{11},k_{0a})</span><script type="math/tex">(C_{00},C_{01},C_{10},C_{11},k_{0a})</script></span>。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>因为对于 Bob 来说， <span><span class="MathJax_Preview">k_{0a}</span><script type="math/tex">k_{0a}</script></span> 只是一个随机字符串，因此仅仅凭着这个 key 不能知道 Alice 的输入是 0 还是 1</p>
+</div>
+<ul>
+<li>
+<p>Bob 使用 OT 协议从 Alice 获取自己输入对应的密钥，假设 Bob 的输入为 0，那么 Bob 获取的密钥就为 <span><span class="MathJax_Preview">k_{0b}</span><script type="math/tex">k_{0b}</script></span>，因为使用了 OT， Alice 并不能确定 Bob 获取的是哪一个密钥。</p>
+</li>
+<li>
+<p>Bob 使用 <span><span class="MathJax_Preview">k_{0a}</span><script type="math/tex">k_{0a}</script></span> 和 <span><span class="MathJax_Preview">k_{0b}</span><script type="math/tex">k_{0b}</script></span> 分别对四个密文 <span><span class="MathJax_Preview">C_{00}, C_{01}, C_{10}, C_{11}</span><script type="math/tex">C_{00}, C_{01}, C_{10}, C_{11}</script></span> 进行解密，如果能获取到正确的 <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>，就能得知输出的结果为多少。这里 Bob 得到的结果为 <span><span class="MathJax_Preview">Z_{0}</span><script type="math/tex">Z_{0}</script></span>，另外，Bob 需要把 <span><span class="MathJax_Preview">Z_{0}</span><script type="math/tex">Z_{0}</script></span> 的值告诉 Alice，Alice知道了这个值以后自然能得到对应的输出结果。</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">半诚实</p>
+<p>这里的假设是 Alice 与 Bob 都是能正确执行这个协议的，也就是 Semi-Honest (半诚实) 的。<strong>半诚实</strong> 有时也称作 <strong>诚实但好奇的</strong> (Honest but Curious)，意思是他们互相遵循协议，但不破坏协议</p>
+</div>
+<hr />
+<h2 id="3">3. 举个栗子</h2>
+<p>我们来举个简单一点的实例，比如<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> Alice 有 <span><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 块钱， Bob 有 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 块钱，他们希望能通过构造 Garbled Circuit 来比较大小。</p>
+<p>首先把他们的金额转化成二进制，即 Alice 金额为 <span><span class="MathJax_Preview">11</span><script type="math/tex">11</script></span>，Bob 的金额为 <span><span class="MathJax_Preview">01</span><script type="math/tex">01</script></span>，</p>
+<p>也就是说，他们的金额都可以用两个 bit 来表示， 为了方便说明，记 Alice 的两个bit为 <span><span class="MathJax_Preview">xy</span><script type="math/tex">xy</script></span>，Bob 的金额为 <span><span class="MathJax_Preview">x'y'</span><script type="math/tex">x'y'</script></span>，那么 <span><span class="MathJax_Preview">xy &gt; x'y'</span><script type="math/tex">xy > x'y'</script></span> 就可以表示为：</p>
+<div>
+<div class="MathJax_Preview">
+(x\ \wedge\ (\ \neg\ x'\ ))\ \vee\ (\ \neg\ (\ x\ \vee\ x'\ ))\ \wedge\ \ (y\ \wedge\ (\neg\ y' ))
+</div>
+<script type="math/tex; mode=display">
+(x\ \wedge\ (\ \neg\ x'\ ))\ \vee\ (\ \neg\ (\ x\ \vee\ x'\ ))\ \wedge\ \ (y\ \wedge\ (\neg\ y' ))
+</script>
+</div>
+<p>用真值表表示的话就是：</p>
+<p><img alt="table" src="https://www.picgd.com/images/2019/03/29/id5f1.png" /></p>
+<p>Alice 首先对表中的 0/1用 <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span> 进行对应标记，然后使用 4 个 a 密钥 <span><span class="MathJax_Preview">k_{00a},k_{01a},k_{10a},k_{11a}</span><script type="math/tex">k_{00a},k_{01a},k_{10a},k_{11a}</script></span> 以及 4 个 b 密钥 <span><span class="MathJax_Preview">k_{00b},k_{01b},k_{10b},k_{11b}</span><script type="math/tex">k_{00b},k_{01b},k_{10b},k_{11b}</script></span> 进行加密，如：</p>
+<div>
+<div class="MathJax_Preview">
+... \\
+E_{k_{11a}}E_{k_{01b}}(Z_{1}) \\
+...
+</div>
+<script type="math/tex; mode=display">
+... \\
+E_{k_{11a}}E_{k_{01b}}(Z_{1}) \\
+...
+</script>
+</div>
+<p>类似的，Alice 把自己的密钥 <span><span class="MathJax_Preview">k_{11a}</span><script type="math/tex">k_{11a}</script></span> 以及 16 个加密后的真值发送给 Bob，Bob 利用 OT 协议从 Alice 处获取 <span><span class="MathJax_Preview">k_{01b}</span><script type="math/tex">k_{01b}</script></span>，此时双方都不知道对方的输入。</p>
+<p>通过解密，Bob 可以得到 <span><span class="MathJax_Preview">Z_{1}</span><script type="math/tex">Z_{1}</script></span>，Bob 把<span><span class="MathJax_Preview">Z_{1}</span><script type="math/tex">Z_{1}</script></span>发送给 Alice，那么 Alice 就可以知道输出的结果为 1，也就是说自己手中的金额比Bob的大。</p>
+<div class="admonition question">
+<p class="admonition-title">Bob 是怎么知道输出的结果呢？</p>
+<p>参考一些 Wiki<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> 的说法， "Alice can <strong>share her information to Bob</strong> or Bob can <strong>reveal the output to Alice</strong> such that one or both of them learn the output"，也就是说：</p>
+<ul>
+<li>Alice 可以事先告诉 Bob <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span> 的值 与 0/1 的对应关系，然后 Bob 把输出的结果告诉 Alice；</li>
+<li>或者 Alice 不告诉 Bob <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span> 的对应关系，而是 Bob 把输出的结果 <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span> 告诉 Alice，Alice 得到对应的输出后，再把结果告诉 Bob。</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">如果 Alice 得到的输出为 0 ?</p>
+<p>因为 Alice 输入为 11，如果她获得的输出为 0，那么意味着她能够反推出 Bob 的输入为 11，这是不是意味着不安全？</p>
+<p>不是的，对于安全的定义是，如果我们构造一个理想的世界 (Ideal World)，在这个理想的世界里，有一个 “神” 一样的角色，Alice 与 Bob 只需要把他们的输入交给 “神”，“神” 就可以返回给他们对应的输出。</p>
+<p>在这个理想的世界里，比如 Alice 输入的是 11，然后得到了 1， 那么 Alice 也会知道 Bob 的输入为 11。因此我们对安全的定义为：</p>
+<p>如果通过构造现实中的协议，我们能提供与理想世界中同等的功能，那么它就是安全的。
+正因为在理想世界中，也无法避免出现 “反推出别人的输入” 这种情况，所以在现实世界中，就不能因为这一点来说明系统的不安全，这点是由问题本身带来的。</p>
+<p>详细讨论可参看 Boaz 的密码学课件 第17.1 节 <em>Ideal vs. Real Model Security</em><sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup></p>
+</div>
+<hr />
+<h2 id="4">4. 总结</h2>
+<p>笼统地说，按照 Yao's garbled circuit 的思路解决百万富翁问题：</p>
+<ol>
+<li>所有的这类问题（比较大小，做加减法运算）都可以写成 <strong>逻辑门/逻辑电路</strong> 的形式；</li>
+<li>以 “与门” 为例，对于 A 和 B 的输入，我们可以构建一个真值表，然后 A 可以使用 <span><span class="MathJax_Preview">Z_0</span><script type="math/tex">Z_0</script></span> 和 <span><span class="MathJax_Preview">Z_1</span><script type="math/tex">Z_1</script></span> 分别代表真值表中的 0 和 1；</li>
+<li>A 选取 2 组密钥，分别代表 A 和 B，每组密钥中有两把密钥，分别对应 0 和 1，A 分别在每组中各取一把，对 <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span> 进行加密；</li>
+<li>A 把加密后的 4 个密文以及自己输入对应的密钥发送给 B，B 从 A 处使用 OT 的方式获取到与自己输入对应的密钥；</li>
+<li>B 使用这一对密钥进行解密，因此只能解出一个 <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>，这样的话，根据 <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span> 与 0/1 的对应关系，就能判断输出的结果。</li>
+</ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://en.wikipedia.org/wiki/Garbled_circuit#Revealing_output">https://en.wikipedia.org/wiki/Garbled_circuit#Revealing_output</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://courses.engr.illinois.edu/cs598man/fa2009/slides/ac-f09-lect16-yao.pdf">https://courses.engr.illinois.edu/cs598man/fa2009/slides/ac-f09-lect16-yao.pdf</a>&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://intensecrypto.org/public/lec_17_SFE.pdf">https://intensecrypto.org/public/lec_17_SFE.pdf</a>&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../accu/" title="累加器" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                累加器
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
