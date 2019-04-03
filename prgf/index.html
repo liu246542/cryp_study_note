@@ -37,7 +37,7 @@
     
     
       
-        <title>环签名 - Liu's Notes</title>
+        <title>PRG与PRF - Liu's Notes</title>
       
     
     
@@ -78,6 +78,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#prg-prf" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -99,7 +103,7 @@
               Liu's Notes
             </span>
             <span class="md-header-nav__topic">
-              环签名
+              PRG与PRF
             </span>
           
         </div>
@@ -198,10 +202,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       对称密码学
@@ -217,11 +223,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../prgf/" title="PRG与PRF" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        PRG与PRF
+      </label>
+    
+    <a href="./" title="PRG与PRF" class="md-nav__link md-nav__link--active">
       PRG与PRF
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 计算不可区分" class="md-nav__link">
+    1. 计算不可区分
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2. 伪随机数生成器" class="md-nav__link">
+    2. 伪随机数生成器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="3. 伪随机生成函数" class="md-nav__link">
+    3. 伪随机生成函数
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -234,12 +292,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
     
     <label class="md-nav__link" for="nav-2-2">
       数字签名
@@ -279,18 +335,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="环签名" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ring/" title="环签名" class="md-nav__link">
       环签名
     </a>
-    
   </li>
 
         
@@ -371,15 +420,119 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 计算不可区分" class="md-nav__link">
+    1. 计算不可区分
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2. 伪随机数生成器" class="md-nav__link">
+    2. 伪随机数生成器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="3. 伪随机生成函数" class="md-nav__link">
+    3. 伪随机生成函数
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>环签名</h1>
-                
-                
+                <h1 id="prg-prf">PRG 与 PRF</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p><strong>伪随机序列生成器 (Pseudorandom Generator, PRG)</strong></p>
+</li>
+<li>
+<p><strong>伪随机生成函数 (Pseudorandom Function, PRF)</strong></p>
+</li>
+</ul>
+</div>
+<p>PRG 是密码学中一个很重要的部分，它的作用是把 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> bit 的序列映射为 <span><span class="MathJax_Preview">\ell(n)</span><script type="math/tex">\ell(n)</script></span> bit 的序列，一般来说，<span><span class="MathJax_Preview">\ell(n)\gg n</span><script type="math/tex">\ell(n)\gg n</script></span>。</p>
+<p>为什么需要这么做呢？</p>
+<p>我们知道，最早的 <strong>绝对安全 (perfectly secret)</strong> 加密机制是 <em>one-time pad</em> ，简称 OTP，它的形式为：
+$$
+\mathcal{C} = \mathcal{M} \oplus \mathcal{K}
+$$</p>
+<p>也就是密文等于明文与密钥的异或，虽然是很安全的，但需要满足两个重要的前提：</p>
+<ol>
+<li>密钥 <span><span class="MathJax_Preview">\mathcal{K}</span><script type="math/tex">\mathcal{K}</script></span> 的长度与 <span><span class="MathJax_Preview">\mathcal{M}</span><script type="math/tex">\mathcal{M}</script></span> 一致</li>
+<li>每次加密都需要更换密钥 <span><span class="MathJax_Preview">\mathcal{K}</span><script type="math/tex">\mathcal{K}</script></span></li>
+</ol>
+<p>这样问题就来了，解密的一方也需要使用 <span><span class="MathJax_Preview">\mathcal{K}</span><script type="math/tex">\mathcal{K}</script></span> 来解密，那么该如何安全地传输密钥呢？</p>
+<p>换句话说，既然能够安全地传输密钥 <span><span class="MathJax_Preview">\mathcal{K}</span><script type="math/tex">\mathcal{K}</script></span>，那么为什么不能直接安全地传递明文 <span><span class="MathJax_Preview">\mathcal{M}</span><script type="math/tex">\mathcal{M}</script></span> 呢？</p>
+<p>因此现代密码学中的加密方案，一般要求密钥长度远远低于明文长度，假如我们有这种 <strong>伪随机序列生成器</strong> <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>，那么我们就可以把长度为 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> bit 的密钥 <span><span class="MathJax_Preview">\mathcal{K}</span><script type="math/tex">\mathcal{K}</script></span> 映射为长度为 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> bit 的 <span><span class="MathJax_Preview">G(\mathcal{K})</span><script type="math/tex">G(\mathcal{K})</script></span>，再使用 OTP：</p>
+<div>
+<div class="MathJax_Preview">
+\mathcal{C} = \mathcal{M} \oplus G(\mathcal{K})
+</div>
+<script type="math/tex; mode=display">
+\mathcal{C} = \mathcal{M} \oplus G(\mathcal{K})
+</script>
+</div>
+<p>在密码学中，对 PRG 的定义比较严格，在现实生活中往往很难找到实际的构造，只能看做理论上的存在。</p>
+<p>在明白 PRG 的定义之前，需要知道什么是 <strong>计算不可区分</strong>。</p>
+<hr />
+<h2 id="1">1. 计算不可区分</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>计算不可区分 (computationally indistinguishable)</strong></p>
+</div>
+<p>假设 <span><span class="MathJax_Preview">X_{n},Y_{n}</span><script type="math/tex">X_{n},Y_{n}</script></span> 是两个在 <span><span class="MathJax_Preview">\{0,1\}^{l(n)}</span><script type="math/tex">\{0,1\}^{l(n)}</script></span> 上的分布 ，对于它们的两个序列 <span><span class="MathJax_Preview">\{X_{n}\},\{Y_n\}</span><script type="math/tex">\{X_{n}\},\{Y_n\}</script></span>，如果对于 polynomially-bounded <span><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span> 和 所有的 polynomial-time <span><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span>，当 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 足够大时，有：</p>
+<div>
+<div class="MathJax_Preview">
+|\Pr[\mathcal{A}(X_n)=1] - \Pr[\mathcal{A}(Y_n)=1]|\leq \epsilon(n)
+</div>
+<script type="math/tex; mode=display">
+|\Pr[\mathcal{A}(X_n)=1] - \Pr[\mathcal{A}(Y_n)=1]|\leq \epsilon(n)
+</script>
+</div>
+<p>总是成立，那么我们称 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 与 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 是计算不可区分的，记作 <span><span class="MathJax_Preview">X_n\approx Y_n</span><script type="math/tex">X_n\approx Y_n</script></span>。</p>
+<hr />
+<h2 id="2">2. 伪随机数生成器</h2>
+<p>如果存在一个函数 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>，可以把 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> bit 字符串映射为 <span><span class="MathJax_Preview">l(n)</span><script type="math/tex">l(n)</script></span> bit，其中 <span><span class="MathJax_Preview">l(n)\geq n</span><script type="math/tex">l(n)\geq n</script></span>，</p>
+<p>且 <span><span class="MathJax_Preview">G(U_n)\approx U_{l(n)}</span><script type="math/tex">G(U_n)\approx U_{l(n)}</script></span>，那么 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 就是伪随机数生成器。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>对于固定的输入，<span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 会给出固定的输出。输出的随机性取决于输入的随机性。</p>
+</div>
+<hr />
+<h2 id="3">3. 伪随机生成函数</h2>
                 
                   
                 
@@ -400,7 +553,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../group/" title="群签名" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -409,19 +562,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                群签名
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../AC/" title="匿名凭证" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../blind/" title="盲签名" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                匿名凭证
+                盲签名
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
