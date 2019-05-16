@@ -37,7 +37,7 @@
     
     
       
-        <title>Hybrid - Liu's Notes</title>
+        <title>Survey - Liu's Notes</title>
       
     
     
@@ -78,7 +78,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#hybrid" tabindex="1" class="md-skip">
+      <a href="#survey" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
               Liu's Notes
             </span>
             <span class="md-header-nav__topic">
-              Hybrid
+              Survey
             </span>
           
         </div>
@@ -394,6 +394,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../hybrid/" title="Hybrid" class="md-nav__link">
+      Hybrid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -405,11 +417,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Hybrid
+        Survey
       </label>
     
-    <a href="./" title="Hybrid" class="md-nav__link md-nav__link--active">
-      Hybrid
+    <a href="./" title="Survey" class="md-nav__link md-nav__link--active">
+      Survey
     </a>
     
       
@@ -423,30 +435,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-fhc-11" title="1. FHC 11" class="md-nav__link">
-    1. FHC 11
+  <a href="#1" title="1. 分类" class="md-nav__link">
+    1. 分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abstract-pseudonym-lifecycle" title="2. Abstract pseudonym lifecycle" class="md-nav__link">
+    2. Abstract pseudonym lifecycle
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-1-ca-system-setup" title="1-1. CA system setup" class="md-nav__link">
-    1-1. CA system setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-2-registration" title="1-2 Registration" class="md-nav__link">
-    1-2 Registration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-3" title="1-3 签名" class="md-nav__link">
-    1-3 签名
+  <a href="#21-issuance" title="2.1 issuance" class="md-nav__link">
+    2.1 issuance
   </a>
   
 </li>
@@ -464,18 +469,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../survey/" title="Survey" class="md-nav__link">
-      Survey
-    </a>
   </li>
 
         
@@ -541,30 +534,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-fhc-11" title="1. FHC 11" class="md-nav__link">
-    1. FHC 11
+  <a href="#1" title="1. 分类" class="md-nav__link">
+    1. 分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abstract-pseudonym-lifecycle" title="2. Abstract pseudonym lifecycle" class="md-nav__link">
+    2. Abstract pseudonym lifecycle
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-1-ca-system-setup" title="1-1. CA system setup" class="md-nav__link">
-    1-1. CA system setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-2-registration" title="1-2 Registration" class="md-nav__link">
-    1-2 Registration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-3" title="1-3 签名" class="md-nav__link">
-    1-3 签名
+  <a href="#21-issuance" title="2.1 issuance" class="md-nav__link">
+    2.1 issuance
   </a>
   
 </li>
@@ -591,87 +577,45 @@
               
                 
                 
-                <h1 id="hybrid">Hybrid 方法</h1>
-<hr />
-<h2 id="1-fhc-11">1. FHC 11</h2>
-<p>2011年的这篇文章<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>提到了 Dan Boneh 的 Broadcast Encryption<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>方案，先看一下这篇文章提到的 related work。</p>
-<p>这篇文章把用在VANETs中的方法分为三类：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Protocol</th>
-<th align="center">Summarization</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Huge anonymous key-based protocol (HAB)</td>
-<td align="center">High storage overhead</td>
-</tr>
-<tr>
-<td align="center">Group signature-based protocol (GSB)</td>
-<td align="center">The revocation list can be eliminated,high compuation cost</td>
-</tr>
-<tr>
-<td align="center">Roadside unit-aided-based protocol (RSU-aided)</td>
-<td align="center">RSUs is required to possess powerful computation capabilities</td>
-</tr>
-</tbody>
-</table>
-<p>他们提出的方案 efficient PPKI scheme (EPPKI) 可以看成由六个部分组成。</p>
-<h3 id="1-1-ca-system-setup">1-1. CA system setup</h3>
-<p>CA 初始化阶段，有算法 <span><span class="MathJax_Preview">\mathsf{CASysSetup}(k)</span><script type="math/tex">\mathsf{CASysSetup}(k)</script></span> 和 <span><span class="MathJax_Preview">\mathsf{KeyGen}(ID_i,CA_{SK},params)</span><script type="math/tex">\mathsf{KeyGen}(ID_i,CA_{SK},params)</script></span>，
-$$
-CA_{SK},CA_{PK},params \leftarrow \mathsf{CAsyssetup}(k)
-$$</p>
-<p><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 代表的是所选择的质数阶 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的位数，即 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 为 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-bit，这里用到了双线性映射，因此公共参数中包含了双线性映射的基本信息：</p>
-<div>
-<div class="MathJax_Preview">
-params=(\mathbb{G}_1,\mathbb{G}_T,e,H,L,\{\hat{L}_i\}_{1\leq i \leq n},S)
-</div>
-<script type="math/tex; mode=display">
-params=(\mathbb{G}_1,\mathbb{G}_T,e,H,L,\{\hat{L}_i\}_{1\leq i \leq n},S)
-</script>
-</div>
-<p>私钥 <span><span class="MathJax_Preview">CA_{SK}</span><script type="math/tex">CA_{SK}</script></span> 由 7 部分组成：
-$$
-CA_{SK} = (s,\alpha,\delta,\eta,\{\alpha^i+\eta\}_{1\leq i \leq 2n},d_1,d_2)
-$$</p>
-<p>公钥 <span><span class="MathJax_Preview">CA_{PK}</span><script type="math/tex">CA_{PK}</script></span> 也由 7 部分组成：
-$$
-CA_{PK} = (p,g,g^s,g^{\delta},g^{\eta},u,v)
-$$</p>
-<p>其中 <span><span class="MathJax_Preview">u^{d_1}=v^{d_2}=g</span><script type="math/tex">u^{d_1}=v^{d_2}=g</script></span></p>
-<h3 id="1-2-registration">1-2 Registration</h3>
-<p>假设 ID 为 <span><span class="MathJax_Preview">ID_i</span><script type="math/tex">ID_i</script></span> 的 OBU 从 CA 处获取 root key，</p>
+                <h1 id="survey">Survey</h1>
+<p>有关 VANETs 方面的 survey 有许多，这里挑了 2014年的一篇<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>，主要介绍的是假名 (pseudonym scheme) 在车辆自组网中的应用。</p>
+<h2 id="1">1. 分类</h2>
+<p>我们可以根据使用假名的方式不同，将这些机制分为4类：</p>
+<p><strong>pseudonym schemes based on</strong></p>
+<ul>
+<li>asymmetric cryptography and PKIs</li>
+<li>identity-based cryptography schemes</li>
+<li>group signature schemes</li>
+<li>symmetric cryptography</li>
+</ul>
+<p>先规定一下 VANETs 中的各个实体，一般我们有装备有 OBUs 的车辆，以及路边辅助设备 RSUs。车辆与车辆之间的通信称为 V2V，车辆与 RSUs 之间的通信称为 V2I。这些通信需要满足 <strong>实时性 (real-time)</strong> ，都依赖于无线网络技术。就目前来说，V2I 很多都是基于 DSRC (Dedicated Short Range Communications) 技术，但一些新的技术也开始投入使用，比如 C-V2X。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup></p>
+<p>车辆广播的信息包括 <strong>Local Danger Warning (LDW)</strong>, <strong>Electronic Emergency Branking Light (EEBL)</strong>，<strong>Cooperative Collision Avoidance (CCA)</strong>，这些信息也统称为 <strong>beacon messages</strong>，一般是以 1-10Hz 周期性地进行广播。</p>
+<h2 id="2-abstract-pseudonym-lifecycle">2. Abstract pseudonym lifecycle</h2>
+<p>一般来说，可以把整个假名的生命周期分为 5 个阶段：</p>
+<ul>
+<li><em>issuance</em></li>
+<li><em>use</em></li>
+<li><em>change</em></li>
+<li><em>resolution</em></li>
+<li><em>revocation</em></li>
+</ul>
+<h3 id="21-issuance">2.1 issuance</h3>
+<p>简单地说，这一阶段就是车辆获取相应的假名。那么面临两个问题：</p>
 <ol>
-<li>OBU 将 <span><span class="MathJax_Preview">ID_i</span><script type="math/tex">ID_i</script></span> 发送给 CA</li>
-<li>CA 检查 <span><span class="MathJax_Preview">ID_i</span><script type="math/tex">ID_i</script></span> 的有效性</li>
-<li>CA 将 <span><span class="MathJax_Preview">ID_i</span><script type="math/tex">ID_i</script></span> 编号设为 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，计算 <span><span class="MathJax_Preview">A_i,B_i,\hat{A}_1,L,\hat{L}_i</span><script type="math/tex">A_i,B_i,\hat{A}_1,L,\hat{L}_i</script></span></li>
-<li>CA 将 root key 设为 <span><span class="MathJax_Preview">V_{iRoot}=(A_i,B_i,\hat{L}_i)</span><script type="math/tex">V_{iRoot}=(A_i,B_i,\hat{L}_i)</script></span></li>
+<li>向谁获取？ </li>
+<li>车辆如何证明自己？</li>
 </ol>
-<p>在这里， <span><span class="MathJax_Preview">A_i=g^{\frac{1}{\alpha^i+s}}</span><script type="math/tex">A_i=g^{\frac{1}{\alpha^i+s}}</script></span>, <span><span class="MathJax_Preview">B_i=g_i</span><script type="math/tex">B_i=g_i</script></span>, <span><span class="MathJax_Preview">\hat{A}_i=e(A_i,g^s)</span><script type="math/tex">\hat{A}_i=e(A_i,g^s)</script></span>,
-CA 需要将 <span><span class="MathJax_Preview">(ID_i,A_i,\hat{A}_i)</span><script type="math/tex">(ID_i,A_i,\hat{A}_i)</script></span> 的对应关系存储在数据库中。</p>
-<p><span><span class="MathJax_Preview">L=L\cdot g^{\alpha ^{n+1-i} \delta}</span><script type="math/tex">L=L\cdot g^{\alpha ^{n+1-i} \delta}</script></span>, 对于 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 中每一个成员 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的值 <span><span class="MathJax_Preview">\hat{L}_v</span><script type="math/tex">\hat{L}_v</script></span> 都重新计算一遍，即</p>
-<div>
-<div class="MathJax_Preview">
-\hat{L}_v=\hat{L}_v + \alpha^{n+1-i+v}\delta + \eta
-</div>
-<script type="math/tex; mode=display">
-\hat{L}_v=\hat{L}_v + \alpha^{n+1-i+v}\delta + \eta
-</script>
-</div>
-<p>对于 RSU 就不用计算这么多，只需要计算 <span><span class="MathJax_Preview">A_i,B_i</span><script type="math/tex">A_i,B_i</script></span> 即可。</p>
-<h3 id="1-3">1-3 签名</h3>
-<p>OBUs 进行签名之前，需要先生成假名。假名的生成，依靠 <span><span class="MathJax_Preview">(V_r,V_{iRoot})</span><script type="math/tex">(V_r,V_{iRoot})</script></span>，其中 <span><span class="MathJax_Preview">V_r</span><script type="math/tex">V_r</script></span> 是一个随机四元组 <span><span class="MathJax_Preview">V_r=(\pi,\theta,r_\pi,r_{\theta})</span><script type="math/tex">V_r=(\pi,\theta,r_\pi,r_{\theta})</script></span>, <span><span class="MathJax_Preview">V_{iRoot}=(A_i,B_i,C_i,\hat{L}_i)</span><script type="math/tex">V_{iRoot}=(A_i,B_i,C_i,\hat{L}_i)</script></span></p>
+<p>发行假名的单位可以认为是交通管理中心（或者可以认为车管所），一般我们也可以用 <em>certificate authority (CA)</em>、<em>pseudonym provider (PP)</em>、<em>trusted authority (TA)</em> 这些来表示。</p>
+<p>车辆本身还具备一个真实的 VID，VID 可以认为是车辆的唯一标识，是可以长期有效的。<em>CA</em> 可以通过验证 VID 来判断车辆的身份，进而发行相应的假名信息。</p>
+<p>当然，为了能够追踪，假名和 VID 之间需要具备一定的关联性，但这种关联也只有 <em>CA</em> 能够识别得出。</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>C.-I. Fan, R.-H. Hsu, and W.-K. Chen, “Privacy protection for vehicular ad hoc networks by using an efficient revocable message authentication scheme,” Security and Communication Networks, vol. 5, no. 5, pp. 462–478, 2012.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>J. Petit, F. Schaub, M. Feiri, and F. Kargl, “Pseudonym Schemes in Vehicular Networks: A Survey,” IEEE Communications Surveys &amp; Tutorials, vol. 17, no. 1, pp. 228–255, 2015.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>D. Boneh, C. Gentry, and B. Waters, “Collusion resistant broadcast encryption with short ciphertexts and private keys,” in Annual International Cryptology Conference, 2005, pp. 258–275.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>http://www.cww.net.cn/article?id=449498&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -695,7 +639,7 @@ CA 需要将 <span><span class="MathJax_Preview">(ID_i,A_i,\hat{A}_i)</span><scr
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../intro/" title="Intro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../hybrid/" title="Hybrid" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -704,19 +648,19 @@ CA 需要将 <span><span class="MathJax_Preview">(ID_i,A_i,\hat{A}_i)</span><scr
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Intro
+                Hybrid
               </span>
             </div>
           </a>
         
         
-          <a href="../survey/" title="Survey" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../reviews/2019/" title="2019" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Survey
+                2019
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

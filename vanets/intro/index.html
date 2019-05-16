@@ -411,6 +411,54 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../survey/" title="Survey" class="md-nav__link">
+      Survey
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Reviews
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Reviews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reviews/2019/" title="2019" class="md-nav__link">
+      2019
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -446,6 +494,24 @@
                 
                 <h1 id="vanets">VANETs</h1>
 <p>Vehical ad-hoc networks</p>
+<p>现实中车辆自组网（Vehical ad-hoc networks, VANETs）使用的是 IEEE 802.11p，这种协议主要用于车载通讯中。</p>
+<p>在 VANETs 中，有装备了 OBUs 的车辆和道路两旁的设施 RSUs。
+由此也可以将通信方式分为两类，一类 V2V (vehicle to vehicle)，一类 V2I (vehicle to infrastructure)。
+通常，对于 V2I，可能不需要太高的实时性，这时候我们可以使用蜂窝网 (cellular communication)，如 LTE；像 V2V 这种对实时性的要求比较高的场景，一般基于 DSRC (dedicated short-range communication)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>。</p>
+<p>车辆是采取广播的形式发送信息的，这也就是说其他车辆在收到消息后，可以对消息进行再次转发 (re-broadcast)。这些信息有很多种，比如与道路安全有关的，与公共服务有关的，与辅助驾驶有关的及跟支付活动有关的<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>。
+像这类信息也被称为 <strong>灯塔信息</strong> (beacon messages)，<mark class="critic">also known as Cooperative Awareness Message in Europe and Basic Safety Message in the US</mark> <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
+<p><img alt="overview_VANETs" src="https://www.picgd.com/images/2019/05/04/yAXtL.png" /></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>J. Petit, F. Schaub, M. Feiri, and F. Kargl, “Pseudonym schemes in vehicular networks: A survey,” IEEE communications surveys &amp; tutorials, vol. 17, no. 1, pp. 228–255, 2015.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>E. Schoch, F. Kargl, M. Weber, and T. Leinmuller, “Communication patterns in VANETs,” IEEE Communications Magazine, vol. 46, no. 11, pp. 119–125, 2008.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
                   
                 
