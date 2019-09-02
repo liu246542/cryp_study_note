@@ -298,6 +298,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../pairing/" title="双线性映射" class="md-nav__link">
+      双线性映射
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../AC/" title="匿名凭证" class="md-nav__link">
       匿名凭证
     </a>
@@ -323,13 +335,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
     
-    <label class="md-nav__link" for="nav-2-5">
+    <label class="md-nav__link" for="nav-2-6">
       安全多方计算
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-5">
+      <label class="md-nav__title" for="nav-2-6">
         安全多方计算
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -343,6 +355,42 @@
   <li class="md-nav__item">
     <a href="../../../gc/" title="Garbled Circuits" class="md-nav__link">
       Garbled Circuits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      哈希函数
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        哈希函数
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../hashc/" title="哈希链" class="md-nav__link">
+      哈希链
     </a>
   </li>
 
@@ -506,8 +554,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3." class="md-nav__link">
-    3.
+  <a href="#3-hcpa-gka-2018" title="3. HCPA-GKA, 2018" class="md-nav__link">
+    3. HCPA-GKA, 2018
   </a>
   
 </li>
@@ -604,8 +652,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3." class="md-nav__link">
-    3.
+  <a href="#3-hcpa-gka-2018" title="3. HCPA-GKA, 2018" class="md-nav__link">
+    3. HCPA-GKA, 2018
   </a>
   
 </li>
@@ -634,7 +682,7 @@
 <p>Jiang, Yichen, Yi Ji, and Tianhua Liu. "An anonymous communication scheme based on ring signature in VANETs." arXiv preprint arXiv:1410.1639 (2014).</p>
 </blockquote>
 <p><mark class="critic">也是利用环签名的特性来构建方案</mark></p>
-<p>关注的问题： unauthorized participation attack</p>
+<p><strong>关注的问题：</strong> unauthorized participation attack</p>
 <blockquote>
 <p>We consider there is a serious security problem in Xiong's scheme because it is vulnerable to the unauthorized participation attack. an ilegal user may compute key pairs by himself without the authentication of the Member Manager, and the other users cannot know if the public key is coming from a legitimate user.</p>
 </blockquote>
@@ -644,7 +692,7 @@
 <li>匿名与可审计的平衡</li>
 <li>Sybil攻击 </li>
 </ol>
-<p>提出的方法： 将 <mark class="critic">无证书的环签名</mark> 应用到 VANETs 中。</p>
+<p><strong>提出的方法：</strong> 将 <mark class="critic">无证书的环签名</mark> 应用到 VANETs 中。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>无证书代表着签名长度会变短，使用环签名代表着去中心化。其实还是使用 Id-based 的方式来实现无证书。</p>
@@ -668,7 +716,12 @@
 <p>a postquantum secure oblivious transfer protocol is devised based on efficient NTRU cryptosystem, which then serves as the understructure of a couplete location-based querying scheme in ad hoc manner.</p>
 </blockquote>
 <p><strong>证明的方式</strong>： UC</p>
-<h2 id="3">3.</h2>
+<h2 id="3-hcpa-gka-2018">3. HCPA-GKA, 2018</h2>
+<blockquote>
+<p>Cui, Jie, et al. "HCPA-GKA: A hash function-based conditional privacy-preserving authentication and group-key agreement scheme for VANETs." Vehicular communications 14 (2018): 15-25.</p>
+</blockquote>
+<p><strong>提出的方法</strong>：基于哈希函数，避免使用双线性映射和椭圆曲线加密，主要依赖中国剩余定理构建了群密钥分发的协议。</p>
+<p><strong>具体的思路</strong>：车辆首先发送登录信息给 RSU，RSU 再把此信息传达给 TA，由 TA 来验证车辆是否合法，如果通过，车辆可以与其它车辆或 RSU 发起通信。</p>
                 
                   
                 
