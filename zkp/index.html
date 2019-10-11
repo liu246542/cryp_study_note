@@ -36,7 +36,7 @@
     
     
       
-        <title>盲签名 - Liu's Notes</title>
+        <title>零知识证明 - Liu's Notes</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#zero-knowledge-proof" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                盲签名
+                零知识证明
               
             </span>
           
@@ -239,12 +239,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
     
     <label class="md-nav__link" for="nav-2-2">
       数字签名
@@ -260,56 +258,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        盲签名
-      </label>
-    
-    <a href="./" title="盲签名" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../blind/" title="盲签名" class="md-nav__link">
       盲签名
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#blind-signature" class="md-nav__link">
-    Blind Signature
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fair-blind-signature" class="md-nav__link">
-    Fair Blind Signature
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -346,11 +299,90 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../zkp/" title="零知识证明" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        零知识证明
+      </label>
+    
+    <a href="./" title="零知识证明" class="md-nav__link md-nav__link--active">
       零知识证明
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-schnorrs-scheme" class="md-nav__link">
+    1. Schnorr's scheme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 性质
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2-1. 正确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    2-2. 完备性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    2-3. 零知识
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sigmasigma-protocol" class="md-nav__link">
+    3. \Sigma\Sigma-protocol
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -644,15 +676,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#blind-signature" class="md-nav__link">
-    Blind Signature
+  <a href="#1-schnorrs-scheme" class="md-nav__link">
+    1. Schnorr's scheme
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fair-blind-signature" class="md-nav__link">
-    Fair Blind Signature
+  <a href="#2" class="md-nav__link">
+    2. 性质
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    2-1. 正确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    2-2. 完备性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3" class="md-nav__link">
+    2-3. 零知识
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sigmasigma-protocol" class="md-nav__link">
+    3. \Sigma\Sigma-protocol
   </a>
   
 </li>
@@ -674,17 +740,80 @@
               
                 
                 
-                <h1 id="_1">盲签名</h1>
-<hr />
-<p>盲签名 (blind signature) 是一种保护个人隐私的签名。简单地说，签名者在不知道签名内容的前提下，可以生成对该内容的合法签名。正因为盲签名具有“盲”的特性，往往也会被拿来滥用（比如，黑市交易，洗钱等等）。</p>
-<h2 id="blind-signature">Blind Signature</h2>
-<h2 id="fair-blind-signature">Fair Blind Signature</h2>
-<p>Fair Blind Signature<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> 的概念是在 1995 年提出的，主要是引入了一个第三方的信任机构 judge，由它可以连接 (link) 签名与签名信息 (message-signature pair)。</p>
+                <h1 id="zero-knowledge-proof">零知识证明 (Zero-Knowledge Proof)</h1>
+<p>零知识证明是一种以<mark class="critic">匿名</mark>的证明方式，它的历史最早可以追溯到 1985 年由 Goldwasser, Micali 和 Rackoff 的一篇题为 <em>The knowledge complexity of interactive proof systems.</em> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>的文章。
+简单来说，零知识证明协议中存在两个实体，即证明方 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 和 验证方 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>。<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 需要向 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 证明一件事， <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 需要确信这件事是否成立，而且获取不了除此以外的任何信息。
+听起来感觉很绕，而且有点悖论的意思，但实际上零知识证明已被广泛应用在各种与隐私相关的协议（如区块链）当中。</p>
+<h2 id="1-schnorrs-scheme">1. Schnorr's scheme</h2>
+<p>一般提到零知识证明，就不得不提到 Schnorr 构造的零知识证明方案<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>，整个过程分为三步：</p>
+<div class="admonition note">
+<p class="admonition-title">Schnorr's scheme</p>
+<p><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 想证明自己知道 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 的离散对数 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> （即 <span><span class="MathJax_Preview">h=g^\omega</span><script type="math/tex">h=g^\omega</script></span>），那么：</p>
+<ol>
+<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 随机选取一个 <span><span class="MathJax_Preview">r\leftarrow_R\mathbb{Z}_q^*</span><script type="math/tex">r\leftarrow_R\mathbb{Z}_q^*</script></span>，并将 <span><span class="MathJax_Preview">a=g^r</span><script type="math/tex">a=g^r</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>；</li>
+<li><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 随机选取一个 <span><span class="MathJax_Preview">e\leftarrow_R\mathbb{Z}_q^*</span><script type="math/tex">e\leftarrow_R\mathbb{Z}_q^*</script></span>，并发送给 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>；</li>
+<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 计算 <span><span class="MathJax_Preview">z=r+e\omega</span><script type="math/tex">z=r+e\omega</script></span>，并把 <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>， <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 只需要验证 <span><span class="MathJax_Preview">g^z\overset{?}{=}ah^e</span><script type="math/tex">g^z\overset{?}{=}ah^e</script></span>。</li>
+</ol>
+</div>
+<h2 id="2">2. 性质</h2>
+<p>零知识证明具备三个基本性质：</p>
+<ul>
+<li>正确性 (correctness)</li>
+<li>完备性 (soundness)</li>
+<li>零知识 (zero knowledge)</li>
+</ul>
+<p>下面就以 Schnorr's scheme 为例，分别解释这三个性质。</p>
+<h3 id="2-1">2-1. 正确性</h3>
+<p>正确性是非常好理解的，也就是说 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 和 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 只要按照这个流程走，一定能完成证明。
+换句话说，就是 如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 所述的事实为真，那么一定能通过 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的验证。
+用数学语言来描述的话，就是</p>
+<div>
+<div class="MathJax_Preview">g^z=g^{r+e\omega}=g^rg^{e\omega}=a(g^{\omega})^e=ah^e</div>
+<script type="math/tex; mode=display">g^z=g^{r+e\omega}=g^rg^{e\omega}=a(g^{\omega})^e=ah^e</script>
+</div>
+<h3 id="2-2">2-2. 完备性</h3>
+<p>完备性指的是，如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 在不知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 的情况下，是只有极小的概率能完成该证明的。
+反过来就是，如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 完成了此证明，那么 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 一定就知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>。</p>
+<p>证明的话一般需要构造一个<mark class="critic">知识器提取器 (knowledge extractor)</mark>：</p>
+<div class="admonition note">
+<p class="admonition-title">知识提取器</p>
+<p>还是以 Schnorr 方案为例，现在把 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 替换成知识提取器 <span><span class="MathJax_Preview">P'</span><script type="math/tex">P'</script></span>，只需要执行两次协议，每次都选取相同的 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>，假设第一次得到的是 <span><span class="MathJax_Preview">e_1</span><script type="math/tex">e_1</script></span>，第二次是 <span><span class="MathJax_Preview">e_2</span><script type="math/tex">e_2</script></span>，那么</p>
+<div>
+<div class="MathJax_Preview">\omega=\frac{z_2-z_1}{e_2-e1}</div>
+<script type="math/tex; mode=display">\omega=\frac{z_2-z_1}{e_2-e1}</script>
+</div>
+</div>
+<h3 id="2-3">2-3. 零知识</h3>
+<p>零知识是从对验证者而言的，也就是说，对于一个不怀好意的 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 来说，无论他采取什么方式，也不能在这些交互过程中提取到有效的信息。
+对于零知识的证明，一般采用 <mark class="critic"> simulation-based </mark> 的证明方式。</p>
+<div class="admonition note">
+<p class="admonition-title">simulation-based 的非正式描述</p>
+<p>密码学中有两大证明法宝，一个是 game-based，另外一个就是 simulation-based。
+一般在证明两方或多方协议的时候，simulation-based 会用得较多。
+simulation-based 的证明方式是，定义一个近乎完美的世界，称之为 "ideal world"，而对于所证明的协议，我们称之为 "real world"。</p>
+<p>在 ideal world 里，我们认为它是 "完美的" （完美的意思可以是安全的，不泄露隐私的等等）；接下来只需要证明这两个世界是不可区分的就可以了，这部分也就是 simulation-based 主要证明部分。</p>
+</div>
+<p>还是以 Schnorr 方案为例，在理想的世界里，我们有一个功能无比强大的模拟器 （simulator），它可以直接穿梭时空，现在我们使用这个 simulator 来代替 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>，那么在理想世界里，即使它不知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 的值，它一样能完成证明，如下：</p>
+<ol>
+<li>Simulator 首先随便发送一个值给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></li>
+<li><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 发送 <span><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span> 给 simulator</li>
+<li>Simulator 随机选出 <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>，然后穿越到 Step.1，将发送的值设置为 <span><span class="MathJax_Preview">g^z/h^e</span><script type="math/tex">g^z/h^e</script></span></li>
+</ol>
+<p>显然，在理想世界里， simulator 根本不知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 的值，更不用说去泄漏了。
+也就是说，在理想世界中是零知识，接下来只需要证明理想世界与现实世界不可区分就行了。</p>
+<h2 id="3-sigmasigma-protocol">3. <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol</h2>
+<p><span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 可以看作是交互式零知识证明体系的一般化表述，它要求验证者是诚实的。
+通过组合一些基础的 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，我们可以得到相对复杂的零知识证明结构。</p>
+<!-- [^2]: Fiat, Amos, and Adi Shamir. "How to prove yourself: Practical solutions to identification and signature problems." Conference on the Theory and Application of Cryptographic Techniques. Springer, Berlin, Heidelberg, 1986. -->
+
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>M. Stadler, J.-M. Piveteau, and J. Camenisch, “Fair Blind Signatures,” in Advances in Cryptology — EUROCRYPT ’95, 1995, pp. 209–219.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Goldwasser, Shafi, Silvio Micali, and Charles Rackoff. "The knowledge complexity of interactive proof systems." SIAM Journal on computing 18.1 (1989): 186-208.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Schnorr, Claus-Peter. "Efficient signature generation by smart cards." Journal of cryptology 4.3 (1991): 161-174.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -708,7 +837,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../prgf/" title="PRG与PRF" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ring/" title="环签名" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -717,19 +846,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                PRG与PRF
+                环签名
               </span>
             </div>
           </a>
         
         
-          <a href="../group/" title="群签名" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../pairing/" title="双线性映射" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                群签名
+                双线性映射
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
