@@ -199,29 +199,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 基本语法
+  <a href="#crypto-10" class="md-nav__link">
+    Crypto 1.0
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 数学公式
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 高亮
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4. 注解
+  <a href="#crypto-20" class="md-nav__link">
+    Crypto 2.0
   </a>
   
 </li>
@@ -654,29 +640,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 基本语法
+  <a href="#crypto-10" class="md-nav__link">
+    Crypto 1.0
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 数学公式
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 高亮
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4. 注解
+  <a href="#crypto-20" class="md-nav__link">
+    Crypto 2.0
   </a>
   
 </li>
@@ -699,133 +671,69 @@
                 
                 
                 <h1 id="home">Home</h1>
-<p>这是一个测试页面，完整的 documentation 可以参看 <a href="https://mkdocs.org">mkdocs.org</a>。</p>
-<p><a href="https://cyent.github.io/markdown-with-mkdocs-material/syntax/main/">markdown 语法总览</a></p>
-<hr />
-<h2 id="1">1. 基本语法</h2>
-<p>中国古典<strong>四大名著</strong>分别是，《西游记》、《红楼梦》、《水浒传》和《三国演义》。</p>
-<p><em>水镜八奇：</em></p>
-<ul>
-<li>一奇袁方</li>
-<li>二奇荀彧</li>
-<li>三奇贾诩</li>
-<li>四奇郭嘉</li>
-<li>五奇庞统</li>
-<li>六奇周瑜</li>
-<li>七奇诸葛亮</li>
-<li>八奇 [未知]</li>
-</ul>
-<p><em>天虎八将：</em></p>
-<ol>
-<li>素还真</li>
-<li>崎路人</li>
-<li>一钱一命</li>
-<li>半驼废</li>
-<li>枯叶</li>
-<li>灵心异佛</li>
-<li>八面狼姬</li>
-<li>呼三叹</li>
-</ol>
-<blockquote>
-<p>我向来不惮以最坏的恶意揣测中国人。 -- 鲁迅</p>
-</blockquote>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> 起床</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> 吃饭</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 看论文</li>
-</ul>
+<p>本网页由 <code>mkdocs</code> 生成，完整的 documentation 可以参看 <a href="https://mkdocs.org">mkdocs.org</a>。</p>
+<p>源文件以 <code>markdown</code> 语法撰写，相关语法可以参考 <a href="https://cyent.github.io/markdown-with-mkdocs-material/syntax/main/">markdown 语法总览</a>。</p>
 <blockquote>
 <p>For every complex problem there is an answer that is clear, simple, and wrong. -- H.L.Mencken</p>
 </blockquote>
-<p>只需要下面几条命令：</p>
+<hr />
+<h2 id="crypto-10">Crypto 1.0</h2>
+<p>在密码学 1.0 时代，我们主要考虑在<strong>通信</strong>，<strong>存储</strong>，<strong>检索</strong>等场景中，如何确保数据的保密性（confidentiality）和可验证性（authentication），使用的主要密码学原语（cryptographic primitives）包括</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve -a [address:port]</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li>公钥加密（public-key encryption）</li>
+<li>数字签名（digital signatures）</li>
+<li>密钥协商（key-exchange protocols）</li>
+<li>密码哈希函数（cryptographic hash functions）</li>
 </ul>
-<p>创世纪：</p>
-<pre><code class="python">import os
-print('Hello World!!')
-</code></pre>
+<h2 id="crypto-20">Crypto 2.0</h2>
+<p>如果说 1.0 关注的是外部攻击者，那么 2.0 更多关注的是内部攻击者。
+因为随着“云”的普及，密码协议的执行者开始由用户转移到了外包的服务器，如何确保服务器不能侵犯用户的隐私，成为了 2.0 时代的难题。
+一些诸如对加密数据进行计算，允许展示数据的部分信息，隐藏数据拥有者的身份信息等想法相继被提出，相关的密码学原语包括：</p>
+<ul>
+<li>同态加密（homomorphic encryption）</li>
+<li>秘密共享（secre sharing）</li>
+<li>不经意的传输（oblivious transfer）</li>
+<li>盲签名（blind signatures）</li>
+<li>零知识证明（zero-knowledge proofs）</li>
+<li>安全多方计算（secure multi-party computation）</li>
+</ul>
+<!-- ### 4. 注解
 
-<p>花名册：</p>
-<table>
-<thead>
-<tr>
-<th>角色</th>
-<th>演员</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>孙悟空</td>
-<td>六小龄童</td>
-</tr>
-<tr>
-<td>猪八戒</td>
-<td>马德华/崔景富</td>
-</tr>
-<tr>
-<td>沙僧</td>
-<td>闫怀礼/刘大刚</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="2">2. 数学公式</h2>
-<p><span><span class="MathJax_Preview">f(X)=\sum_{i=0}^{n}x_i</span><script type="math/tex">f(X)=\sum_{i=0}^{n}x_i</script></span></p>
-<hr />
-<h2 id="3">3. 高亮</h2>
-<p><mark class="critic">众所周知，密码学是一门很硬核的学科。</mark></p>
-<hr />
-<h2 id="4">4. 注解</h2>
-<div class="admonition note">
-<p class="admonition-title">笔记</p>
-<p>上联： 能攻心，则反侧自消，自古知兵非好战</p>
-<p>下联： 不申势，则宽严皆误，后来治蜀要深思</p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">线索</p>
-<p>汉儿尽作胡儿语，却向城头骂汉人。</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">提问</p>
-<p>“汉武秋风辞意健，英雄何须叹华年”描述的是哪一位英雄的心声？ <span style="background-color: black; color: black">答案：刘备</span></p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">失败</p>
-<p>慈临亡，叹息曰：“丈夫生世，当带七尺之剑，以升天子之阶。今所志未从，奈何而死乎！” -- 《三国志》</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">自嘲</p>
-<p>皇帝招我做女婿，路远迢迢我不去。</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p>苟利国家生死以，岂因祸福避趋之。</p>
-</div>
-<div class="admonition bug">
-<p class="admonition-title">bug</p>
-<p>You need to be logged in to log out. Please log in to log out.</p>
-</div>
-<div class="admonition quote">
-<p class="admonition-title">quote</p>
-<p>Running water never grows stale. So you just have to 'keep on flowing'.
--- Bruce Lee</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">讯息</p>
-<p>《春秋》，天子之事也。是故孔子曰：“知我者，其惟《春秋》乎！罪我者，其惟《春秋》乎！”</p>
-</div>
-<div class="admonition summary">
-<p class="admonition-title">总结</p>
-<p>贬敌抬己，其法有三：其一，敌将初胜者，贬己方武将鲁莽。其二，敌将多胜者，贬己方军师择地失当，气候预测错误。其三，敌将常胜者，贬敌军将领有勇无谋。</p>
-</div>
-<div class="admonition check">
-<p class="admonition-title">成功</p>
-<p>大风起兮云飞扬，威加海内兮归故乡，安得猛士兮守四方！</p>
-</div>
+!!! note "笔记"
+    上联： 能攻心，则反侧自消，自古知兵非好战
+
+    下联： 不申势，则宽严皆误，后来治蜀要深思
+
+!!! hint "线索"
+    汉儿尽作胡儿语，却向城头骂汉人。
+
+!!! question "提问"
+    “汉武秋风辞意健，英雄何须叹华年”描述的是哪一位英雄的心声？ <span style="background-color: black; color: black">答案：刘备</span>
+
+!!! failure "失败"
+    慈临亡，叹息曰：“丈夫生世，当带七尺之剑，以升天子之阶。今所志未从，奈何而死乎！” -- 《三国志》
+
+!!! danger "自嘲"
+    皇帝招我做女婿，路远迢迢我不去。
+
+!!! warning "警告"
+    苟利国家生死以，岂因祸福避趋之。
+
+!!! bug "bug"
+    You need to be logged in to log out. Please log in to log out.
+
+!!! quote "quote"
+    Running water never grows stale. So you just have to 'keep on flowing'.
+    -- Bruce Lee
+
+!!! info "讯息"
+    《春秋》，天子之事也。是故孔子曰：“知我者，其惟《春秋》乎！罪我者，其惟《春秋》乎！”
+
+!!! summary "总结"
+    贬敌抬己，其法有三：其一，敌将初胜者，贬己方武将鲁莽。其二，敌将多胜者，贬己方军师择地失当，气候预测错误。其三，敌将常胜者，贬敌军将领有勇无谋。
+
+!!! check "成功"
+    大风起兮云飞扬，威加海内兮归故乡，安得猛士兮守四方！ -->
                 
                   
                 
