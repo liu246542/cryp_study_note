@@ -386,27 +386,6 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-8" type="checkbox" id="nav-2-8" checked>
-    
-    <label class="md-nav__link" for="nav-2-8">
-      哈希函数
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-8">
-        哈希函数
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -414,15 +393,39 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        哈希链
+      </label>
+    
     <a href="./" title="哈希链" class="md-nav__link md-nav__link--active">
       哈希链
     </a>
     
-  </li>
-
-        
-      </ul>
-    </nav>
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 构造
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -604,6 +607,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 构造
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -616,7 +635,38 @@
                 
                 
                 <h1 id="hash-chain">哈希链 (Hash Chain)</h1>
+<p>哈希链通常用于认证的过程中，在哈希链之前主要是使用的是 身份-密码 验证的方式。
+1981年，Lamport<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> 提出使用哈希函数的方式代替传统的验证方式。
+这种哈希链的形式在后来的实际生活中也有着广泛的应用，而且对后来<mark class="critic">区块链</mark>的出现也有一定的启发意义。</p>
 <hr />
+<h2 id="1">1. 构造</h2>
+<div class="admonition note">
+<p class="admonition-title">哈希链</p>
+<p>长度为 <span><span class="MathJax_Preview">\ell</span><script type="math/tex">\ell</script></span> 的哈希链是由长度为 <span><span class="MathJax_Preview">\ell</span><script type="math/tex">\ell</script></span> 的序列 <span><span class="MathJax_Preview">\{x_1,x_2,...,x_\ell\}</span><script type="math/tex">\{x_1,x_2,...,x_\ell\}</script></span> 组成的，其中，对于 <span><span class="MathJax_Preview">0&lt; i\leq \ell</span><script type="math/tex">0< i\leq \ell</script></span>，有 <span><span class="MathJax_Preview">x_i=H(x_{i+1})</span><script type="math/tex">x_i=H(x_{i+1})</script></span>，其中 <span><span class="MathJax_Preview">H:\{0,1\}^*\rightarrow\{0,1\}^k</span><script type="math/tex">H:\{0,1\}^*\rightarrow\{0,1\}^k</script></span> 是一个密码哈希函数。</p>
+</div>
+<p>一般提到认证协议（identification protocol），一般分为两个部分：注册（registration）和认证（identification）。</p>
+<ul>
+<li><strong>注册：</strong> <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 随机选取 <span><span class="MathJax_Preview">x_0\in_R\{0,1\}^k</span><script type="math/tex">x_0\in_R\{0,1\}^k</script></span>，计算 <span><span class="MathJax_Preview">x_\ell=H^\ell(x_0)</span><script type="math/tex">x_\ell=H^\ell(x_0)</script></span>，然后将 <span><span class="MathJax_Preview">x_\ell</span><script type="math/tex">x_\ell</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>，<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 将 <span><span class="MathJax_Preview">x_\ell</span><script type="math/tex">x_\ell</script></span> 作为 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 保存起来； <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 与 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 各自留有一个计数器 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的初始值为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>；</li>
+<li><strong>认证：</strong> <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 计算 <span><span class="MathJax_Preview">x_{\ell-i}=H^{\ell-i}(x_0)</span><script type="math/tex">x_{\ell-i}=H^{\ell-i}(x_0)</script></span> 并将 <span><span class="MathJax_Preview">x_{\ell-i}</span><script type="math/tex">x_{\ell-i}</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>；<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 在收到 <span><span class="MathJax_Preview">x_{\ell-i}</span><script type="math/tex">x_{\ell-i}</script></span> 之后，计算 <span><span class="MathJax_Preview">H(x_{\ell-i})\overset{?}{=}v</span><script type="math/tex">H(x_{\ell-i})\overset{?}{=}v</script></span> 是否成立，如果成立，则将 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的值重新设置为 <span><span class="MathJax_Preview">x_{\ell-i}</span><script type="math/tex">x_{\ell-i}</script></span>。</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>现实中的 <span><span class="MathJax_Preview">\ell</span><script type="math/tex">\ell</script></span> 一般取得比较大，如 <span><span class="MathJax_Preview">\ell=2^32</span><script type="math/tex">\ell=2^32</script></span></p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 的空间复杂度是 <span><span class="MathJax_Preview">O(\log \ell)</span><script type="math/tex">O(\log \ell)</script></span>，<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的空间复杂度是 <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>；</p>
+<p>注册过程，<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 的计算复杂度是 <span><span class="MathJax_Preview">O(\ell)</span><script type="math/tex">O(\ell)</script></span>，<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的计算复杂度是 <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>；</p>
+<p>认证过程，<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 的计算复杂度是 <span><span class="MathJax_Preview">O(\log \ell)</span><script type="math/tex">O(\log \ell)</script></span>，<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的计算复杂度仍然是 <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>。</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>L. Lamport, “Password authentication with insecure communication,” Communications of the ACM, vol. 24, no. 11, pp. 770–772, 1981.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
                   
                 
