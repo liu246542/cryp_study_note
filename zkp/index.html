@@ -368,42 +368,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 性质
+  <a href="#2-sigma-protocol" class="md-nav__link">
+    2. Sigma-Protocol
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-1" class="md-nav__link">
-    2-1. 正确性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-2" class="md-nav__link">
-    2-2. 完备性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-3" class="md-nav__link">
-    2-3. 零知识
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sigmasigma-protocol" class="md-nav__link">
-    3. \Sigma\Sigma-protocol
+  <a href="#4" class="md-nav__link">
+    4. 构造数字签名
   </a>
   
 </li>
@@ -669,6 +642,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Q&A
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Q&A
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../q_and_a/pairing/" title="Pairing realted" class="md-nav__link">
+      Pairing realted
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -697,42 +706,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 性质
+  <a href="#2-sigma-protocol" class="md-nav__link">
+    2. Sigma-Protocol
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-1" class="md-nav__link">
-    2-1. 正确性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-2" class="md-nav__link">
-    2-2. 完备性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-3" class="md-nav__link">
-    2-3. 零知识
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sigmasigma-protocol" class="md-nav__link">
-    3. \Sigma\Sigma-protocol
+  <a href="#4" class="md-nav__link">
+    4. 构造数字签名
   </a>
   
 </li>
@@ -755,69 +737,61 @@
                 
                 
                 <h1 id="zero-knowledge-proof">零知识证明 (Zero-Knowledge Proof)</h1>
-<p>零知识证明是一种以<mark class="critic">匿名</mark>的证明方式，它的历史最早可以追溯到 1985 年由 Goldwasser, Micali 和 Rackoff 的一篇题为 <em>The knowledge complexity of interactive proof systems.</em> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>的文章。
-简单来说，零知识证明协议中存在两个实体，即证明方 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 和 验证方 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>。<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 需要向 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 证明一件事， <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 需要确信这件事是否成立，而且获取不了除此以外的任何信息。
-听起来感觉很绕，而且有点悖论的意思，但实际上零知识证明已被广泛应用在各种与隐私相关的协议（如区块链）当中。</p>
+<blockquote>
+<p>本节内容参考自 Berry Schoenmakers 的 <a href="https://www.win.tue.nl/~berry/CryptographicProtocols/LectureNotes.pdf"><em>Lecture Notes: Cryptographic Protocols</em></a>，没有具体标明引用的部分即默认引用该原文。</p>
+</blockquote>
+<hr />
+<p>零知识证明是一种保护隐私的证明方式，它的历史最早可以追溯到 1985 年由 Goldwasser, Micali 和 Rackoff 的文章<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。
+简单来说，零知识证明协议中存在两个实体，即证明方 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 和 验证方 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。<span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 需要让 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 相信自己知道某个知识，但又不能将这个知识直接告诉 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。</p>
+<p>最直观的例子就是 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 知道 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 的离散对数 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，（即 <span><span class="MathJax_Preview">g^w=h\ \mathsf{mod}\ n</span><script type="math/tex">g^w=h\ \mathsf{mod}\ n</script></span>），同时 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 希望能让 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 信服，但又不能直接将 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 展示给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。
+乍一听有种悖论的感觉，但实际上是有很多方法可以做到。</p>
+<blockquote>
+<p>In fact, the theory of zero-knowledge proofs tells us that <mark class="critic"> any NP-statment </mark> can be proved efficiently in zero-knowledge.</p>
+</blockquote>
 <h2 id="1-schnorrs-scheme">1. Schnorr's scheme</h2>
-<p>一般提到零知识证明，就不得不提到 Schnorr 构造的零知识证明方案<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>，整个过程分为三步：</p>
+<p>Schnorr 的证明方案<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>分为三步：</p>
 <div class="admonition note">
 <p class="admonition-title">Schnorr's scheme</p>
-<p><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 想证明自己知道 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 的离散对数 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> （即 <span><span class="MathJax_Preview">h=g^\omega</span><script type="math/tex">h=g^\omega</script></span>），那么：</p>
+<p><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 想证明自己知道 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 的离散对数 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> （即 <span><span class="MathJax_Preview">h=g^w\ \mathsf{mod}\ n</span><script type="math/tex">h=g^w\ \mathsf{mod}\ n</script></span>），那么：</p>
 <ol>
-<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 随机选取一个 <span><span class="MathJax_Preview">r\leftarrow_R\mathbb{Z}_q^*</span><script type="math/tex">r\leftarrow_R\mathbb{Z}_q^*</script></span>，并将 <span><span class="MathJax_Preview">a=g^r</span><script type="math/tex">a=g^r</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>；</li>
-<li><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 随机选取一个 <span><span class="MathJax_Preview">e\leftarrow_R\mathbb{Z}_q^*</span><script type="math/tex">e\leftarrow_R\mathbb{Z}_q^*</script></span>，并发送给 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>；</li>
-<li><span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 计算 <span><span class="MathJax_Preview">z=r+e\omega</span><script type="math/tex">z=r+e\omega</script></span>，并把 <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>， <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 只需要验证 <span><span class="MathJax_Preview">g^z\overset{?}{=}ah^e</span><script type="math/tex">g^z\overset{?}{=}ah^e</script></span>。</li>
+<li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 随机选取一个 <span><span class="MathJax_Preview">u\leftarrow_R\mathbb{Z}_n</span><script type="math/tex">u\leftarrow_R\mathbb{Z}_n</script></span>，并将 <span><span class="MathJax_Preview">a=g^u</span><script type="math/tex">a=g^u</script></span> 发送给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>；</li>
+<li><span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 随机选取一个 <span><span class="MathJax_Preview">c\leftarrow_R\mathbb{Z}_n</span><script type="math/tex">c\leftarrow_R\mathbb{Z}_n</script></span>，并发送给 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span>；</li>
+<li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 计算 <span><span class="MathJax_Preview">r=u+cw</span><script type="math/tex">r=u+cw</script></span>，并把 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 发送给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>， <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 只需要验证 <span><span class="MathJax_Preview">g^r\overset{?}{=}ah^c</span><script type="math/tex">g^r\overset{?}{=}ah^c</script></span>。</li>
 </ol>
 </div>
-<h2 id="2">2. 性质</h2>
-<p>零知识证明具备三个基本性质：</p>
+<p>这个方案满足三个性质： Completeness、Special soundness、Special honest-verifier zero-knowledgeness。</p>
 <ul>
-<li>正确性 (correctness)</li>
-<li>完备性 (soundness)</li>
-<li>零知识 (zero knowledge)</li>
+<li><strong>完备性</strong>（Completeness）：因为 <span><span class="MathJax_Preview">g^r=g^{u+cw}=g^u*g^{cw}=ah^c</span><script type="math/tex">g^r=g^{u+cw}=g^u*g^{cw}=ah^c</script></span>，所以此方案是完备的；</li>
+<li><strong>可靠性</strong>（Special soundness）：如果有满足条件的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 和 <span><span class="MathJax_Preview">(a;c';r')</span><script type="math/tex">(a;c';r')</script></span>，那么可以通过知识解析器（extrator）计算出 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的值，即 <span><span class="MathJax_Preview">w=(r-r')/(c-c')</span><script type="math/tex">w=(r-r')/(c-c')</script></span>；</li>
+<li><strong>对诚实验证者的零知识性</strong>（Special honest-verifier zero-knowledgeness）：在不知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的情况下，可以“通过先取 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 和 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>，再计算 <span><span class="MathJax_Preview">a=g^r/h^c</span><script type="math/tex">a=g^r/h^c</script></span> 的方式” 生成一个满足条件的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，这样算出的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 与协议中的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 具有相同的概率分布。</li>
 </ul>
-<p>下面就以 Schnorr's scheme 为例，分别解释这三个性质。</p>
-<h3 id="2-1">2-1. 正确性</h3>
-<p>正确性是非常好理解的，也就是说 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 和 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 只要按照这个流程走，一定能完成证明。
-换句话说，就是 如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 所述的事实为真，那么一定能通过 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的验证。
-用数学语言来描述的话，就是</p>
+<h2 id="2-sigma-protocol">2. Sigma-Protocol</h2>
+<p>如果满足上述三个性质，那么这个协议又可以称作 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol。
+在 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 中，我们把 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 拥有的知识称为 witness，用 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 表示，双方共同的输入用 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 来表示。下面对三个性质进行说明。</p>
+<ul>
+<li>
+<p>完备性主要证明 “ 如果 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，那么通过这个协议一定能说服 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> ”，因此证明的方式就比较 straightforward；</p>
+</li>
+<li>
+<p>可靠性的意思是 “ 如果 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 不知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，那么它能够完成验证的几率是可以忽略不计的” 证明需要使用逆否命题，即如果能较轻松完成证明，那么 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 就会知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>。加上 Special 之后就变成，对于一个 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，如果有一组 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 和 <span><span class="MathJax_Preview">(a;c';r')</span><script type="math/tex">(a;c';r')</script></span>，且 <span><span class="MathJax_Preview">c\neq c', r\neq r'</span><script type="math/tex">c\neq c', r\neq r'</script></span>，那么我们可以构造一个知识解析器（knowledge extractor）将 witness 计算出来；</p>
+</li>
+<li>
+<p>对诚实验证者的零知识性，证明的思想来自 simulation-based，比较正式的描述是： 存在一个<mark class="critic"> p.p.t 算法 </mark><span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> （simulator），对于任意的 <mark class="critic"><span><span class="MathJax_Preview">v\in L_R</span><script type="math/tex">v\in L_R</script></span></mark> 和 <span><span class="MathJax_Preview">c\in C</span><script type="math/tex">c\in C</script></span>，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 都能生成一个 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，而且它的分布概率与原协议将 <span><span class="MathJax_Preview">v,c</span><script type="math/tex">v,c</script></span> 作为输入，及 <span><span class="MathJax_Preview">(v,w)\in R</span><script type="math/tex">(v,w)\in R</script></span> 所产生的结果的分布概率是一样的。</p>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>如果把 Schnorr 协议的第三步改成 <span><span class="MathJax_Preview">r=cu+w</span><script type="math/tex">r=cu+w</script></span>，验证时用 <span><span class="MathJax_Preview">g^r\overset{?}{=}a^ch</span><script type="math/tex">g^r\overset{?}{=}a^ch</script></span>，（当然 <span><span class="MathJax_Preview">u\leftarrow_R\mathbb{Z}_n^*</span><script type="math/tex">u\leftarrow_R\mathbb{Z}_n^*</script></span>），那么它还是 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 吗？</p>
+</div>
+<hr />
+<h2 id="4">4. 构造数字签名</h2>
+<p>任意的 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 都可以构造数字签名，这个想法是由 Fiat 和 Shamir 提出来的（Fiat-Shamir heuristic）。核心思想在于 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的构造，在一般的 <span><span class="MathJax_Preview">Sigma</span><script type="math/tex">Sigma</script></span>-protocol 中，<span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 一般都是随机选取的。但是如果我们将 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 取做某个值的哈希，比如</p>
 <div>
-<div class="MathJax_Preview">g^z=g^{r+e\omega}=g^rg^{e\omega}=a(g^{\omega})^e=ah^e</div>
-<script type="math/tex; mode=display">g^z=g^{r+e\omega}=g^rg^{e\omega}=a(g^{\omega})^e=ah^e</script>
+<div class="MathJax_Preview">c\leftarrow H(a,M)</div>
+<script type="math/tex; mode=display">c\leftarrow H(a,M)</script>
 </div>
-<h3 id="2-2">2-2. 完备性</h3>
-<p>完备性指的是，如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 在不知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 的情况下，是只有极小的概率能完成该证明的。
-反过来就是，如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 完成了此证明，那么 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 一定就知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>。</p>
-<p>证明的话一般需要构造一个<mark class="critic">知识器提取器 (knowledge extractor)</mark>：</p>
-<div class="admonition note">
-<p class="admonition-title">知识提取器</p>
-<p>还是以 Schnorr 方案为例，现在把 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 替换成知识提取器 <span><span class="MathJax_Preview">P'</span><script type="math/tex">P'</script></span>，只需要执行两次协议，每次都选取相同的 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>，假设第一次得到的是 <span><span class="MathJax_Preview">e_1</span><script type="math/tex">e_1</script></span>，第二次是 <span><span class="MathJax_Preview">e_2</span><script type="math/tex">e_2</script></span>，那么</p>
-<div>
-<div class="MathJax_Preview">\omega=\frac{z_2-z_1}{e_2-e1}</div>
-<script type="math/tex; mode=display">\omega=\frac{z_2-z_1}{e_2-e1}</script>
-</div>
-</div>
-<h3 id="2-3">2-3. 零知识</h3>
-<p>零知识是从对验证者而言的，也就是说，对于一个不怀好意的 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 来说，无论他采取什么方式，也不能在这些交互过程中提取到有效的信息。
-对于零知识的证明，一般采用 <mark class="critic"> simulation-based </mark> 的证明方式。</p>
-<div class="admonition note">
-<p class="admonition-title">simulation-based 的非正式描述</p>
-<p>密码学中有两大证明法宝，一个是 game-based，另外一个就是 simulation-based。
-一般在证明两方或多方协议的时候，simulation-based 会用得较多。
-simulation-based 的证明方式是，定义一个近乎完美的世界，称之为 "ideal world"，而对于所证明的协议，我们称之为 "real world"。</p>
-<p>在 ideal world 里，我们认为它是 "完美的" （完美的意思可以是安全的，不泄露隐私的等等）；接下来只需要证明这两个世界是不可区分的就可以了，这部分也就是 simulation-based 主要证明部分。</p>
-</div>
-<p>还是以 Schnorr 方案为例，在理想的世界里，我们有一个功能无比强大的模拟器 （simulator），它可以直接穿梭时空，现在我们使用这个 simulator 来代替 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>，那么在理想世界里，即使它不知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 的值，它一样能完成证明，如下：</p>
-<ol>
-<li>Simulator 首先随便发送一个值给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></li>
-<li><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 发送 <span><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span> 给 simulator</li>
-<li>Simulator 随机选出 <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>，然后穿越到 Step.1，将发送的值设置为 <span><span class="MathJax_Preview">g^z/h^e</span><script type="math/tex">g^z/h^e</script></span></li>
-</ol>
-<p>显然，在理想世界里， simulator 根本不知道 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 的值，更不用说去泄漏了。
-也就是说，在理想世界中是零知识，接下来只需要证明理想世界与现实世界不可区分就行了。</p>
-<h2 id="3-sigmasigma-protocol">3. <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol</h2>
-<p><span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 可以看作是交互式零知识证明体系的一般化表述，它要求验证者是诚实的。
-通过组合一些基础的 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，我们可以得到相对复杂的零知识证明结构。</p>
+<p>其中，<span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 是需要签名的消息。这样的话，双方都可以得到同样的 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>，同时还减少了一次交互。值得注意的是，这种构造的安全性是基于 random oracle 下的（因为哈希函数 <span><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 的使用）。这样构造的协议也称作 非交互式的零知识证明（Non-interactive <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol）。</p>
+<p>​</p>
 <!-- [^2]: Fiat, Amos, and Adi Shamir. "How to prove yourself: Practical solutions to identification and signature problems." Conference on the Theory and Application of Cryptographic Techniques. Springer, Berlin, Heidelberg, 1986. -->
 
 <div class="footnote">
@@ -904,9 +878,15 @@ simulation-based 的证明方式是，定义一个近乎完美的世界，称之
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
-        <script src="../js/extra.js"></script>
-      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="../js/extra.js"></script>
       
     
   </body>

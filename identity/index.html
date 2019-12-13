@@ -350,8 +350,35 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1. 与信息认证的区别
+    1. 简介
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 零知识的认证协议
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-schnorrs-protocol" class="md-nav__link">
+    2-1. Schnorr's protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-witness-hiding" class="md-nav__link">
+    2-2. Witness hiding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -628,6 +655,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Q&A
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Q&A
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../q_and_a/pairing/" title="Pairing realted" class="md-nav__link">
+      Pairing realted
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -650,8 +713,35 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1. 与信息认证的区别
+    1. 简介
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 零知识的认证协议
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-schnorrs-protocol" class="md-nav__link">
+    2-1. Schnorr's protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-witness-hiding" class="md-nav__link">
+    2-2. Witness hiding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -677,7 +767,60 @@
 <p>认证协议中一般包含两方，即证明方（Prover）和验证方（Verifier）。验证通常是为了进行访问控制（Access Control），比如你输入自己的账号和密码以管理员的身份登录某个网站（Password-based），或者按下自己的指纹开启办公室的大门（Biometrics）。这些都是不同的认证方式，或者称之为认证协议。</p>
 <p>为了进行一般化的表述，我们通常以证明方需要证明自己知道密钥（Secret Key）为例。我们的目标就是尽量减小证明方与验证方之间的计算量。从隐私角度来说，比较弱的证明就是基于密码（password-based）的方式，比较强的证明就是零知识证明协议（zero-knowledge protocols）</p>
 <hr />
-<h2 id="1">1. 与信息认证的区别</h2>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Compared to message authentication, an important difference is that there is <mark class="critic"> some notion of fressness to be fulfilled </mark>. On the other hand, compared to digital signatures, there is no such thing as no-repudiation: it is not required that the verifier is able to convince an outsider at a later point in time that a prover indeed successfully identified itself to the verifier. </p>
+</div>
+<h2 id="1">1. 简介</h2>
+<p>认证协议可以看做认证机制中的重要组成部分，在这个机制中，主要包含两个协议： 注册 （registration） 和 认证 （identification）。现实生活中最简单的例子就是使用密码登录网站，也就是所谓的 password-based schemes。由于双方都会得到相同的 secret，所以这也是一种对称式的认证机制。</p>
+<p>很显然，如果通信中明文传输密码是不可靠的，甚至连最简单的窃听攻击都防御不了。密码明文存储在服务端也是不建议的，实际中一般存储密码的哈希值，这样即使服务器的信息遭到泄漏，也不会泄漏密码的原文。当然简单的密码可以通过跑<a href="https://zh.wikipedia.org/wiki/%E5%BD%A9%E8%99%B9%E8%A1%A8">彩虹表</a>的方式暴力破解，所以通常建议使用复杂的密码以及采用加盐哈希的方式。</p>
+<p>哈希链更是将这种思想发挥到了极致。对于一个长度为 <span><span class="MathJax_Preview">\ell</span><script type="math/tex">\ell</script></span> 的序列 <span><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span>， <span><span class="MathJax_Preview">0\leq i \leq \ell</span><script type="math/tex">0\leq i \leq \ell</script></span>，满足 <span><span class="MathJax_Preview">x_{i+1}=H(x_i)</span><script type="math/tex">x_{i+1}=H(x_i)</script></span>，其中 <span><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 是一个密码哈希函数 <span><span class="MathJax_Preview">H:\{0,1\}^*\rightarrow\{0,1\}^k</span><script type="math/tex">H:\{0,1\}^*\rightarrow\{0,1\}^k</script></span>。</p>
+<div class="admonition note">
+<p class="admonition-title">one-way hash chain</p>
+<p>在基于哈希链的机制中，注册的过程就是 prover 首先选取 <span><span class="MathJax_Preview">x_0\in_R\{0,1\}^k</span><script type="math/tex">x_0\in_R\{0,1\}^k</script></span>，然后计算 <span><span class="MathJax_Preview">x_\ell=H^\ell(x_0)</span><script type="math/tex">x_\ell=H^\ell(x_0)</script></span> 并把 <span><span class="MathJax_Preview">x_\ell</span><script type="math/tex">x_\ell</script></span> 发送给 receiver. receiver 将 <span><span class="MathJax_Preview">x_\ell</span><script type="math/tex">x_\ell</script></span> 记作 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>。</p>
+<p>双方都需要同步一个 计数器 （counter） <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，这样每次需要认证的时候，sender 只需要发送 <span><span class="MathJax_Preview">x_{\ell-i}=H^{\ell-i}(x_0)</span><script type="math/tex">x_{\ell-i}=H^{\ell-i}(x_0)</script></span> 给 receiver，receiver 再验证 <span><span class="MathJax_Preview">H(x_{\ell-i})\overset{?}{=}v</span><script type="math/tex">H(x_{\ell-i})\overset{?}{=}v</script></span>。通过的话，再将 <span><span class="MathJax_Preview">x_{\ell-i}</span><script type="math/tex">x_{\ell-i}</script></span> 记作 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>。</p>
+</div>
+<hr />
+<h2 id="2">2. 零知识的认证协议</h2>
+<p>零知识的意思就是，无论 verifier 如何与 prover 交互，它得到的信息仅凭自己也能得到。</p>
+<h3 id="2-1-schnorrs-protocol">2-1. Schnorr's protocol</h3>
+<p>prover 需要证明自己知道 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 且满足 <span><span class="MathJax_Preview">x=log_gh</span><script type="math/tex">x=log_gh</script></span>，需要三步：</p>
+<ol>
+<li>prover -&gt; verifier: <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 选择 <span><span class="MathJax_Preview">u\in_R\mathbb{Z}_n</span><script type="math/tex">u\in_R\mathbb{Z}_n</script></span>，计算 <span><span class="MathJax_Preview">a=g^u</span><script type="math/tex">a=g^u</script></span>，并将 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>；</li>
+<li>prover &lt;- verifier：<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 随机选择 <span><span class="MathJax_Preview">c=</span><script type="math/tex">c=</script></span> 0 或 1，并发送给 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>；</li>
+<li>prover -&gt; verifier：如果 <span><span class="MathJax_Preview">c=0</span><script type="math/tex">c=0</script></span>，<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 直接将 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 发送给 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>，否则发送 <span><span class="MathJax_Preview">u+x</span><script type="math/tex">u+x</script></span>。</li>
+</ol>
+<p>最后，<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 只需要计算 <span><span class="MathJax_Preview">g^r=a, (当 c=0 )</span><script type="math/tex">g^r=a, (当 c=0 )</script></span> 或 <span><span class="MathJax_Preview">g^r=ah, (当 c=1 )</span><script type="math/tex">g^r=ah, (当 c=1 )</script></span>。</p>
+<details class="note"><summary>Note</summary><p>一般 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 指代 announcement，<span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 指代 challenge，<span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 指代 responce。</p>
+</details>
+<p><mark class="critic"> Soundness </mark>：如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 不知道 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，那么一定（很大概率）无法完成认证。要证明上面的协议是 soundness 的话，我们可以考虑反证法的思路。如果 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 能完成这个证明，那么就说明对于他已经发送的值 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，无论 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 发送的是 0 还是 1，他都能够做出正确的回复。即</p>
+<div>
+<div class="MathJax_Preview">g^{r_0}=a, g^{r_1}=ah</div>
+<script type="math/tex; mode=display">g^{r_0}=a, g^{r_1}=ah</script>
+</div>
+<p>这样的话，其实就可以将 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 计算出来，即 <span><span class="MathJax_Preview">x=r_1-r_1\ \mathsf{mod}\ n</span><script type="math/tex">x=r_1-r_1\ \mathsf{mod}\ n</script></span></p>
+<p><mark class="critic"> Zero knowledge </mark>： 零知识的证明在于构造一个 simulator，作为观察者，在认证过程中，我们观察到的是一组 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，因此我们需要做的是，不依赖 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的值，构造出满足条件的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>。</p>
+<p>这也分为两种情况，第一种是 诚实的验证者 （honest verifier），另一种是不怀好意的验证者 （cheating verifier），两种在构造 simulator 的时候有一些区别。</p>
+<p>Honest 的情况：</p>
+<p>构造一组 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，首先 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 是从 <span><span class="MathJax_Preview">\{0,1\}</span><script type="math/tex">\{0,1\}</script></span> 中随机选取，<span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 是从 <span><span class="MathJax_Preview">\mathbb{Z}_n</span><script type="math/tex">\mathbb{Z}_n</script></span> 中随机选取，那么 <span><span class="MathJax_Preview">a=g^rh^{-c}</span><script type="math/tex">a=g^rh^{-c}</script></span>，刚好满足条件。</p>
+<p>因为我们知道 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 和 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 都是随机选择的，因此找到一组 <span><span class="MathJax_Preview">(A;C;R)</span><script type="math/tex">(A;C;R)</script></span> 满足 <span><span class="MathJax_Preview">g^R=Ah^C</span><script type="math/tex">g^R=Ah^C</script></span> 的概率 <span><span class="MathJax_Preview">\Pr[(a;c;r)=(A;C;R)]=\frac{1}{2n}</span><script type="math/tex">\Pr[(a;c;r)=(A;C;R)]=\frac{1}{2n}</script></span>。</p>
+<p>Cheating 的情况：</p>
+<p>在 cheating 的情况下，<span><span class="MathJax_Preview">\mathcal{V}^*</span><script type="math/tex">\mathcal{V}^*</script></span> 可以在看到 challenge 的取值后倒带（rewind）并对以前的值进行修正。</p>
+<hr />
+<p>然而，仅仅做一次肯定是不够的，因为 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 能够猜到的成功率有 50%，所以一般是进行 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 次，则 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 猜到的概率为 <span><span class="MathJax_Preview">2^{-k}</span><script type="math/tex">2^{-k}</script></span>。</p>
+<p>当然，更进一步的方法是将 <span><span class="MathJax_Preview">c\in\{0,1\}</span><script type="math/tex">c\in\{0,1\}</script></span> 改成 <span><span class="MathJax_Preview">c\in\mathbb{Z}_q</span><script type="math/tex">c\in\mathbb{Z}_q</script></span>。但这样一来，同时带来了另外一个问题，如果是 cheating verifier 的情况，将没有办法进行 zero knowledge 的证明。</p>
+<p>（为什么？）</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Simulator 的计算时间是 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>，而 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是一个很大的数。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At this point, we remark that if one could prove that Schnorr's protocol is zero-knowledge then it would follow that Schnorr signatures can be forged.</p>
+</div>
+<h3 id="2-2-witness-hiding">2-2. Witness hiding</h3>
+<p>也就是说，让 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 在 <span><span class="MathJax_Preview">\{0,1\}</span><script type="math/tex">\{0,1\}</script></span> 中任意取在现实中是不太可能的，因为需要 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 此才能完全证明。因此很多时候我们又引入了一个新概念： witeness hiding.</p>
+<p>Witness hiding 是比 zero knowledge 更弱的一种定义，它要求的是 verifier 获取不到完整的 prover 的私钥。</p>
                 
                   
                 
@@ -751,9 +894,15 @@
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
-        <script src="../js/extra.js"></script>
-      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="../js/extra.js"></script>
       
     
   </body>
