@@ -299,27 +299,6 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
-    
-    <label class="md-nav__link" for="nav-2-3">
-      认证协议
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-3">
-        认证协议
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
     <a href="../identity/" title="认证协议" class="md-nav__link">
@@ -392,11 +371,6 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
           
           
           
@@ -440,13 +414,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-8" type="checkbox" id="nav-2-8">
     
-    <label class="md-nav__link" for="nav-2-7">
+    <label class="md-nav__link" for="nav-2-8">
       安全多方计算
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-7">
+      <label class="md-nav__title" for="nav-2-8">
         安全多方计算
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -737,17 +711,15 @@
                 
                 
                 <h1 id="zero-knowledge-proof">零知识证明 (Zero-Knowledge Proof)</h1>
-<blockquote>
-<p>本节内容参考自 Berry Schoenmakers 的 <a href="https://www.win.tue.nl/~berry/CryptographicProtocols/LectureNotes.pdf"><em>Lecture Notes: Cryptographic Protocols</em></a>，没有具体标明引用的部分即默认引用该原文。</p>
-</blockquote>
 <hr />
 <p>零知识证明是一种保护隐私的证明方式，它的历史最早可以追溯到 1985 年由 Goldwasser, Micali 和 Rackoff 的文章<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。
-简单来说，零知识证明协议中存在两个实体，即证明方 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 和 验证方 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。<span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 需要让 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 相信自己知道某个知识，但又不能将这个知识直接告诉 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。</p>
-<p>最直观的例子就是 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 知道 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 的离散对数 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，（即 <span><span class="MathJax_Preview">g^w=h\ \mathsf{mod}\ n</span><script type="math/tex">g^w=h\ \mathsf{mod}\ n</script></span>），同时 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 希望能让 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 信服，但又不能直接将 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 展示给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。
+简单来说，零知识证明协议中存在两个实体，即证明方 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 和 验证方 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。<span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 需要让 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 相信自己知道某个 witness <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，但又不能将 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 直接告诉 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。</p>
+<p>最直观的例子就是 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 知道 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 的离散对数 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，（即 <span><span class="MathJax_Preview">g^w=h\ \mathsf{mod}\ n</span><script type="math/tex">g^w=h\ \mathsf{mod}\ n</script></span>），同时 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 希望能让 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 信服，但又不能直接将 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 展示给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。
 乍一听有种悖论的感觉，但实际上是有很多方法可以做到。</p>
 <blockquote>
 <p>In fact, the theory of zero-knowledge proofs tells us that <mark class="critic"> any NP-statment </mark> can be proved efficiently in zero-knowledge.</p>
 </blockquote>
+<hr />
 <h2 id="1-schnorrs-scheme">1. Schnorr's scheme</h2>
 <p>Schnorr 的证明方案<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>分为三步：</p>
 <div class="admonition note">
@@ -761,22 +733,22 @@
 </div>
 <p>这个方案满足三个性质： Completeness、Special soundness、Special honest-verifier zero-knowledgeness。</p>
 <ul>
-<li><strong>完备性</strong>（Completeness）：因为 <span><span class="MathJax_Preview">g^r=g^{u+cw}=g^u*g^{cw}=ah^c</span><script type="math/tex">g^r=g^{u+cw}=g^u*g^{cw}=ah^c</script></span>，所以此方案是完备的；</li>
-<li><strong>可靠性</strong>（Special soundness）：如果有满足条件的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 和 <span><span class="MathJax_Preview">(a;c';r')</span><script type="math/tex">(a;c';r')</script></span>，那么可以通过知识解析器（extrator）计算出 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的值，即 <span><span class="MathJax_Preview">w=(r-r')/(c-c')</span><script type="math/tex">w=(r-r')/(c-c')</script></span>；</li>
-<li><strong>对诚实验证者的零知识性</strong>（Special honest-verifier zero-knowledgeness）：在不知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的情况下，可以“通过先取 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 和 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>，再计算 <span><span class="MathJax_Preview">a=g^r/h^c</span><script type="math/tex">a=g^r/h^c</script></span> 的方式” 生成一个满足条件的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，这样算出的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 与协议中的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 具有相同的概率分布。</li>
+<li>Completeness：因为 <span><span class="MathJax_Preview">g^r=g^{u+cw}=g^u*g^{cw}=ah^c</span><script type="math/tex">g^r=g^{u+cw}=g^u*g^{cw}=ah^c</script></span>，所以此方案是完备的；</li>
+<li>Special soundness：如果有满足条件的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 和 <span><span class="MathJax_Preview">(a;c';r')</span><script type="math/tex">(a;c';r')</script></span>，那么可以通过知识解析器（extrator）计算出 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的值，即 <span><span class="MathJax_Preview">w=(r-r')/(c-c')</span><script type="math/tex">w=(r-r')/(c-c')</script></span>；</li>
+<li>Special honest-verifier zero-knowledgeness：在不知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的情况下，可以“通过先取 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 和 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>，再计算 <span><span class="MathJax_Preview">a=g^r/h^c</span><script type="math/tex">a=g^r/h^c</script></span> 的方式” 生成一个满足条件的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，这样算出的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 与协议中的 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 具有相同的概率分布。</li>
 </ul>
 <h2 id="2-sigma-protocol">2. Sigma-Protocol</h2>
 <p>如果满足上述三个性质，那么这个协议又可以称作 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol。
 在 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 中，我们把 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 拥有的知识称为 witness，用 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 表示，双方共同的输入用 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 来表示。下面对三个性质进行说明。</p>
 <ul>
 <li>
-<p>完备性主要证明 “ 如果 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，那么通过这个协议一定能说服 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> ”，因此证明的方式就比较 straightforward；</p>
+<p>Completeness 主要证明 “ 如果 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，那么通过这个协议一定能说服 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> ”，因此证明的方式就比较 straightforward；</p>
 </li>
 <li>
-<p>可靠性的意思是 “ 如果 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 不知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，那么它能够完成验证的几率是可以忽略不计的” 证明需要使用逆否命题，即如果能较轻松完成证明，那么 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 就会知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>。加上 Special 之后就变成，对于一个 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，如果有一组 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 和 <span><span class="MathJax_Preview">(a;c';r')</span><script type="math/tex">(a;c';r')</script></span>，且 <span><span class="MathJax_Preview">c\neq c', r\neq r'</span><script type="math/tex">c\neq c', r\neq r'</script></span>，那么我们可以构造一个知识解析器（knowledge extractor）将 witness 计算出来；</p>
+<p>Soundness 的意思是 “ 如果 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 不知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，那么它能够完成验证的几率是可以忽略不计的” 证明需要使用逆否命题，即如果能较轻松完成证明，那么 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 就会知道 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>。加上 Special 之后就变成，对于一个 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，如果有一组 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 和 <span><span class="MathJax_Preview">(a;c';r')</span><script type="math/tex">(a;c';r')</script></span>，且 <span><span class="MathJax_Preview">c\neq c', r\neq r'</span><script type="math/tex">c\neq c', r\neq r'</script></span>，那么我们可以构造一个知识解析器（knowledge extractor）将 witness 计算出来；</p>
 </li>
 <li>
-<p>对诚实验证者的零知识性，证明的思想来自 simulation-based，比较正式的描述是： 存在一个<mark class="critic"> p.p.t 算法 </mark><span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> （simulator），对于任意的 <mark class="critic"><span><span class="MathJax_Preview">v\in L_R</span><script type="math/tex">v\in L_R</script></span></mark> 和 <span><span class="MathJax_Preview">c\in C</span><script type="math/tex">c\in C</script></span>，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 都能生成一个 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，而且它的分布概率与原协议将 <span><span class="MathJax_Preview">v,c</span><script type="math/tex">v,c</script></span> 作为输入，及 <span><span class="MathJax_Preview">(v,w)\in R</span><script type="math/tex">(v,w)\in R</script></span> 所产生的结果的分布概率是一样的。</p>
+<p>Special honest-verifier zero-knowledgeness，证明的思想来自 simulation-based，比较正式的描述是： 存在一个<mark class="critic"> p.p.t 算法 </mark><span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> （simulator），对于任意的 <mark class="critic"><span><span class="MathJax_Preview">v\in L_R</span><script type="math/tex">v\in L_R</script></span></mark> 和 <span><span class="MathJax_Preview">c\in C</span><script type="math/tex">c\in C</script></span>，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 都能生成一个 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span>，而且它的分布概率与原协议将 <span><span class="MathJax_Preview">v,c</span><script type="math/tex">v,c</script></span> 作为输入，及 <span><span class="MathJax_Preview">(v,w)\in R</span><script type="math/tex">(v,w)\in R</script></span> 所产生的结果的分布概率是一样的。</p>
 </li>
 </ul>
 <div class="admonition question">
@@ -814,7 +786,7 @@
 \}</script>
 </div>
 <p>当 <span><span class="MathJax_Preview">g^r=h</span><script type="math/tex">g^r=h</script></span> 时，一共 <span><span class="MathJax_Preview">(n-1)</span><script type="math/tex">(n-1)</script></span> 中情况；当 <span><span class="MathJax_Preview">g^r\neq h</span><script type="math/tex">g^r\neq h</script></span> 时，一共 <span><span class="MathJax_Preview">(n-1)(n-1)</span><script type="math/tex">(n-1)(n-1)</script></span> 中情况，因此所有 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 的组合一共有 <span><span class="MathJax_Preview">n(n-1)</span><script type="math/tex">n(n-1)</script></span> 种，每种出现的概率均为 <span><span class="MathJax_Preview">1/n(n-1)</span><script type="math/tex">1/n(n-1)</script></span>。与之前的分布是一致的。</p>
-<p>对于 cheating verifiers，他们只需要将 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的值设为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，即可获得 knowledge <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，因此这个协议虽然是 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，但并不能保证对 cheating verifiers 零知识。</p>
+<p>对于 cheating verifiers，他们只需要将 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的值设为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，即可获得 witness <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，因此这个协议虽然是 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，但并不能保证对 cheating verifiers 零知识。</p>
 </details>
 <hr />
 <h2 id="4">4. 构造数字签名</h2>

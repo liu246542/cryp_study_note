@@ -302,27 +302,6 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
-    
-    <label class="md-nav__link" for="nav-2-3">
-      认证协议
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-3">
-        认证协议
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -412,11 +391,6 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
           
           
           
@@ -460,13 +434,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-8" type="checkbox" id="nav-2-8">
     
-    <label class="md-nav__link" for="nav-2-7">
+    <label class="md-nav__link" for="nav-2-8">
       安全多方计算
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-7">
+      <label class="md-nav__title" for="nav-2-8">
         安全多方计算
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -860,13 +834,35 @@
 <p>也就是说，让 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 在 <span><span class="MathJax_Preview">\{0,1\}</span><script type="math/tex">\{0,1\}</script></span> 中任意取在现实中是不太可能的，因为需要 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 此才能完全证明。因此很多时候我们又引入了一个新概念： witeness hiding.</p>
 <p>Witness hiding 是比 zero knowledge 更弱的一种定义，它要求的是 cheating verifier 获取不到完整的 prover 的私钥。下面来看一个 witness hiding 的例子。</p>
 <p><mark class="critic"> Okamoto's protocol </mark>：</p>
-<p><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 需要证明自己知道 <span><span class="MathJax_Preview">x_1,x_2</span><script type="math/tex">x_1,x_2</script></span> 且满足 <span><span class="MathJax_Preview">h=g_1^{x_1}g_2^{x_2}</span><script type="math/tex">h=g_1^{x_1}g_2^{x_2}</script></span>，需要三步：</p>
+<p><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 需要证明自己知道 <span><span class="MathJax_Preview">x_1,x_2</span><script type="math/tex">x_1,x_2</script></span> 且满足 <span><span class="MathJax_Preview">h=g_1^{x_1}g_2^{x_2}</span><script type="math/tex">h=g_1^{x_1}g_2^{x_2}</script></span>，（其中 <span><span class="MathJax_Preview">log_{g_1}g_2</span><script type="math/tex">log_{g_1}g_2</script></span> 是未知的），需要三步：</p>
 <ol>
 <li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> -&gt; <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>: <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 选择 <span><span class="MathJax_Preview">u_1,u_2\in_R\mathbb{Z}_n</span><script type="math/tex">u_1,u_2\in_R\mathbb{Z}_n</script></span>，计算 <span><span class="MathJax_Preview">a=g_1^{u_1}g_2^{u_2}</span><script type="math/tex">a=g_1^{u_1}g_2^{u_2}</script></span>，并将 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 发送给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>；</li>
 <li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> &lt;- <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>：<span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 随机选择 <span><span class="MathJax_Preview">c\in_R\mathcal{Z}_n</span><script type="math/tex">c\in_R\mathcal{Z}_n</script></span> ，并发送给 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span>；</li>
 <li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> -&gt; <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>：<span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 计算 <span><span class="MathJax_Preview">r_1\leftarrow u_1+cx_1</span><script type="math/tex">r_1\leftarrow u_1+cx_1</script></span>，<span><span class="MathJax_Preview">r_2\leftarrow u_2+cx_2</span><script type="math/tex">r_2\leftarrow u_2+cx_2</script></span>，并将 <span><span class="MathJax_Preview">r_1,r_2</span><script type="math/tex">r_1,r_2</script></span> 发送给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>。</li>
 </ol>
 <p><span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 只需要计算 <span><span class="MathJax_Preview">g_1^{r_1}g_2^{r_2}\overset{?}{=}ah^c</span><script type="math/tex">g_1^{r_1}g_2^{r_2}\overset{?}{=}ah^c</script></span>。</p>
+<p>这个协议与 Schnorr's protocol 最大的不同在于我们能够证明它满足 witness hiding，即使在 cheating verifier 的条件下。</p>
+<p><mark class="critic"> witness hiding </mark>：</p>
+<details class="note"><summary>什么是 witness</summary><p>witness 翻译过来就是 证据，证明，在这里 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 的秘密值就是 witness。比如说 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 知道 <span><span class="MathJax_Preview">h=g^x \mbox{mod} n</span><script type="math/tex">h=g^x \mbox{mod} n</script></span> 中的 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，那么 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 就称为 witness。在这个协议里，witness 指得就是 <span><span class="MathJax_Preview">(x_1,x_2)</span><script type="math/tex">(x_1,x_2)</script></span></p>
+</details>
+<p>首先说一下证明的目的，我们需要证明 honest <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 在与 cheating <span><span class="MathJax_Preview">\mathcal{V}^*</span><script type="math/tex">\mathcal{V}^*</script></span> 进行交互多次之后，<span><span class="MathJax_Preview">\mathcal{V}^*</span><script type="math/tex">\mathcal{V}^*</script></span> 不能生成一组 <span><span class="MathJax_Preview">(x_1',x_2')</span><script type="math/tex">(x_1',x_2')</script></span> 满足 <span><span class="MathJax_Preview">h=g^{x_1'}g^{x_2'}</span><script type="math/tex">h=g^{x_1'}g^{x_2'}</script></span>。</p>
+<p>注：<span><span class="MathJax_Preview">(x_1',x_2')\neq (x_1,x_2)</span><script type="math/tex">(x_1',x_2')\neq (x_1,x_2)</script></span></p>
+<p>用反证法，如果能找出这一组 <span><span class="MathJax_Preview">(x_1',x_2')</span><script type="math/tex">(x_1',x_2')</script></span>，那么我们知道：</p>
+<div>
+<div class="MathJax_Preview">
+g_2=g_1^{(x_1'-x_1)/(x_2'-x_2)}
+</div>
+<script type="math/tex; mode=display">
+g_2=g_1^{(x_1'-x_1)/(x_2'-x_2)}
+</script>
+</div>
+<p>这也表明 <span><span class="MathJax_Preview">(x_1'-x_1)/(x_2'-x_2)</span><script type="math/tex">(x_1'-x_1)/(x_2'-x_2)</script></span> 是 <span><span class="MathJax_Preview">g_2</span><script type="math/tex">g_2</script></span> 的离散对数。因为求解离散对数问题是困难的，因此要找到 <span><span class="MathJax_Preview">(x_1',x_2')</span><script type="math/tex">(x_1',x_2')</script></span> 也是困难的。</p>
+<div class="admonition note">
+<p class="admonition-title">witness indistinguishable</p>
+<p>witness 不可区分，直观上说就是给出一组不同的 <span><span class="MathJax_Preview">(x_1,x_2)</span><script type="math/tex">(x_1,x_2)</script></span> 和 <span><span class="MathJax_Preview">(x_1',x_2')</span><script type="math/tex">(x_1',x_2')</script></span>，他们的 conversation <span><span class="MathJax_Preview">(a;c;r_1,r_2)</span><script type="math/tex">(a;c;r_1,r_2)</script></span> 和 <span><span class="MathJax_Preview">(a';c;r_1',r_2')</span><script type="math/tex">(a';c;r_1',r_2')</script></span> 可以是相等的。
+比如我们只需要令：
+<span><span class="MathJax_Preview">u_1'\leftarrow u_1 + c (x_1 - x_1')</span><script type="math/tex">u_1'\leftarrow u_1 + c (x_1 - x_1')</script></span>,  <span><span class="MathJax_Preview">u_2'\leftarrow u_2 + c (x_2 - x_2')</span><script type="math/tex">u_2'\leftarrow u_2 + c (x_2 - x_2')</script></span>，那么很容易推出 <span><span class="MathJax_Preview">a=a', (r_1,r_2)=(r_1',r_2')</span><script type="math/tex">a=a', (r_1,r_2)=(r_1',r_2')</script></span>。</p>
+</div>
                 
                   
                 
