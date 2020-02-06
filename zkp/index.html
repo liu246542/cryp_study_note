@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -40,17 +40,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -351,6 +351,19 @@
     2. Sigma-Protocol
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1-parallel-composition" class="md-nav__link">
+    3-1. Parallel composition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -551,6 +564,42 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      Vehicular Communications
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        Vehicular Communications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vanets/reviews/2019_100182/" title="2019_100182" class="md-nav__link">
+      2019_100182
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../vanets/reviews/2019/" title="2019" class="md-nav__link">
       2019
@@ -684,6 +733,19 @@
     2. Sigma-Protocol
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1-parallel-composition" class="md-nav__link">
+    3-1. Parallel composition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -788,6 +850,15 @@
 <p>当 <span><span class="MathJax_Preview">g^r=h</span><script type="math/tex">g^r=h</script></span> 时，一共 <span><span class="MathJax_Preview">(n-1)</span><script type="math/tex">(n-1)</script></span> 中情况；当 <span><span class="MathJax_Preview">g^r\neq h</span><script type="math/tex">g^r\neq h</script></span> 时，一共 <span><span class="MathJax_Preview">(n-1)(n-1)</span><script type="math/tex">(n-1)(n-1)</script></span> 中情况，因此所有 <span><span class="MathJax_Preview">(a;c;r)</span><script type="math/tex">(a;c;r)</script></span> 的组合一共有 <span><span class="MathJax_Preview">n(n-1)</span><script type="math/tex">n(n-1)</script></span> 种，每种出现的概率均为 <span><span class="MathJax_Preview">1/n(n-1)</span><script type="math/tex">1/n(n-1)</script></span>。与之前的分布是一致的。</p>
 <p>对于 cheating verifiers，他们只需要将 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的值设为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，即可获得 witness <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，因此这个协议虽然是 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol，但并不能保证对 cheating verifiers 零知识。</p>
 </details>
+<p>对于 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 有五种不同的组合方式，即 parallel composition, AND-composition, EQ-composition, OR-composition, 和 NEQ-composition。
+下面还是以 Schnorr 的协议来描述这些组合方式。</p>
+<h3 id="3-1-parallel-composition">3-1. Parallel composition</h3>
+<p>对于 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 证明自己知道 <span><span class="MathJax_Preview">x_1=log_g h_1,x_2=log_g h_2</span><script type="math/tex">x_1=log_g h_1,x_2=log_g h_2</script></span>：</p>
+<ul>
+<li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> -&gt; <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>： <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 选取 <span><span class="MathJax_Preview">u_1,u_2\in_R\mathbb{Z}_n</span><script type="math/tex">u_1,u_2\in_R\mathbb{Z}_n</script></span>，计算 <span><span class="MathJax_Preview">a_1\leftarrow g^{u_1}, a_2\leftarrow g^{u_2}</span><script type="math/tex">a_1\leftarrow g^{u_1}, a_2\leftarrow g^{u_2}</script></span>，并将 <span><span class="MathJax_Preview">a_1,a_2</span><script type="math/tex">a_1,a_2</script></span> 发送给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>；</li>
+<li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> &lt;- <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>：<span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 选择 <span><span class="MathJax_Preview">c\in_R\mathbb{Z}_n</span><script type="math/tex">c\in_R\mathbb{Z}_n</script></span>，将 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 发送给 <span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span>；</li>
+<li><span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> -&gt; <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>：<span><span class="MathJax_Preview">\mathcal{P}</span><script type="math/tex">\mathcal{P}</script></span> 计算 <span><span class="MathJax_Preview">r_1\leftarrow_n u_1+cx_1,r_2\leftarrow_n u_2+cx_2</span><script type="math/tex">r_1\leftarrow_n u_1+cx_1,r_2\leftarrow_n u_2+cx_2</script></span>，并将 <span><span class="MathJax_Preview">r_1,r_2</span><script type="math/tex">r_1,r_2</script></span> 发送给 <span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span>；<span><span class="MathJax_Preview">\mathcal{V}</span><script type="math/tex">\mathcal{V}</script></span> 验证 <span><span class="MathJax_Preview">g^{r_1}\overset{?}{=}a_1h_1^{c}, g^{r_2}\overset{?}{=}a_2h_2^{c}</span><script type="math/tex">g^{r_1}\overset{?}{=}a_1h_1^{c}, g^{r_2}\overset{?}{=}a_2h_2^{c}</script></span>。</li>
+</ul>
 <hr />
 <h2 id="4">4. 构造数字签名</h2>
 <p>任意的 <span><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>-protocol 都可以构造数字签名，这个想法是由 Fiat 和 Shamir 提出来的（Fiat-Shamir heuristic）。核心思想在于 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的构造，在一般的 <span><span class="MathJax_Preview">Sigma</span><script type="math/tex">Sigma</script></span>-protocol 中，<span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 一般都是随机选取的。但是如果我们将 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 取做某个值的哈希，比如</p>
@@ -812,6 +883,7 @@
 </div>
                 
                   
+                
                 
               
               
@@ -879,7 +951,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.c648116f.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
