@@ -1,0 +1,1624 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>EPTD19 - Liu's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/mystyle.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#review-for-eptd19" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liu&#39;s Notes" class="md-header__button md-logo" aria-label="Liu's Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liu's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EPTD19
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liu&#39;s Notes" class="md-nav__button md-logo" aria-label="Liu's Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Liu's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        密码学
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="密码学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          密码学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        对称密码学
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="对称密码学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          对称密码学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prgf/" class="md-nav__link">
+        PRG与PRF
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        数字签名
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数字签名" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数字签名
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blind/" class="md-nav__link">
+        盲签名
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../group/" class="md-nav__link">
+        群签名
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ring/" class="md-nav__link">
+        环签名
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../identity/" class="md-nav__link">
+        认证协议
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zkp/" class="md-nav__link">
+        零知识证明
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pairing/" class="md-nav__link">
+        双线性映射
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AC/" class="md-nav__link">
+        匿名凭证
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accu/" class="md-nav__link">
+        累加器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      <label class="md-nav__link" for="__nav_2_8">
+        安全多方计算
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="安全多方计算" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          安全多方计算
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beaver/" class="md-nav__link">
+        Beaver Triples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc/" class="md-nav__link">
+        Garbled Circuits
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hashc/" class="md-nav__link">
+        哈希链
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        可搜索加密
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="可搜索加密" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          可搜索加密
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE/intro/" class="md-nav__link">
+        简介
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE/multip/" class="md-nav__link">
+        多关键词
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE/OXT/" class="md-nav__link">
+        OXT协议
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        IBC
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IBC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          IBC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ibc/mcs/" class="md-nav__link">
+        IBC + MCS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Privacy-Preserving
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Privacy-Preserving" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Privacy-Preserving
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        Real-Time Data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Real-Time Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Real-Time Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pp/rt/01/" class="md-nav__link">
+        WLP'20
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Reviews
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reviews" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Reviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Review/SmartGrid/" class="md-nav__link">
+        智能电网
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        MCS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="MCS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          MCS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/eHealth21/" class="md-nav__link">
+        eHealth
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        VANETs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="VANETs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          VANETs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/intro/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/hybrid/" class="md-nav__link">
+        Hybrid
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/survey/" class="md-nav__link">
+        Survey
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/ieee802/" class="md-nav__link">
+        IEEE802.11p
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" type="checkbox" id="__nav_8_5" >
+      
+      <label class="md-nav__link" for="__nav_8_5">
+        Reviews
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reviews" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          Reviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5_1" type="checkbox" id="__nav_8_5_1" >
+      
+      <label class="md-nav__link" for="__nav_8_5_1">
+        Vehicular Communications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Vehicular Communications" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Vehicular Communications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/reviews/2019_100182/" class="md-nav__link">
+        2019_100182
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/reviews/2019/" class="md-nav__link">
+        2019
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/reviews/2018/" class="md-nav__link">
+        2018
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_6" type="checkbox" id="__nav_8_6" >
+      
+      <label class="md-nav__link" for="__nav_8_6">
+        PKI
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PKI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          PKI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/PKI/seveccom/" class="md-nav__link">
+        Seveccom
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Q&A
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Q&A" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Q&A
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../q_and_a/pairing/" class="md-nav__link">
+        Pairing realted
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        Smart Contracts
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Smart Contracts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sc/dpm18_privacyguard/" class="md-nav__link">
+        PrivacyGuard (DPM '18)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dp/" class="md-nav__link">
+        Differential Privacy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      <label class="md-nav__link" for="__nav_12">
+        PPTD
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PPTD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          PPTD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        INTRO
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          EPTD19
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        EPTD19
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    Problem Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-proposed-scheme" class="md-nav__link">
+    The Proposed Scheme
+  </a>
+  
+    <nav class="md-nav" aria-label="The Proposed Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secure-weight-update" class="md-nav__link">
+    Secure Weight Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MSJ17/" class="md-nav__link">
+        MSJ17
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XLX20/" class="md-nav__link">
+        XLX20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TWY18/" class="md-nav__link">
+        TWY18
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XZY20/" class="md-nav__link">
+        XZY20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ICDCS20/" class="md-nav__link">
+        ICDCS20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JZT20/" class="md-nav__link">
+        JZT20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RTPT19/" class="md-nav__link">
+        RTPT19
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thesis_TD/" class="md-nav__link">
+        thesis19
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%80%9D%E8%80%83/" class="md-nav__link">
+        rethink
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPPR19/" class="md-nav__link">
+        tppr19
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TFL21/" class="md-nav__link">
+        TFL21
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problems/" class="md-nav__link">
+        难点
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      <label class="md-nav__link" for="__nav_13">
+        Archives
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Archives" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Archives
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NaN/D20/" class="md-nav__link">
+        D20
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    Problem Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-proposed-scheme" class="md-nav__link">
+    The Proposed Scheme
+  </a>
+  
+    <nav class="md-nav" aria-label="The Proposed Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secure-weight-update" class="md-nav__link">
+    Secure Weight Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="review-for-eptd19">Review for EPTD'19</h1>
+<div class="admonition info">
+<p class="admonition-title">[EPTD'19]</p>
+<p><strong>Efficient and Privacy-Preserving Truth Discovery in Mobile Crowd Sensing Systems</strong></p>
+<p>(<em>IEEE TVT'19</em>)</p>
+<p>"... can tolerate users offline at any stage, while guaranteeing practical efficiency and accuracy under working process."</p>
+</div>
+<hr />
+<h2 id="motivation">Motivation</h2>
+<ul>
+<li>previous researches require that users stay online at all times for interacting frequently with the cloud server consequently</li>
+<li>two non-colluding servers seem not suitable for real-world applications</li>
+</ul>
+<h2 id="problem-statement">Problem Statement</h2>
+<blockquote>
+<p>Specifically, truth discovery <mark class="critic"> always starts from estimation each user's reliability </mark> subsequently to integrate the users' weights and sensory data for further inferring the ground truths.</p>
+</blockquote>
+<p>假设一共有 <span><span class="MathJax_Preview">\mathcal{H}</span><script type="math/tex">\mathcal{H}</script></span> 个对象，<span><span class="MathJax_Preview">\mathcal{D}</span><script type="math/tex">\mathcal{D}</script></span> 个用户。<span><span class="MathJax_Preview">x_h^d</span><script type="math/tex">x_h^d</script></span> 表示第 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 个用户对对象 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 观测到的结果，地面真值用 <span><span class="MathJax_Preview">x_h^*</span><script type="math/tex">x_h^*</script></span> 来表示。</p>
+<p><strong>Weight Update:</strong></p>
+<div>
+<div class="MathJax_Preview">w_d = f(\sum_{h=1}^H d(x_h^d, x_h^*))</div>
+<script type="math/tex; mode=display">w_d = f(\sum_{h=1}^H d(x_h^d, x_h^*))</script>
+</div>
+<p><strong>Truth Update:</strong></p>
+<div>
+<div class="MathJax_Preview">x_h^* = \frac{\sum_{d=1}^\mathcal{D} w_d \cdot x_h^d}{\sum_{d=1}^\mathcal{D} w_d}</div>
+<script type="math/tex; mode=display">x_h^* = \frac{\sum_{d=1}^\mathcal{D} w_d \cdot x_h^d}{\sum_{d=1}^\mathcal{D} w_d}</script>
+</div>
+<p>Two types of entities (honest-but-curious):</p>
+<ul>
+<li>users</li>
+<li>the cloud server</li>
+</ul>
+<blockquote>
+<p>In our EPTD, we allow the cloud server to collude with any set of less than <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> users to attack EPTD for stealing users' privacy.</p>
+</blockquote>
+<p>Goal: protect the privacy of user's sensory data and reliability information (i.e., weight) in whole working process</p>
+<ul>
+<li>shamir secret sharing: tolerate additional parties dropping out during recovery process</li>
+<li>double masking: ensure the privacy of <span><span class="MathJax_Preview">x_d</span><script type="math/tex">x_d</script></span> even the cloud server can remove the masks above of each user <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></li>
+</ul>
+<p><strong>Shamir's <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>-out-of-<span><span class="MathJax_Preview">\mathcal{D}</span><script type="math/tex">\mathcal{D}</script></span> Secret Sharing:</strong></p>
+<p><span><span class="MathJax_Preview">\mathcal{U}</span><script type="math/tex">\mathcal{U}</script></span> denotes the users' ID, <span><span class="MathJax_Preview">|\mathcal{U}| = \mathcal{D}</span><script type="math/tex">|\mathcal{U}| = \mathcal{D}</script></span>, <span><span class="MathJax_Preview">\mathcal{M}\subseteq \mathcal{U}</span><script type="math/tex">\mathcal{M}\subseteq \mathcal{U}</script></span>, <span><span class="MathJax_Preview">t\leq |\mathcal{M}|</span><script type="math/tex">t\leq |\mathcal{M}|</script></span></p>
+<ul>
+<li><span><span class="MathJax_Preview">\mbox{Shamir.share}(s, t, \mathcal{U}) \to \{(d, s_d)\}_{d\in \mathcal{U}}</span><script type="math/tex">\mbox{Shamir.share}(s, t, \mathcal{U}) \to \{(d, s_d)\}_{d\in \mathcal{U}}</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{Shamir.recon}(\{(d, s_d)\}_{d\in \mathcal{M}}, t) \to s</span><script type="math/tex">\mbox{Shamir.recon}(\{(d, s_d)\}_{d\in \mathcal{M}}, t) \to s</script></span></li>
+</ul>
+<p><strong>Key Agreement:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是私钥，后面用 <span><span class="MathJax_Preview">D_d^{SK}</span><script type="math/tex">D_d^{SK}</script></span> 表示；<span><span class="MathJax_Preview">g^x</span><script type="math/tex">g^x</script></span> 是公钥，后面用 <span><span class="MathJax_Preview">D_d^{PK}</span><script type="math/tex">D_d^{PK}</script></span> 表示。<span><span class="MathJax_Preview">\mbox{KA.agree}</span><script type="math/tex">\mbox{KA.agree}</script></span> 的意思就是在知道用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 的私钥 <span><span class="MathJax_Preview">x_d</span><script type="math/tex">x_d</script></span> 和 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的公钥 <span><span class="MathJax_Preview">g^{x_m}</span><script type="math/tex">g^{x_m}</script></span> 时，可以得到他们之间的共享密钥 <span><span class="MathJax_Preview">s_{d,m}</span><script type="math/tex">s_{d,m}</script></span>。</p>
+</div>
+<ul>
+<li><span><span class="MathJax_Preview">\mbox{KA.param}(k)\to (\mathcal{G}, g, q, H)</span><script type="math/tex">\mbox{KA.param}(k)\to (\mathcal{G}, g, q, H)</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{KA.gen}(\mathcal{G}, g, q, H)\to (x, g^x)</span><script type="math/tex">\mbox{KA.gen}(\mathcal{G}, g, q, H)\to (x, g^x)</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{KA.agree}(\mathsf{sign}_m(g^{x_d}, g^{x_m}), \mathsf{MAC}_{k_v}(m) ,x_d, g^{x_m}, d, m) \to s_{d,m}</span><script type="math/tex">\mbox{KA.agree}(\mathsf{sign}_m(g^{x_d}, g^{x_m}), \mathsf{MAC}_{k_v}(m) ,x_d, g^{x_m}, d, m) \to s_{d,m}</script></span></li>
+</ul>
+<p>真值发现的目标是计算</p>
+<ol>
+<li><span><span class="MathJax_Preview">\sum_{d'=1}^\mathcal{D} \sum_{h=1}^{H} d(x_h^{d'}, x_h^*)</span><script type="math/tex">\sum_{d'=1}^\mathcal{D} \sum_{h=1}^{H} d(x_h^{d'}, x_h^*)</script></span></li>
+<li><span><span class="MathJax_Preview">\sum_{d=1}^\mathcal{D} w_d \cdot x_h^d</span><script type="math/tex">\sum_{d=1}^\mathcal{D} w_d \cdot x_h^d</script></span></li>
+<li><span><span class="MathJax_Preview">\sum_{d=1}^\mathcal{D} w_d</span><script type="math/tex">\sum_{d=1}^\mathcal{D} w_d</script></span></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>对应到增量的真值发现中，也是需要计算这些，但是不需要迭代</p>
+</div>
+<p><strong>One Masking:</strong></p>
+<p>假定所有用户按照一定次序排列，对于任一对用户 <span><span class="MathJax_Preview">(d,m)</span><script type="math/tex">(d,m)</script></span>, <span><span class="MathJax_Preview">d&lt;m</span><script type="math/tex">d<m</script></span>，他们共同有一个随机数 <span><span class="MathJax_Preview">r_{d,m}</span><script type="math/tex">r_{d,m}</script></span>，用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 加上这个随机数，而用户 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 减去这个随机数。</p>
+<p>那么用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 输出</p>
+<div>
+<div class="MathJax_Preview">y_d = x_d + \sum_{m\in \mathcal{D}:d&lt;m}r_{d,m} - \sum_{m\in \mathcal{D}:d&gt;m} r_{m,d}</div>
+<script type="math/tex; mode=display">y_d = x_d + \sum_{m\in \mathcal{D}:d<m}r_{d,m} - \sum_{m\in \mathcal{D}:d>m} r_{m,d}</script>
+</div>
+<p>因此把 <span><span class="MathJax_Preview">y_d</span><script type="math/tex">y_d</script></span> 全部加起来就可以得到聚合后的总值</p>
+<div>
+<div class="MathJax_Preview">z = \sum_{d\in \mathcal{D}} y_d = \sum_{d\in\mathcal{D}} x_d </div>
+<script type="math/tex; mode=display">z = \sum_{d\in \mathcal{D}} y_d = \sum_{d\in\mathcal{D}} x_d </script>
+</div>
+<p>这个方法有两个缺点：</p>
+<ol>
+<li>每一个用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 都需要跟其他所有的用户达成共同随机数 <span><span class="MathJax_Preview">r_{d,m}</span><script type="math/tex">r_{d,m}</script></span>，通信开销为 <span><span class="MathJax_Preview">\mathcal{D}^2</span><script type="math/tex">\mathcal{D}^2</script></span></li>
+<li>如果有一个用户退出，那么最后的结果就会产生偏差</li>
+</ol>
+<p><strong>Double-Masking with OTP:</strong></p>
+<p>为了降低通信开销，可以使用伪随机数生成器，即 <span><span class="MathJax_Preview">\mathsf{PRG}</span><script type="math/tex">\mathsf{PRG}</script></span>。种子可以使用二者之间的共享密钥。
+至于用户退出的问题，可以用秘密共享的方式解决。
+但在现实中，可能出现用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 发送的 <span><span class="MathJax_Preview">r_{d,m}</span><script type="math/tex">r_{d,m}</script></span> 存在延迟的情况，这也就让服务器可以恢复 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 上传的数值 <span><span class="MathJax_Preview">x_d</span><script type="math/tex">x_d</script></span>。</p>
+<p>因此这里每个用户在上传之前，会随机选择一个种子 <span><span class="MathJax_Preview">n_d</span><script type="math/tex">n_d</script></span>，并把 <span><span class="MathJax_Preview">n_d</span><script type="math/tex">n_d</script></span> 以秘密共享的方式分享给其他用户。</p>
+<div>
+<div class="MathJax_Preview">y_d = x_d + \mathsf{PRG}(n_d) + \sum_{m\in\mathcal{D}:d&lt;m}\mathsf{PRG}(r_{d,m}) - \sum_{m\in\mathcal{D}:d&gt;m}\mathsf{PRG}(r_{m,d}) </div>
+<script type="math/tex; mode=display">y_d = x_d + \mathsf{PRG}(n_d) + \sum_{m\in\mathcal{D}:d<m}\mathsf{PRG}(r_{d,m}) - \sum_{m\in\mathcal{D}:d>m}\mathsf{PRG}(r_{m,d}) </script>
+</div>
+<hr />
+<h2 id="the-proposed-scheme">The Proposed Scheme</h2>
+<p><strong>High-Level View:</strong></p>
+<p>一个云服务器，<span><span class="MathJax_Preview">\mathcal{D}</span><script type="math/tex">\mathcal{D}</script></span> 个用户，而且每个用户秘密地上传 <span><span class="MathJax_Preview">x_d</span><script type="math/tex">x_d</script></span>，服务器的目标就是聚合 <span><span class="MathJax_Preview">x_d</span><script type="math/tex">x_d</script></span> 并获取最终的结果。在这个过程中，用户可以随时退出，而云服务器只需要至少有 <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 个用户提供了数据即可恢复出原有的数据。</p>
+<h3 id="secure-weight-update">Secure Weight Update</h3>
+<p><strong>Round 0 - Key Generation:</strong></p>
+<div>
+<div class="MathJax_Preview">\{(T_d^{PK}, T_d^{SK}), (D_d^{PK}, D_d^{SK}), (C_d^{PK}, C_d^{SK})\} \gets \mbox{KA.gen}(k)</div>
+<script type="math/tex; mode=display">\{(T_d^{PK}, T_d^{SK}), (D_d^{PK}, D_d^{SK}), (C_d^{PK}, C_d^{SK})\} \gets \mbox{KA.gen}(k)</script>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此步骤由 TA 完成，每个用户有三对密钥，这三对密钥的作用分别是，<span><span class="MathJax_Preview">T_d</span><script type="math/tex">T_d</script></span> 在密钥交换后作为对称加密密钥，<span><span class="MathJax_Preview">D_d</span><script type="math/tex">D_d</script></span> 在密钥交换后作为种子，<span><span class="MathJax_Preview">C_d</span><script type="math/tex">C_d</script></span> 作为签名和验证</p>
+</div>
+<p>每个用户使用私钥 <span><span class="MathJax_Preview">C_d^{SK}</span><script type="math/tex">C_d^{SK}</script></span> 对公钥 <span><span class="MathJax_Preview">(T_d^{PK}, D_d^{PK})</span><script type="math/tex">(T_d^{PK}, D_d^{PK})</script></span> 进行签名，即：</p>
+<div>
+<div class="MathJax_Preview">\rho_d \gets \mbox{sign}(C_d^{SK}, T_d^{PK}||D_d^{PK})</div>
+<script type="math/tex; mode=display">\rho_d \gets \mbox{sign}(C_d^{SK}, T_d^{PK}||D_d^{PK})</script>
+</div>
+<p>然后用户将 <span><span class="MathJax_Preview">(\rho_d || T_d^{PK} || D_d^{PK})</span><script type="math/tex">(\rho_d || T_d^{PK} || D_d^{PK})</script></span> 发送给云服务器。记云服务器收到的用户集合为 <span><span class="MathJax_Preview">\mathcal{U}_1</span><script type="math/tex">\mathcal{U}_1</script></span>，它将 <span><span class="MathJax_Preview">\{(m, T_m^{PK}, D_m^{PK}, \rho_m)\}_{m\in \mathcal{U}_1}</span><script type="math/tex">\{(m, T_m^{PK}, D_m^{PK}, \rho_m)\}_{m\in \mathcal{U}_1}</script></span> 广播给所有用户。</p>
+<hr />
+<p><strong>Round 1 - Key Sharing:</strong></p>
+<p>对于用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 来说，他需要检查：</p>
+<ul>
+<li><span><span class="MathJax_Preview">|\mathcal{U}_1| \geq t</span><script type="math/tex">|\mathcal{U}_1| \geq t</script></span> ?</li>
+<li><span><span class="MathJax_Preview">\rho_m</span><script type="math/tex">\rho_m</script></span> is valid (使用 <span><span class="MathJax_Preview">C_m^{PK}</span><script type="math/tex">C_m^{PK}</script></span>，对于每一个 <span><span class="MathJax_Preview">m\in \mathcal{U}_1</span><script type="math/tex">m\in \mathcal{U}_1</script></span>)?</li>
+</ul>
+<p>检查完毕，用户首先随机选择 <span><span class="MathJax_Preview">n_d</span><script type="math/tex">n_d</script></span> 并为 <span><span class="MathJax_Preview">D_d^{SK}</span><script type="math/tex">D_d^{SK}</script></span> 和 <span><span class="MathJax_Preview">n_d</span><script type="math/tex">n_d</script></span> 创建秘密共享：</p>
+<div>
+<div class="MathJax_Preview">\{(m, D_{m,d}^{SK})\}_{m\in\mathcal{U}_1} \gets \mbox{Shamir.share}(D_d^{SK}, t, \mathcal{U}_1)</div>
+<script type="math/tex; mode=display">\{(m, D_{m,d}^{SK})\}_{m\in\mathcal{U}_1} \gets \mbox{Shamir.share}(D_d^{SK}, t, \mathcal{U}_1)</script>
+</div>
+<div>
+<div class="MathJax_Preview">\{(m, n_{m,d})\}_{m\in\mathcal{U}_1} \gets \mbox{Shamir.share}(n_d, t, \mathcal{U}_1)</div>
+<script type="math/tex; mode=display">\{(m, n_{m,d})\}_{m\in\mathcal{U}_1} \gets \mbox{Shamir.share}(n_d, t, \mathcal{U}_1)</script>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>也就是说把这些都分成了 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 份，只需要其中的 <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 份便可以还原出 <span><span class="MathJax_Preview">D_d^{SK}</span><script type="math/tex">D_d^{SK}</script></span> 和 <span><span class="MathJax_Preview">n_d</span><script type="math/tex">n_d</script></span></p>
+</div>
+<p>每个用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 使用对称加密算法，加密 <span><span class="MathJax_Preview">d,m,D_{m,d}^{SK},n_{m,d}</span><script type="math/tex">d,m,D_{m,d}^{SK},n_{m,d}</script></span>，生成密文 <span><span class="MathJax_Preview">\mathcal{T}_{m,d}</span><script type="math/tex">\mathcal{T}_{m,d}</script></span>，并提交给服务器：</p>
+<div>
+<div class="MathJax_Preview">\mathcal{T}_{m,d} \gets \mbox{AE.enc}(\mbox{KA.agree}(T_d^{SK}, T_m^{PK}), d||m||D_{m,d}^{SK}||n_{m,d})</div>
+<script type="math/tex; mode=display">\mathcal{T}_{m,d} \gets \mbox{AE.enc}(\mbox{KA.agree}(T_d^{SK}, T_m^{PK}), d||m||D_{m,d}^{SK}||n_{m,d})</script>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span><span class="MathJax_Preview">\mathcal{T}_{m,d}</span><script type="math/tex">\mathcal{T}_{m,d}</script></span> 只有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 和 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 可以解密</p>
+</div>
+<p>设 <span><span class="MathJax_Preview">\mathcal{U}_2</span><script type="math/tex">\mathcal{U}_2</script></span> 为此时服务器收到消息的用户集合，<span><span class="MathJax_Preview">\mathcal{U}_2\subseteq \mathcal{U}_1</span><script type="math/tex">\mathcal{U}_2\subseteq \mathcal{U}_1</script></span>。服务器首先初始化一个真值 <span><span class="MathJax_Preview">x_h^*</span><script type="math/tex">x_h^*</script></span>，并将 <span><span class="MathJax_Preview">\{\mathcal{T}_{m,d}\}_{m\in\mathcal{U}_2}</span><script type="math/tex">\{\mathcal{T}_{m,d}\}_{m\in\mathcal{U}_2}</script></span> 和 <span><span class="MathJax_Preview">x_h^*</span><script type="math/tex">x_h^*</script></span> 发送给所有用户。</p>
+<hr />
+<p><strong>Round 2:</strong></p>
+<p>用户收到 <span><span class="MathJax_Preview">\{\mathcal{T}_{m,d}\}_{m\in\mathcal{U}_2}</span><script type="math/tex">\{\mathcal{T}_{m,d}\}_{m\in\mathcal{U}_2}</script></span> 后，首先检查是否 <span><span class="MathJax_Preview">|\mathcal{U}_2|\geq t</span><script type="math/tex">|\mathcal{U}_2|\geq t</script></span>。对于用户 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 来说，可以计算出：</p>
+<div>
+<div class="MathJax_Preview">r_{d,m} \gets \mbox{KA.agree}(D_d^{SK}, D_m^{PK})</div>
+<script type="math/tex; mode=display">r_{d,m} \gets \mbox{KA.agree}(D_d^{SK}, D_m^{PK})</script>
+</div>
+<p>然后可以计算：</p>
+<div>
+<div class="MathJax_Preview">y_d^2 = x_d^2 + \mathsf{PRG}(n_d) + \sum_{m\in\mathcal{U}_2:d&lt;m} \mathsf{PRG}(r_{d,m}) - \sum_{m\in\mathcal{U}_2:d&gt;m} \mathsf{PRG}(r_{m,d})</div>
+<script type="math/tex; mode=display">y_d^2 = x_d^2 + \mathsf{PRG}(n_d) + \sum_{m\in\mathcal{U}_2:d<m} \mathsf{PRG}(r_{d,m}) - \sum_{m\in\mathcal{U}_2:d>m} \mathsf{PRG}(r_{m,d})</script>
+</div>
+<p>其中，<span><span class="MathJax_Preview">x_d^2</span><script type="math/tex">x_d^2</script></span> 表示 <span><span class="MathJax_Preview">\sum_{h=1}^\mathcal{H}d(x_h^d, x_h^*)</span><script type="math/tex">\sum_{h=1}^\mathcal{H}d(x_h^d, x_h^*)</script></span></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../intro/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              INTRO
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../MSJ17/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              MSJ17
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

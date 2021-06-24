@@ -1,0 +1,1677 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>RTPT19 - Liu's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/mystyle.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#review-for-rtpt19" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liu&#39;s Notes" class="md-header__button md-logo" aria-label="Liu's Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liu's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RTPT19
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liu&#39;s Notes" class="md-nav__button md-logo" aria-label="Liu's Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Liu's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        密码学
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="密码学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          密码学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        对称密码学
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="对称密码学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          对称密码学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prgf/" class="md-nav__link">
+        PRG与PRF
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        数字签名
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数字签名" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数字签名
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blind/" class="md-nav__link">
+        盲签名
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../group/" class="md-nav__link">
+        群签名
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ring/" class="md-nav__link">
+        环签名
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../identity/" class="md-nav__link">
+        认证协议
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zkp/" class="md-nav__link">
+        零知识证明
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pairing/" class="md-nav__link">
+        双线性映射
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AC/" class="md-nav__link">
+        匿名凭证
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accu/" class="md-nav__link">
+        累加器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      <label class="md-nav__link" for="__nav_2_8">
+        安全多方计算
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="安全多方计算" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          安全多方计算
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beaver/" class="md-nav__link">
+        Beaver Triples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gc/" class="md-nav__link">
+        Garbled Circuits
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hashc/" class="md-nav__link">
+        哈希链
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        可搜索加密
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="可搜索加密" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          可搜索加密
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE/intro/" class="md-nav__link">
+        简介
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE/multip/" class="md-nav__link">
+        多关键词
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE/OXT/" class="md-nav__link">
+        OXT协议
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        IBC
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IBC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          IBC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ibc/mcs/" class="md-nav__link">
+        IBC + MCS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Privacy-Preserving
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Privacy-Preserving" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Privacy-Preserving
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        Real-Time Data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Real-Time Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Real-Time Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pp/rt/01/" class="md-nav__link">
+        WLP'20
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Reviews
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reviews" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Reviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Review/SmartGrid/" class="md-nav__link">
+        智能电网
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        MCS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="MCS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          MCS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/eHealth21/" class="md-nav__link">
+        eHealth
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        VANETs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="VANETs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          VANETs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/intro/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/hybrid/" class="md-nav__link">
+        Hybrid
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/survey/" class="md-nav__link">
+        Survey
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/ieee802/" class="md-nav__link">
+        IEEE802.11p
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" type="checkbox" id="__nav_8_5" >
+      
+      <label class="md-nav__link" for="__nav_8_5">
+        Reviews
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reviews" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          Reviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5_1" type="checkbox" id="__nav_8_5_1" >
+      
+      <label class="md-nav__link" for="__nav_8_5_1">
+        Vehicular Communications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Vehicular Communications" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Vehicular Communications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/reviews/2019_100182/" class="md-nav__link">
+        2019_100182
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/reviews/2019/" class="md-nav__link">
+        2019
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/reviews/2018/" class="md-nav__link">
+        2018
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_6" type="checkbox" id="__nav_8_6" >
+      
+      <label class="md-nav__link" for="__nav_8_6">
+        PKI
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PKI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          PKI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanets/PKI/seveccom/" class="md-nav__link">
+        Seveccom
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Q&A
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Q&A" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Q&A
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../q_and_a/pairing/" class="md-nav__link">
+        Pairing realted
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        Smart Contracts
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Smart Contracts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sc/dpm18_privacyguard/" class="md-nav__link">
+        PrivacyGuard (DPM '18)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dp/" class="md-nav__link">
+        Differential Privacy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      <label class="md-nav__link" for="__nav_12">
+        PPTD
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PPTD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          PPTD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        INTRO
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EPTD19/" class="md-nav__link">
+        EPTD19
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MSJ17/" class="md-nav__link">
+        MSJ17
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XLX20/" class="md-nav__link">
+        XLX20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TWY18/" class="md-nav__link">
+        TWY18
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XZY20/" class="md-nav__link">
+        XZY20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ICDCS20/" class="md-nav__link">
+        ICDCS20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JZT20/" class="md-nav__link">
+        JZT20
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          RTPT19
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        RTPT19
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminaries" class="md-nav__link">
+    Preliminaries
+  </a>
+  
+    <nav class="md-nav" aria-label="Preliminaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icrh" class="md-nav__link">
+    ICRH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-agreement" class="md-nav__link">
+    Key agreement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret-sharing" class="md-nav__link">
+    Secret sharing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticated-encryption" class="md-nav__link">
+    Authenticated encryption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-proposed-framework-design" class="md-nav__link">
+    The proposed framework design
+  </a>
+  
+    <nav class="md-nav" aria-label="The proposed framework design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secure-summation-aggregation" class="md-nav__link">
+    Secure summation aggregation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thesis_TD/" class="md-nav__link">
+        thesis19
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%80%9D%E8%80%83/" class="md-nav__link">
+        rethink
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPPR19/" class="md-nav__link">
+        tppr19
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TFL21/" class="md-nav__link">
+        TFL21
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problems/" class="md-nav__link">
+        难点
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      <label class="md-nav__link" for="__nav_13">
+        Archives
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Archives" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Archives
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NaN/D20/" class="md-nav__link">
+        D20
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminaries" class="md-nav__link">
+    Preliminaries
+  </a>
+  
+    <nav class="md-nav" aria-label="Preliminaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icrh" class="md-nav__link">
+    ICRH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-agreement" class="md-nav__link">
+    Key agreement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret-sharing" class="md-nav__link">
+    Secret sharing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticated-encryption" class="md-nav__link">
+    Authenticated encryption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-proposed-framework-design" class="md-nav__link">
+    The proposed framework design
+  </a>
+  
+    <nav class="md-nav" aria-label="The proposed framework design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secure-summation-aggregation" class="md-nav__link">
+    Secure summation aggregation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="review-for-rtpt19">Review for RTPT'19</h1>
+<div class="admonition info">
+<p class="admonition-title">[RTPT'19] - RTPT</p>
+<p><strong>RTPT: A Framework for Real-Time Privacy-Preserving Truth Discovery on Crowdsensed Data Streams</strong></p>
+<p>(<em>Computer Networks</em>)</p>
+<p>"Our design is based on the incremental conflict resolution on heterogeneous data, which is very efficient in processing <mark class="critic"> data streams </mark>."</p>
+</div>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>Two limitations:</p>
+<ul>
+<li>dropouts are common for mobile devices</li>
+<li>all prior works are based on traditional truth discovery methods (conduct inefficient iterative procedures)</li>
+</ul>
+<blockquote>
+<p>there is no existing PPTD work that can eliminate these two shortcomings simultaneously.</p>
+</blockquote>
+<p>Goal:</p>
+<ul>
+<li>explore a robust and scalable PPTD architecture for real-time MCS applications</li>
+</ul>
+<blockquote>
+<p>... we build our security design on incremental conflict resolution on heterogeneous data (ICRH) for its state-of-the-art efficiency performance in our target MCS scenario.</p>
+</blockquote>
+<p>ICRH:</p>
+<ul>
+<li>obtain the truth for sensed objects in the current time period based on the worker's weights learned from historical data</li>
+</ul>
+<p>The proposed scheme:</p>
+<ul>
+<li>for real-time PPTD on crowdsensed data streams</li>
+<li>design a new secure summation aggregation protocol</li>
+<li>a constant number of rounds, low communication overhead, fully robustness to clients' dropping out at any point</li>
+<li>only one server</li>
+</ul>
+<p>Symbols:</p>
+<p>Suppose there are <span><span class="MathJax_Preview">|I|</span><script type="math/tex">|I|</script></span> sensing workers and <span><span class="MathJax_Preview">|M|</span><script type="math/tex">|M|</script></span> sensed objects. In the <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>-th time period, the worker <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> with the weight <span><span class="MathJax_Preview">w_i^t</span><script type="math/tex">w_i^t</script></span> generate a sensing data <span><span class="MathJax_Preview">x_{mi}^t</span><script type="math/tex">x_{mi}^t</script></span> of the object <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> with her mobile devices.</p>
+<p>Threat model:</p>
+<ul>
+<li>honest-but-curious</li>
+<li>protocols under the semi-honest model would present much more efficient implementation than protocols under the malicious adversary model</li>
+<li>the most common malicious attack is that workders maliciously manipulate their sensing data</li>
+</ul>
+<h2 id="preliminaries">Preliminaries</h2>
+<p>Truth discovery:</p>
+<ul>
+<li>identify the true information of the same object from noisy data provided by sensing workers with different reliability</li>
+<li>CRH is widely used, but is mostly designed to run on static data sets</li>
+</ul>
+<h3 id="icrh">ICRH</h3>
+<p><strong>Loss Function:</strong> </p>
+<div>
+<div class="MathJax_Preview">d(x_{mi}^t, X_m^t) = d(x_{mi}^t - X_m^t)^2</div>
+<script type="math/tex; mode=display">d(x_{mi}^t, X_m^t) = d(x_{mi}^t - X_m^t)^2</script>
+</div>
+<p><strong>TruthUpdate:</strong></p>
+<div>
+<div class="MathJax_Preview">X_m^t = \frac{\sum_{i=1}^{|\mathcal{I}|}w_i^{t-1}x_{mi}^t}{\sum_{i}^{|\mathcal{I}|}w_i^{t-1}}</div>
+<script type="math/tex; mode=display">X_m^t = \frac{\sum_{i=1}^{|\mathcal{I}|}w_i^{t-1}x_{mi}^t}{\sum_{i}^{|\mathcal{I}|}w_i^{t-1}}</script>
+</div>
+<p><strong>WeightUpdate:</strong></p>
+<div>
+<div class="MathJax_Preview">w_i^t = \log\big(\frac{\sum_{i=1}^{|\mathcal{I}|}d_i^t}{d_i^t}\big)</div>
+<script type="math/tex; mode=display">w_i^t = \log\big(\frac{\sum_{i=1}^{|\mathcal{I}|}d_i^t}{d_i^t}\big)</script>
+</div>
+<p>and</p>
+<div>
+<div class="MathJax_Preview">d_i^t = d_i^{t-1} \times \alpha + \sum_{m=1}^{|\mathcal{M}|}d(x_{mi}^t , X_m^t) </div>
+<script type="math/tex; mode=display">d_i^t = d_i^{t-1} \times \alpha + \sum_{m=1}^{|\mathcal{M}|}d(x_{mi}^t , X_m^t) </script>
+</div>
+<p>where decay rate <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> is introduced to accumulate the worker's loss.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ICRH 的设计初衷是为了能处理流数据，在这种情况下用户可以随时加入和退出。值得注意的是，如果当前有用户加入时，该用户提供的数值不计入真值更新 （因为此时新用户没有权重，如果采用初始权重会导致结果不够精确），而是在权重更新是计算出该用户的权重。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>如果一个用户只在 <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 时刻提交了真值，然后 <span><span class="MathJax_Preview">t+1</span><script type="math/tex">t+1</script></span> 时刻退出，那么该用户在整个真值计算中没有发挥任何作用。</p>
+</div>
+<h3 id="key-agreement">Key agreement</h3>
+<p>Three algorithms:</p>
+<ul>
+<li><span><span class="MathJax_Preview">\mbox{KA.param}(k) \to (\mathbb{G}, g, q)</span><script type="math/tex">\mbox{KA.param}(k) \to (\mathbb{G}, g, q)</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{KA.gen}(\mathbb{G}, g, q) \to (s^{SK}, s^{PK})</span><script type="math/tex">\mbox{KA.gen}(\mathbb{G}, g, q) \to (s^{SK}, s^{PK})</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{KA.agree}(s_i^{SK}, s_j^{PK}) \to s_{ij}</span><script type="math/tex">\mbox{KA.agree}(s_i^{SK}, s_j^{PK}) \to s_{ij}</script></span></li>
+</ul>
+<h3 id="secret-sharing">Secret sharing</h3>
+<p><span><span class="MathJax_Preview">\mathcal{T}</span><script type="math/tex">\mathcal{T}</script></span>-out-of-<span><span class="MathJax_Preview">\mathcal{N}</span><script type="math/tex">\mathcal{N}</script></span> secret sharing:</p>
+<ul>
+<li><span><span class="MathJax_Preview">\mbox{SS.share}(ss_i, \mathcal{T}, \mathcal{I}) \to \{j, ss_{ij}\}_{j\in\mathcal{I}\backslash\{i\}}</span><script type="math/tex">\mbox{SS.share}(ss_i, \mathcal{T}, \mathcal{I}) \to \{j, ss_{ij}\}_{j\in\mathcal{I}\backslash\{i\}}</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{SS.recon}((j,ss_{ij})_{j\in\mathcal{I}'}, \mathcal{T}) \to ss_i</span><script type="math/tex">\mbox{SS.recon}((j,ss_{ij})_{j\in\mathcal{I}'}, \mathcal{T}) \to ss_i</script></span></li>
+</ul>
+<h3 id="authenticated-encryption">Authenticated encryption</h3>
+<ul>
+<li><span><span class="MathJax_Preview">\mbox{AE.enc}(s, m)\to (c, \mathsf{tag})</span><script type="math/tex">\mbox{AE.enc}(s, m)\to (c, \mathsf{tag})</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{AE.dec}(s, c, \mathsf{tag}) \to m</span><script type="math/tex">\mbox{AE.dec}(s, c, \mathsf{tag}) \to m</script></span></li>
+</ul>
+<hr />
+<h2 id="the-proposed-framework-design">The proposed framework design</h2>
+<h3 id="secure-summation-aggregation">Secure summation aggregation</h3>
+<p>Assume public parameters <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> and threshold value <span><span class="MathJax_Preview">\mathcal{T}</span><script type="math/tex">\mathcal{T}</script></span> of secret sharing</p>
+<ul>
+<li><span><span class="MathJax_Preview">\mbox{KA.param}(k) \to (\mathcal{G}, g, q)</span><script type="math/tex">\mbox{KA.param}(k) \to (\mathcal{G}, g, q)</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{KA.gen} \to (s_i^{SK}, s_i^{PK})</span><script type="math/tex">\mbox{KA.gen} \to (s_i^{SK}, s_i^{PK})</script></span></li>
+<li><span><span class="MathJax_Preview">\mbox{KA.gen} \to (c_i^{SK}, c_i^{PK})</span><script type="math/tex">\mbox{KA.gen} \to (c_i^{SK}, c_i^{PK})</script></span></li>
+<li>send <span><span class="MathJax_Preview">(s_i^{PK} || c_i^{PK})</span><script type="math/tex">(s_i^{PK} || c_i^{PK})</script></span> to the server</li>
+</ul>
+<p><strong>Sharing keys and random seeds:</strong></p>
+<p>server:</p>
+<ul>
+<li>collect at lease <span><span class="MathJax_Preview">\mathcal{T}</span><script type="math/tex">\mathcal{T}</script></span> messages</li>
+<li>broadcast the received list <span><span class="MathJax_Preview">\{(i, s_i^{PK}, c_i^{PK})\}_{i\in\mathcal{I}_1}</span><script type="math/tex">\{(i, s_i^{PK}, c_i^{PK})\}_{i\in\mathcal{I}_1}</script></span></li>
+</ul>
+<p>client <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>:</p>
+<ul>
+<li>sample an additional random <span><span class="MathJax_Preview">r_i^t\in_r Z_q</span><script type="math/tex">r_i^t\in_r Z_q</script></span></li>
+<li>share <span><span class="MathJax_Preview">\mbox{SS.share}(r_i^t, \mathcal{T}, \mathcal{I}_1)\to (j, r_{ij}^t)_{j\in\mathcal{I}_1}</span><script type="math/tex">\mbox{SS.share}(r_i^t, \mathcal{T}, \mathcal{I}_1)\to (j, r_{ij}^t)_{j\in\mathcal{I}_1}</script></span></li>
+<li>and <span><span class="MathJax_Preview">\mbox{SS.share}(s_i^{SK},\mathcal{T},\mathcal{I}_1)\to (j,s_{ij}^{SK})_{j\in\mathcal{I}_1}</span><script type="math/tex">\mbox{SS.share}(s_i^{SK},\mathcal{T},\mathcal{I}_1)\to (j,s_{ij}^{SK})_{j\in\mathcal{I}_1}</script></span></li>
+<li>encrypt them <span><span class="MathJax_Preview">e_{ij}^t \gets \mbox{AE.enc}(\mbox{KA.agree}(c_i^{SK}, c_j^{PK}), i||j, s_{ij}^{SK}||r_{ij}^t)</span><script type="math/tex">e_{ij}^t \gets \mbox{AE.enc}(\mbox{KA.agree}(c_i^{SK}, c_j^{PK}), i||j, s_{ij}^{SK}||r_{ij}^t)</script></span> for each other <span><span class="MathJax_Preview">j\in \mathcal{I}_1 \backslash \{i\}</span><script type="math/tex">j\in \mathcal{I}_1 \backslash \{i\}</script></span></li>
+<li>send <span><span class="MathJax_Preview">\{(i, j ,e_{ij}^t)\}_{j\in\mathcal{I}_1\backslash \{i\}}</span><script type="math/tex">\{(i, j ,e_{ij}^t)\}_{j\in\mathcal{I}_1\backslash \{i\}}</script></span> to the server</li>
+</ul>
+<p>server:</p>
+<ul>
+<li>gather lists of encrypted shares from at least <span><span class="MathJax_Preview">\mathcal{T}</span><script type="math/tex">\mathcal{T}</script></span> clients, i.e., <span><span class="MathJax_Preview">\mathcal{I}_2</span><script type="math/tex">\mathcal{I}_2</script></span></li>
+<li>send to each client <span><span class="MathJax_Preview">i\in\mathcal{I}_2</span><script type="math/tex">i\in\mathcal{I}_2</script></span> all the encrypted shares <span><span class="MathJax_Preview">\{j,i,e_{ji}^t\}_{j\in\mathcal{I}_2\backslash\{i\}}</span><script type="math/tex">\{j,i,e_{ji}^t\}_{j\in\mathcal{I}_2\backslash\{i\}}</script></span> and an random integer <span><span class="MathJax_Preview">f_t\in_r Z_q</span><script type="math/tex">f_t\in_r Z_q</script></span></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>用户 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 生成的密文 <span><span class="MathJax_Preview">e_{ij}</span><script type="math/tex">e_{ij}</script></span> 的数量为 <span><span class="MathJax_Preview">|\mathcal{I}_1| - 1</span><script type="math/tex">|\mathcal{I}_1| - 1</script></span></p>
+</div>
+<p><strong>Masked inputs collection:</strong></p>
+<p>client <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>:</p>
+<ul>
+<li>receive <span><span class="MathJax_Preview">\{e_{ij}\}_{j\in\mathcal{I}_2}</span><script type="math/tex">\{e_{ij}\}_{j\in\mathcal{I}_2}</script></span></li>
+<li>copmute <span><span class="MathJax_Preview">s_{ij}\gets \mbox{KA.agree}(s_i^{SK}, s_j^{PK})</span><script type="math/tex">s_{ij}\gets \mbox{KA.agree}(s_i^{SK}, s_j^{PK})</script></span> for each other client <span><span class="MathJax_Preview">j\in\mathcal{I}_2</span><script type="math/tex">j\in\mathcal{I}_2</script></span></li>
+<li>at each time period <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>先搁到这，不太靠谱，暂时不看了</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../JZT20/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              JZT20
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../thesis_TD/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              thesis19
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
