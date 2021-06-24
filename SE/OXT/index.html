@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -493,9 +498,57 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          OXT协议
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         OXT协议
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 系统模型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sks" class="md-nav__link">
+    2. 单关键词可搜索加密 （SKS）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-basic-cross-tags-bxt" class="md-nav__link">
+    3. Basic Cross-Tags 协议 （BXT）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-oblivious-cross-tags-oxt" class="md-nav__link">
+    4. Oblivious Cross-Tags 协议 （OXT）
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1255,6 +1308,56 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 系统模型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sks" class="md-nav__link">
+    2. 单关键词可搜索加密 （SKS）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-basic-cross-tags-bxt" class="md-nav__link">
+    3. Basic Cross-Tags 协议 （BXT）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-oblivious-cross-tags-oxt" class="md-nav__link">
+    4. Oblivious Cross-Tags 协议 （OXT）
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1265,12 +1368,77 @@
                 
                 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<ul>
-<li>Title: Highly-scalable searchable symmetric encryption with support for Boolean queries</li>
-<li>CRYPTO 2013 (CCF A 类会议)</li>
-<li>David Cash, Stanislaw Jarecki, Charanjit Jutla, Hugo Krawczyk, Marcel-Catalin Rosu, Michael Steiner</li>
-</ul>
+<p><strong>Highly-scalable searchable symmetric encryption with support for Boolean queries</strong></p>
+<p><em>CRYPTO 2013</em> (CCF A 类会议)</p>
+<p>David Cash, Stanislaw Jarecki, Charanjit Jutla, Hugo Krawczyk, Marcel-Catalin Rosu, Michael Steiner</p>
+<p>"This work presents the design and analysis of the first searchable symmetric encryption (SSE) protocol that <mark class="critic">supports conjunctive search and general Boolean queries</mark> ..."</p>
 </div>
+<hr />
+<h2 id="1">1. 系统模型</h2>
+<p>数据库由 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 个文件组成，每一个都包含一组关键词 <span><span class="MathJax_Preview">\mathsf{W}_i</span><script type="math/tex">\mathsf{W}_i</script></span>。SSE 协议输出的是文件标识 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span>，客户端可以通过这些标识来获取加密的文件，之后再进行解密。</p>
+<p>数据库 <span><span class="MathJax_Preview">\mathsf{DB} = (\mathsf{ind}_i, \mathsf{W}_i)_{i=1}^d</span><script type="math/tex">\mathsf{DB} = (\mathsf{ind}_i, \mathsf{W}_i)_{i=1}^d</script></span>，是一组由标识符/关键词集组成，其中 <span><span class="MathJax_Preview">\mathsf{ind}_i\in\{0,1\}^\lambda</span><script type="math/tex">\mathsf{ind}_i\in\{0,1\}^\lambda</script></span>，<span><span class="MathJax_Preview">\mathsf{W}_i \subseteq\{0,1\}^*</span><script type="math/tex">\mathsf{W}_i \subseteq\{0,1\}^*</script></span>。那么所有的关键词集合可以表示为 <span><span class="MathJax_Preview">\mathsf{W} = \cup_{i=1}^d \mathsf{W}_i</span><script type="math/tex">\mathsf{W} = \cup_{i=1}^d \mathsf{W}_i</script></span>。
+由于 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span> 是混淆后的文件标识，因此可以泄露给外包服务器。
+对于关键词 <span><span class="MathJax_Preview">\overline{w}\in\mathsf{W}^*</span><script type="math/tex">\overline{w}\in\mathsf{W}^*</script></span>，<span><span class="MathJax_Preview">\psi(\overline{w})</span><script type="math/tex">\psi(\overline{w})</script></span> 表示对关键词 <span><span class="MathJax_Preview">\overline{w}</span><script type="math/tex">\overline{w}</script></span> 的布尔表达式。
+我们用 <span><span class="MathJax_Preview">\mathsf{DB}(\psi(\overline{w}))</span><script type="math/tex">\mathsf{DB}(\psi(\overline{w}))</script></span> 来表示满足 <span><span class="MathJax_Preview">\psi(\overline{w})</span><script type="math/tex">\psi(\overline{w})</script></span> 的表达符。<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 表示文件数量，<span><span class="MathJax_Preview">m=|\mathsf{W}|</span><script type="math/tex">m=|\mathsf{W}|</script></span>，<span><span class="MathJax_Preview">N=\sum_{w\in \mathsf{W}}|\mathsf{DB}(w)|</span><script type="math/tex">N=\sum_{w\in \mathsf{W}}|\mathsf{DB}(w)|</script></span>。</p>
+<p>定义 <em>tuple set</em>，或者称为 <em>T-set</em>。T-set 允许在数据库里将每一个关键词都关联一个固定大小的数据元组。用户查询时，返回的就是这些数据元组列表。在本文提出的协议中，T-set 被用来作为 expanded inverted index。</p>
+<p>T-set 由三个函数组成，<span><span class="MathJax_Preview">\Sigma = (\mathsf{TSetSetup}, \mathsf{TSetGetTag}, \mathsf{TSetRetrieve})</span><script type="math/tex">\Sigma = (\mathsf{TSetSetup}, \mathsf{TSetGetTag}, \mathsf{TSetRetrieve})</script></span>：</p>
+<ul>
+<li><span><span class="MathJax_Preview">\mathsf{TSetSetup}(\mathbf{T}) \to (\mathsf{TSet}, K_T)</span><script type="math/tex">\mathsf{TSetSetup}(\mathbf{T}) \to (\mathsf{TSet}, K_T)</script></span></li>
+<li><span><span class="MathJax_Preview">\mathsf{TSetGetTag}(K_T,w)\to \mathsf{stag}</span><script type="math/tex">\mathsf{TSetGetTag}(K_T,w)\to \mathsf{stag}</script></span></li>
+<li><span><span class="MathJax_Preview">\mathsf{TSetRetrieve}(\mathsf{TSet}, \mathsf{stag}) \to \mathbf{T}[w]</span><script type="math/tex">\mathsf{TSetRetrieve}(\mathsf{TSet}, \mathsf{stag}) \to \mathbf{T}[w]</script></span></li>
+</ul>
+<hr />
+<h2 id="2-sks">2. 单关键词可搜索加密 （SKS）</h2>
+<p>SKS，single-keyword SSE Scheme 由以下几个算法组成：</p>
+<p><span><span class="MathJax_Preview">\mathsf{EDBSetup}(\mathsf{DB})</span><script type="math/tex">\mathsf{EDBSetup}(\mathsf{DB})</script></span>:</p>
+<ul>
+<li>选择 PRF <span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的密钥 <span><span class="MathJax_Preview">K_S</span><script type="math/tex">K_S</script></span>，将 <span><span class="MathJax_Preview">\mathsf{DB}</span><script type="math/tex">\mathsf{DB}</script></span> 解析成 <span><span class="MathJax_Preview">(\mathsf{ind}_i, \mathsf{W}_i)_{i=1}^d</span><script type="math/tex">(\mathsf{ind}_i, \mathsf{W}_i)_{i=1}^d</script></span> 的形式</li>
+<li>初始化 <span><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span> 为一个空数组，关键词集合 <span><span class="MathJax_Preview">\mathsf{W}=\cup_{i=1}^d \mathsf{W}_i</span><script type="math/tex">\mathsf{W}=\cup_{i=1}^d \mathsf{W}_i</script></span></li>
+<li>对于每一个 <span><span class="MathJax_Preview">w\in\mathsf{W}</span><script type="math/tex">w\in\mathsf{W}</script></span>，按照以下方式构建 <span><span class="MathJax_Preview">\mathbf{T}[w]</span><script type="math/tex">\mathbf{T}[w]</script></span>：<ul>
+<li>初始化一个空列表 <span><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>，令 <span><span class="MathJax_Preview">K_e\gets F(K_S, w)</span><script type="math/tex">K_e\gets F(K_S, w)</script></span></li>
+<li>对于所有的 <span><span class="MathJax_Preview">\mathsf{ind}\in\mathsf{DB}(w)</span><script type="math/tex">\mathsf{ind}\in\mathsf{DB}(w)</script></span>，计算 <span><span class="MathJax_Preview">\mathsf{e}\gets\mathsf{Enc}(K_e, ind)</span><script type="math/tex">\mathsf{e}\gets\mathsf{Enc}(K_e, ind)</script></span>，然后将 <span><span class="MathJax_Preview">\mathsf{e}</span><script type="math/tex">\mathsf{e}</script></span> 添加到列表 <span><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span> 中</li>
+<li><span><span class="MathJax_Preview">(\mathsf{TSet}, K_T)\gets \mathsf{TSetSetup}(\mathbf{T})</span><script type="math/tex">(\mathsf{TSet}, K_T)\gets \mathsf{TSetSetup}(\mathbf{T})</script></span></li>
+<li>输出密钥 <span><span class="MathJax_Preview">(K_S, K_T)</span><script type="math/tex">(K_S, K_T)</script></span> 以及加密的数据库 <span><span class="MathJax_Preview">\mathsf{EDB} = \mathsf{TSet}</span><script type="math/tex">\mathsf{EDB} = \mathsf{TSet}</script></span></li>
+</ul>
+</li>
+</ul>
+<p>查询协议：</p>
+<ul>
+<li>客户端已知密钥 <span><span class="MathJax_Preview">(K_S, K_T)</span><script type="math/tex">(K_S, K_T)</script></span>，以及查询的关键词 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span></li>
+<li>计算 <span><span class="MathJax_Preview">\mathsf{stag} \gets \mathsf{TSetGetTag}(K_T, w)</span><script type="math/tex">\mathsf{stag} \gets \mathsf{TSetGetTag}(K_T, w)</script></span>，发送 <span><span class="MathJax_Preview">\mathsf{stag}</span><script type="math/tex">\mathsf{stag}</script></span> 给服务器</li>
+<li>服务器计算 <span><span class="MathJax_Preview">\mathbf{t}\gets \mathsf{TSetRetrieve}(\mathsf{TSet}, \mathsf{stag})</span><script type="math/tex">\mathbf{t}\gets \mathsf{TSetRetrieve}(\mathsf{TSet}, \mathsf{stag})</script></span>，返回 <span><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span> 给客户端</li>
+<li>客户端令 <span><span class="MathJax_Preview">K_e\gets F(K_S, w)</span><script type="math/tex">K_e\gets F(K_S, w)</script></span>，对于在 <span><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span> 中的每一个 <span><span class="MathJax_Preview">\mathsf{e}</span><script type="math/tex">\mathsf{e}</script></span>，计算 <span><span class="MathJax_Preview">\mathsf{ind}\gets \mathsf{Dec}(K_e, \mathsf{e})</span><script type="math/tex">\mathsf{ind}\gets \mathsf{Dec}(K_e, \mathsf{e})</script></span>，然后输出 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span></li>
+</ul>
+<p>如何将其扩展为支持连接搜索 (conjunctive keyword search)？</p>
+<p>比如输入的查询是 <span><span class="MathJax_Preview">\bar{w} = (w_1, \ldots, w_n)</span><script type="math/tex">\bar{w} = (w_1, \ldots, w_n)</script></span>，对于在 <span><span class="MathJax_Preview">\bar{w}</span><script type="math/tex">\bar{w}</script></span> 中的每个关键词 <span><span class="MathJax_Preview">w_i</span><script type="math/tex">w_i</script></span>，都执行一次。但是服务器并不直接将 <span><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span> 返回给客户端，而是从客户端出获得 <span><span class="MathJax_Preview">K_{e_i}</span><script type="math/tex">K_{e_i}</script></span>，其中 <span><span class="MathJax_Preview">i=1,\ldots, n</span><script type="math/tex">i=1,\ldots, n</script></span>，然后对 <span><span class="MathJax_Preview">\mathsf{e}</span><script type="math/tex">\mathsf{e}</script></span> 解密得到每个 <span><span class="MathJax_Preview">w_i</span><script type="math/tex">w_i</script></span> 的 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span> 集合。这样搜索的复杂度为 <span><span class="MathJax_Preview">\sum_{i=1}^n |\mathsf{DB}(w_i)|</span><script type="math/tex">\sum_{i=1}^n |\mathsf{DB}(w_i)|</script></span> 的倍数。</p>
+<hr />
+<h2 id="3-basic-cross-tags-bxt">3. Basic Cross-Tags 协议 （BXT）</h2>
+<p>假设客户端给的关键词列表为 <span><span class="MathJax_Preview">\bar{w} = (w_1, \ldots, w_n)</span><script type="math/tex">\bar{w} = (w_1, \ldots, w_n)</script></span>，假设 <span><span class="MathJax_Preview">\mathsf{DB}(w_1)</span><script type="math/tex">\mathsf{DB}(w_1)</script></span> 是最短的。首先运行 SKS 搜索协议来查找关键词 <span><span class="MathJax_Preview">w_1</span><script type="math/tex">w_1</script></span>，客户端得到所有匹配 <span><span class="MathJax_Preview">w_1</span><script type="math/tex">w_1</script></span> 的文件。</p>
+<p>BXT 协议的核心思想是使用 SKS 来检索 <span><span class="MathJax_Preview">\mathsf{TSet}(w_1)</span><script type="math/tex">\mathsf{TSet}(w_1)</script></span>，然后服务器对 <span><span class="MathJax_Preview">w_2,\ldots,w_n</span><script type="math/tex">w_2,\ldots,w_n</script></span> 的结果取交集，服务器只会返回 full conjunction 的结果。</p>
+<p>具体的做法是在 <span><span class="MathJax_Preview">\mathsf{EDBSetup}(\mathsf{DB})</span><script type="math/tex">\mathsf{EDBSetup}(\mathsf{DB})</script></span> 阶段，除了生成 <span><span class="MathJax_Preview">\mathsf{TSet}</span><script type="math/tex">\mathsf{TSet}</script></span> 之外，还生成一个 <span><span class="MathJax_Preview">\mathsf{XSet}</span><script type="math/tex">\mathsf{XSet}</script></span>，其中包含的元素我们称为 <span><span class="MathJax_Preview">\mathsf{xtag}</span><script type="math/tex">\mathsf{xtag}</script></span>。对每个 <span><span class="MathJax_Preview">w\in W</span><script type="math/tex">w\in W</script></span>，首先计算关键词的陷门 <span><span class="MathJax_Preview">\mathsf{xtrap} = F(K_X, w)</span><script type="math/tex">\mathsf{xtrap} = F(K_X, w)</script></span>；对于每一个 <span><span class="MathJax_Preview">\mathsf{ind}\in\mathsf{DB}(w)</span><script type="math/tex">\mathsf{ind}\in\mathsf{DB}(w)</script></span>，需要计算 <span><span class="MathJax_Preview">\mathsf{xtag} = f(\mathsf{xtrap}, \mathsf{ind})</span><script type="math/tex">\mathsf{xtag} = f(\mathsf{xtrap}, \mathsf{ind})</script></span>。</p>
+<p>对于连接搜索 <span><span class="MathJax_Preview">(w_1,\ldots, w_n)</span><script type="math/tex">(w_1,\ldots, w_n)</script></span>，选择估测出现频率最低的关键词，比如 <span><span class="MathJax_Preview">w_1</span><script type="math/tex">w_1</script></span>，使用 SKS 协议，即 <span><span class="MathJax_Preview">K_e\gets F(K_S, w_1)</span><script type="math/tex">K_e\gets F(K_S, w_1)</script></span>，<span><span class="MathJax_Preview">\mathsf{stag}\gets \mathsf{TSetGetTag}(K_T, w_1)</span><script type="math/tex">\mathsf{stag}\gets \mathsf{TSetGetTag}(K_T, w_1)</script></span>。对于每一个 <span><span class="MathJax_Preview">i=2,\ldots, n</span><script type="math/tex">i=2,\ldots, n</script></span>，客户端计算 <span><span class="MathJax_Preview">\mathsf{xtrap}_i\gets F(K_X, w_i)</span><script type="math/tex">\mathsf{xtrap}_i\gets F(K_X, w_i)</script></span>，发送 <span><span class="MathJax_Preview">(K_e, \mathsf{stag}, \mathsf{xtrap}_2, \ldots, \mathsf{xtrap}_n)</span><script type="math/tex">(K_e, \mathsf{stag}, \mathsf{xtrap}_2, \ldots, \mathsf{xtrap}_n)</script></span>。服务器使用 <span><span class="MathJax_Preview">\mathsf{stag}</span><script type="math/tex">\mathsf{stag}</script></span> 检索 <span><span class="MathJax_Preview">\mathbf{t} = \mathsf{TSetRetrive}(\mathsf{TSet}, \mathsf{stag})</span><script type="math/tex">\mathbf{t} = \mathsf{TSetRetrive}(\mathsf{TSet}, \mathsf{stag})</script></span>。对每一个在 <span><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span> 中的密文 <span><span class="MathJax_Preview">\mathsf{e}</span><script type="math/tex">\mathsf{e}</script></span>，首先解密 <span><span class="MathJax_Preview">\mathsf{ind} = \mathsf{Dec}(K_e, \mathsf{e})</span><script type="math/tex">\mathsf{ind} = \mathsf{Dec}(K_e, \mathsf{e})</script></span>，如果 <span><span class="MathJax_Preview">f(\mathsf{xtrap}_i, \mathsf{ind})\in \mathsf{XSet}</span><script type="math/tex">f(\mathsf{xtrap}_i, \mathsf{ind})\in \mathsf{XSet}</script></span>，发送符合条件的 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span> 给客户端。</p>
+<blockquote>
+<p>这样一来，服务器就知道了 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span></p>
+</blockquote>
+<p>BXT 协议的问题在于，当服务器知道了 <span><span class="MathJax_Preview">\mathsf{xtrap}_i</span><script type="math/tex">\mathsf{xtrap}_i</script></span> 之后，便可以进行保存。在之后的操作中，它便可以知道对于任意给定的 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span>，只需要测试 是否 <span><span class="MathJax_Preview">f(\mathsf{xtrap_i},\mathsf{ind})\in \mathsf{XSet}</span><script type="math/tex">f(\mathsf{xtrap_i},\mathsf{ind})\in \mathsf{XSet}</script></span>，便可以知道该文件索引对应的文件中是否包含关键词 <span><span class="MathJax_Preview">w_i</span><script type="math/tex">w_i</script></span>。</p>
+<p>一种规避这种攻击的方法是，让客户端计算该函数而不是让服务器执行。但这样一来通信开销就会增大。另一种方式是使用一种 oblivious shared computation between client and server 来代替之前的函数 <span><span class="MathJax_Preview">f(\mathsf{xtrap}, \cdot)</span><script type="math/tex">f(\mathsf{xtrap}, \cdot)</script></span>。</p>
+<p>首先，我们考虑使用盲指数，将 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span> 盲化，即 <span><span class="MathJax_Preview">\mathsf{xind} = F_p(K_I, \mathsf{ind})</span><script type="math/tex">\mathsf{xind} = F_p(K_I, \mathsf{ind})</script></span>，那么 <span><span class="MathJax_Preview">\mathsf{xtag}</span><script type="math/tex">\mathsf{xtag}</script></span> 将被定义为 <span><span class="MathJax_Preview">g^{F_p(K_X,w)\cdot \mathsf{xind}}</span><script type="math/tex">g^{F_p(K_X,w)\cdot \mathsf{xind}}</script></span>。客户端首先计算并发送 <span><span class="MathJax_Preview">g^{F_p(K_X, w_i)\cdot z}</span><script type="math/tex">g^{F_p(K_X, w_i)\cdot z}</script></span>，其中 <span><span class="MathJax_Preview">z\in Z_p^*</span><script type="math/tex">z\in Z_p^*</script></span> 为盲因子。服务器将其作为 <span><span class="MathJax_Preview">\mathsf{xind}</span><script type="math/tex">\mathsf{xind}</script></span> 的指数，服务器最后将收到的结果使用 <span><span class="MathJax_Preview">z^{-1}</span><script type="math/tex">z^{-1}</script></span> 去盲，即得到 <span><span class="MathJax_Preview">g^{F_p(K_X, w_i)\cdot \mathsf{xind}}</span><script type="math/tex">g^{F_p(K_X, w_i)\cdot \mathsf{xind}}</script></span>。</p>
+<blockquote>
+<p>这种方式可靠吗？</p>
+</blockquote>
+<p>这种方法也有问题，服务器会知道 <span><span class="MathJax_Preview">g^{F_p(K_X, w_i)}</span><script type="math/tex">g^{F_p(K_X, w_i)}</script></span>，同样也会采取跟之前类似的攻击。</p>
+<hr />
+<h2 id="4-oblivious-cross-tags-oxt">4. Oblivious Cross-Tags 协议 （OXT）</h2>
+<p>在设计 OXT 协议之前，首先需要解决两个问题。核心思想是在 <span><span class="MathJax_Preview">\mathsf{EDBSetup}</span><script type="math/tex">\mathsf{EDBSetup}</script></span> 预计算盲的部分，并将其保存在 <span><span class="MathJax_Preview">\mathsf{EDB}</span><script type="math/tex">\mathsf{EDB}</script></span> 中。也就是说，对于每个关键词以及对应的索引元组，首先保存一个盲值 <span><span class="MathJax_Preview">y_c = \mathsf{xind}\cdot z_c^{-1}</span><script type="math/tex">y_c = \mathsf{xind}\cdot z_c^{-1}</script></span>，其中 <span><span class="MathJax_Preview">z_c</span><script type="math/tex">z_c</script></span> 是由 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 和计数器 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 生成。</p>
+<blockquote>
+<p>计数器的目的是为了让每个 <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 值都不一样</p>
+</blockquote>
+<p>搜索时，服务器需要对每一个 <span><span class="MathJax_Preview">\mathsf{xind}</span><script type="math/tex">\mathsf{xind}</script></span> 计算 <span><span class="MathJax_Preview">g^{F_p(K_X, w_i)\cdot \mathsf{xind}}</span><script type="math/tex">g^{F_p(K_X, w_i)\cdot \mathsf{xind}}</script></span>，并且在 <span><span class="MathJax_Preview">\mathsf{XSet}</span><script type="math/tex">\mathsf{XSet}</script></span> 中检验它们是否存在。
+对于在 <span><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span> 中的第 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 个元组，客户端定义长度为 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span><span class="MathJax_Preview">\mathsf{xtoken}[c]</span><script type="math/tex">\mathsf{xtoken}[c]</script></span>，即 <span><span class="MathJax_Preview">\mathsf{xtoken}[c,i]:=g^{F_p(K_X, w_i)\cdot z_c}</span><script type="math/tex">\mathsf{xtoken}[c,i]:=g^{F_p(K_X, w_i)\cdot z_c}</script></span>，其中 <span><span class="MathJax_Preview">i=1,\ldots, n</span><script type="math/tex">i=1,\ldots, n</script></span>。
+<span><span class="MathJax_Preview">z_c</span><script type="math/tex">z_c</script></span> 是根据 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 和计数器 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 盲化后的值。服务器通过 T-set 找出 <span><span class="MathJax_Preview">w_1</span><script type="math/tex">w_1</script></span> 匹配的结果，然后通过测试 <span><span class="MathJax_Preview">\mathsf{xtoken}[c,i]^{y_c}\in \mathsf{XSet}</span><script type="math/tex">\mathsf{xtoken}[c,i]^{y_c}\in \mathsf{XSet}</script></span> 是否成立来过滤第 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 个结果。由于 <span><span class="MathJax_Preview">\mathsf{xtoken}[c,i]^{y_c} = g^{F_p(K_X,w_i)\cdot z_c \cdot \mathsf{xind}\cdot z_c^{-1}} = g^{F_p(K_X,w_i)\cdot \mathsf{xmind}}</span><script type="math/tex">\mathsf{xtoken}[c,i]^{y_c} = g^{F_p(K_X,w_i)\cdot z_c \cdot \mathsf{xind}\cdot z_c^{-1}} = g^{F_p(K_X,w_i)\cdot \mathsf{xmind}}</script></span></p>
+<blockquote>
+<p>相对于 BXT 协议，OXT 泄露的信息更少。对于服务器而言，它既不知道 <span><span class="MathJax_Preview">\mathsf{ind}</span><script type="math/tex">\mathsf{ind}</script></span> 也不知道 <span><span class="MathJax_Preview">\mathsf{xtrap_j}</span><script type="math/tex">\mathsf{xtrap_j}</script></span>，<span><span class="MathJax_Preview">j=2,\ldots, n</span><script type="math/tex">j=2,\ldots, n</script></span>。</p>
+</blockquote>
                 
               
               
