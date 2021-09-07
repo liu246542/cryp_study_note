@@ -513,6 +513,46 @@
     3. 现有的研究
   </a>
   
+    <nav class="md-nav" aria-label="3. 现有的研究">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 多关键词检索
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 模糊检索
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 模糊检索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1 通配符检索
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    3.2.2 范围检索
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -543,6 +583,57 @@
       <a href="../OXT/" class="md-nav__link">
         OXT协议
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SEandEDB/" class="md-nav__link">
+        可搜索加密与加密数据库
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Reviews
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reviews" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Reviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Review/TDSC20/" class="md-nav__link">
+        TDSC20
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1335,6 +1426,46 @@
     3. 现有的研究
   </a>
   
+    <nav class="md-nav" aria-label="3. 现有的研究">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 多关键词检索
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 模糊检索
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 模糊检索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1 通配符检索
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    3.2.2 范围检索
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1352,11 +1483,11 @@
                 
                   <h1>简介</h1>
                 
-                <h3 id="1">1. 研究的问题</h3>
+                <h2 id="1">1. 研究的问题</h2>
 <p><mark class="critic"> 可搜索加密 </mark>，简单描述就是用户将自己的数据加密后上传到云服务器，为了方便搜索，用户还需要使用关键词对文件进行标记，这样用户只需要提供特定的关键词，云服务器便可以返回相应的结果。</p>
 <p><img alt="SSE_model" src="https://i.imgur.com/jOenUFv.png" /></p>
 <hr />
-<h3 id="2">2. 系统模型</h3>
+<h2 id="2">2. 系统模型</h2>
 <p>从上图可以看出，可搜索加密中存在三类实体：</p>
 <ol>
 <li>数据拥有者（Data Owner），负责上传数据；</li>
@@ -1370,7 +1501,7 @@
 <li>不能知道关键词与文件的具体对应关系。</li>
 </ul>
 <hr />
-<h3 id="3">3. 现有的研究</h3>
+<h2 id="3">3. 现有的研究</h2>
 <p>如果单纯从参与者的数量出发，可以分成四类：</p>
 <ol>
 <li>SW/SR，即 single-writer/single-reader</li>
@@ -1385,6 +1516,16 @@
 <li><mark class="critic"><strong>从单用户到多用户：</strong></mark> 在可搜索加密中，用户一般指代查询用户。一般的模型里数据拥有者就假定为一个，多用户指的就是查询用户有很多个。这个场景在现实中非常常见，在这种场景中需要考虑的就是数据拥有者对用户的授权问题（规定可搜索范围），服务器需要对用户进行认证，以及对用户的撤销操作。部分工作采用广播加密或基于属性的加密来为用户分配权限，但还存在效率方面的问题。Du 等人<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> 在 OXT 协议<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>的基础上使用了一个用户列表来记录每个用户的权限信息；</li>
 <li><mark class="critic"><strong>从静态到动态：</strong></mark> 动态可搜索加密是可搜索加密中的难点，动态是指支持对加密数据集进行修改，而不需要有数据拥有者重新初始化再上传。为什么这个问题比较困难呢？是因为一旦有了更新，后面会引发一系列安全相关的问题，也就是前向安全和后向安全。近期有篇工作详细给出了在可搜索加密中前后向安全的定义，并设计了三个不同的动态可搜索加密机制。前向安全需要保证的是新的更新不能与之前的操作关联起来，而后向安全需要确保如果在查询关键词<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 之前，包含关键词 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的文档被删除，那么这次查询也不能暴露该删除文档的信息。从这篇文章里我想到另外一个问题，谁可以修改数据？一般意义上只能数据拥有者来修改，但如果考虑现实中情况的话，类似于多人协作的场景，数据查询者有时也需要被赋予修改的权限。</li>
 </ol>
+<h3 id="31">3.1 多关键词检索</h3>
+<p>狭义上的多关键词检索指的是连接关键词检索，也就是服务器返回包含所有查询关键词的文档。最简单的做法是服务器对每个关键词执行单关键词检索，之后对得到的结果取交集。多关键词连接查询可以直接参考OXT协议，此处不做赘述。</p>
+<h3 id="32">3.2 模糊检索</h3>
+<h4 id="321">3.2.1 通配符检索</h4>
+<h4 id="322">3.2.2 范围检索</h4>
+<ul>
+<li><em>Rich Queries on Encrypted Data: Beyond Exact Matches</em>, ESORICS '15 <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></li>
+<li><em>CryptDB: Protecting Confidentiality with Encrypted Query Processing</em>, SOSP '11 <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
+<li><em>An Efficiently Searchable Encrypted Data Structure for Range Queries</em>, ESORICS '19<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></li>
+</ul>
 <div class="footnote">
 <hr />
 <ol>
@@ -1402,6 +1543,15 @@
 </li>
 <li id="fn:5">
 <p>I. Demertzis, J. G. Chamani, D. Papadopoulos, and C. Papamanthou, “Dynamic Searchable Encryption with Small Client Storage,” presented at the Network and Distributed System Security Symposium, San Diego, CA, 2020, doi: 10.14722/ndss.2020.24423.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>S. Faber, S. Jarecki, H. Krawczyk, Q. Nguyen, M. Rosu, and M. Steiner, “Rich Queries on Encrypted Data: Beyond Exact Matches,” in Computer Security -- ESORICS 2015, Cham, 2015, pp. 123–145. doi: 10.1007/978-3-319-24177-7_7.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>R. A. Popa, C. M. S. Redfield, N. Zeldovich, and H. Balakrishnan, “CryptDB: protecting confidentiality with encrypted query processing,” in Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles, New York, NY, USA, Oct. 2011, pp. 85–100. doi: 10.1145/2043556.2043566.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>F. Kerschbaum and A. Tueno, “An Efficiently Searchable Encrypted Data Structure for Range Queries,” in Computer Security – ESORICS 2019, Cham, 2019, pp. 344–364. doi: 10.1007/978-3-030-29962-0_17.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

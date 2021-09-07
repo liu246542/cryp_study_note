@@ -14,7 +14,7 @@
     
     
       
-        <title>WLP'20 - Liu's Notes</title>
+        <title>TDSC20 - Liu's Notes</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#review-for-patternldp" class="md-skip">
+        <a href="#review" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WLP'20
+              TDSC20
             
           </span>
         </div>
@@ -443,12 +443,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         可搜索加密
@@ -466,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SE/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         简介
       </a>
     </li>
@@ -478,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SE/multip/" class="md-nav__link">
+      <a href="../../multip/" class="md-nav__link">
         多关键词
       </a>
     </li>
@@ -490,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SE/OXT/" class="md-nav__link">
+      <a href="../../OXT/" class="md-nav__link">
         OXT协议
       </a>
     </li>
@@ -502,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SE/SEandEDB/" class="md-nav__link">
+      <a href="../../SEandEDB/" class="md-nav__link">
         可搜索加密与加密数据库
       </a>
     </li>
@@ -512,12 +514,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
       
       <label class="md-nav__link" for="__nav_3_5">
         Reviews
@@ -533,11 +537,131 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../SE/Review/TDSC20/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TDSC20
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         TDSC20
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation" class="md-nav__link">
+    1. Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 相关工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 创新点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-preliminary" class="md-nav__link">
+    4. Preliminary
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Preliminary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-inverted-keyword-search-index" class="md-nav__link">
+    4.1 Inverted Keyword Search Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2 关键词词典
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 系统模型
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 系统模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 三个实体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 六个算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 五个目标
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-the-proposed-scheme" class="md-nav__link">
+    6. The Proposed Scheme
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -602,14 +726,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         Privacy-Preserving
@@ -625,14 +747,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
       
       <label class="md-nav__link" for="__nav_5_1">
         Real-Time Data
@@ -648,20 +768,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../pp/rt/01/" class="md-nav__link">
         WLP'20
       </a>
-      
     </li>
   
 
@@ -1326,6 +1437,103 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation" class="md-nav__link">
+    1. Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 相关工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 创新点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-preliminary" class="md-nav__link">
+    4. Preliminary
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Preliminary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-inverted-keyword-search-index" class="md-nav__link">
+    4.1 Inverted Keyword Search Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2 关键词词典
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 系统模型
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 系统模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 三个实体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 六个算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 五个目标
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-the-proposed-scheme" class="md-nav__link">
+    6. The Proposed Scheme
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1337,14 +1545,176 @@
               
                 
                 
-                <h1 id="review-for-patternldp">Review for PatternLDP</h1>
-<div class="admonition info patternldp">
+                <h1 id="review">Review</h1>
+<div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><strong>Towards Pattern-aware Privacy-preserving Real-time Data Collection</strong></p>
-<p>(<em>IEEE INFOCOM'20</em>)</p>
-<p>"In this paper, we focus on <mark class="critic"> real-time data collection </mark> under a honest-but-curious server, and propose a novel pattern-aware privacy-preserving apporach, called PatternLDP, to protect data privacy while <mark class="critic"> the pattern of time-series can still be preserved </mark>."</p>
+<ul>
+<li>Title: Multi-Client Sub-Linear Boolean Keyword Searching for Encrypted Cloud Storage with Owner-Enforced Authenorization</li>
+<li>IEEE TDSC 2020, Early Access (CCF A)</li>
+<li>Kai Zhang, Mi Wen, Rongxing Lu, Kefei Chen</li>
+<li>Doi: <a href="https://doi.org/10.1109/TDSC.2020.2968425">10.1109/TDSC.2020.2968425</a></li>
+</ul>
 </div>
 <hr />
+<h2 id="1-motivation">1. Motivation</h2>
+<blockquote>
+<p>Hence, a problem from this example arises naturally: <em>is there a secure and efficient <mark class="critic">multi-user</mark> documents retrieval and sharing system that supports expressive search patterns and access control sharing policy?</em></p>
+</blockquote>
+<hr />
+<h2 id="2">2. 相关工作</h2>
+<ol>
+<li>单关键词搜索，早期只考虑 SW/SR，不太实际；后来有使用 ABE 的，但单关键词始终用途有限；</li>
+<li>布尔搜索，还是 Cash 的工作，使用了 inverted-index 结构</li>
+</ol>
+<p>现有的工作要么只考虑 owner-enforced authorization 但搜索效率不高；要么只实现了 sub-linear 布尔搜索却又不支持细粒度的多用户。</p>
+<blockquote>
+<p>Hence, <em>a searchable encryption system that supports both sub-linear boolean query and fine-grained authorization across multiple clients simultaneously</em> is still an unaddressed problem.</p>
+<p>注：我在想有没有一种无需授权的多用户方案，或者说代理授权的</p>
+</blockquote>
+<hr />
+<h2 id="3">3. 创新点</h2>
+<ol>
+<li>Supporting owner-enforced attribute-based authorization for multiple clients data sharing</li>
+<li>Supporting Boolean keyword search with sub-linear complexity</li>
+<li>写了证明，做了实验，实验数据来源：<a href="http://www.cs.cmu.edu/~./enron/">enron</a></li>
+</ol>
+<hr />
+<h2 id="4-preliminary">4. Preliminary</h2>
+<h3 id="41-inverted-keyword-search-index">4.1 Inverted Keyword Search Index</h3>
+<p>传统的是使用 forward index，也就是文件对应关键词的形式，这样会带来非常大的计算开销；与之相对的是 inverted index，也就是关键词对应文件的形式。</p>
+<p>这篇文章指出，直接照搬之前的 inverted index 结构是不行的，因为之前的都是针对对称密码体系，不能直接应用与这个场景，所以他们进行了一些改造。</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>具体的改造体现在哪里？</p>
+</div>
+<h3 id="42">4.2 关键词词典</h3>
+<p>关键词词典 <span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> 由元组 <span><span class="MathJax_Preview">(w,c)</span><script type="math/tex">(w,c)</script></span> 组成，<span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 为关键词， <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 是计数器。这种结构是为了将 static SE 扩展到 dynamic SE，<span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> 包含以下两个函数：</p>
+<ul>
+<li><span><span class="MathJax_Preview">c\gets \mathsf{Get}(\delta, w)</span><script type="math/tex">c\gets \mathsf{Get}(\delta, w)</script></span>: 给定关键词，输出计数器，如果不存在，输出 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span></li>
+<li><span><span class="MathJax_Preview">\mathsf{Update}(\delta, w, c)</span><script type="math/tex">\mathsf{Update}(\delta, w, c)</script></span>: 将关键词 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的计数器更新为 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>，如果关键词不存在，将其作为新的附加进去</li>
+</ul>
+<hr />
+<h2 id="5">5. 系统模型</h2>
+<h3 id="51">5.1 三个实体</h3>
+<ul>
+<li>Authority (trusted)</li>
+<li>Cloud Server (semi-honest)</li>
+<li>Clients</li>
+</ul>
+<blockquote>
+<p>注：这里 authority 还不是 data owner，而是一个完全可信的第三方机构，注意区别；当然，引入了一个完全可信的第三方，这种假设未免太强。</p>
+</blockquote>
+<h3 id="52">5.2 六个算法</h3>
+<ul>
+<li><span><span class="MathJax_Preview">\mathsf{Setup}(1^\kappa, \mathcal{N})\to (\mathsf{PP}, \mathsf{MK})</span><script type="math/tex">\mathsf{Setup}(1^\kappa, \mathcal{N})\to (\mathsf{PP}, \mathsf{MK})</script></span>，<span><span class="MathJax_Preview">\mathsf{MK}</span><script type="math/tex">\mathsf{MK}</script></span> 为主私钥；</li>
+<li><span><span class="MathJax_Preview">\mathsf{KeyGen}(\Gamma,\mathsf{MK})\to \mathsf{sk}</span><script type="math/tex">\mathsf{KeyGen}(\Gamma,\mathsf{MK})\to \mathsf{sk}</script></span>，<span><span class="MathJax_Preview">\Gamma</span><script type="math/tex">\Gamma</script></span> 为属性集合，<span><span class="MathJax_Preview">\mathsf{sk}</span><script type="math/tex">\mathsf{sk}</script></span>是用户私钥；</li>
+<li><span><span class="MathJax_Preview">\mathsf{Encrypt}(\mathsf{PP}, \mathsf{Doc}, \mathsf{sk}, \mathcal{ACC}) \to (\mathsf{EDB}, \mathsf{XSet})</span><script type="math/tex">\mathsf{Encrypt}(\mathsf{PP}, \mathsf{Doc}, \mathsf{sk}, \mathcal{ACC}) \to (\mathsf{EDB}, \mathsf{XSet})</script></span></li>
+<li><span><span class="MathJax_Preview">\mathsf{TrapGen}(Q, \mathsf{sk})\to \mathsf{Token}</span><script type="math/tex">\mathsf{TrapGen}(Q, \mathsf{sk})\to \mathsf{Token}</script></span></li>
+<li><span><span class="MathJax_Preview">\mathsf{Search}(\mathsf{Token}) \to R</span><script type="math/tex">\mathsf{Search}(\mathsf{Token}) \to R</script></span></li>
+<li><span><span class="MathJax_Preview">\mathsf{Retrieve}(R, \mathsf{sk}) \to \mathsf{Docuemnts}</span><script type="math/tex">\mathsf{Retrieve}(R, \mathsf{sk}) \to \mathsf{Docuemnts}</script></span></li>
+</ul>
+<blockquote>
+<p>注：这里任何注册过的用户都可以上传文件；没有提到用户撤销问题；没有提到文件更新的前后向安全问题。</p>
+</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>想到的一些问题：</p>
+<ul>
+<li>需不需要区分上传权限和查询权限？</li>
+<li>用户如何撤销？有没有提供修改权限的功能？</li>
+<li>文件的前后向安全如何保证？</li>
+<li>可信第三方是否是必须的，有没有不依赖可信第三方的方法？</li>
+<li>上传文件之后，如何修改该文件的权限？</li>
+</ul>
+</div>
+<h3 id="53">5.3 五个目标</h3>
+<ul>
+<li>多用户</li>
+<li>细粒度的认证</li>
+<li>布尔搜索</li>
+<li>sub-linear 的搜索开销</li>
+<li>安全</li>
+</ul>
+<hr />
+<h2 id="6-the-proposed-scheme">6. The Proposed Scheme</h2>
+<p>第一步，生成密钥</p>
+<p><span><span class="MathJax_Preview">\mathsf{Setup}(1^\kappa, \mathcal{N})</span><script type="math/tex">\mathsf{Setup}(1^\kappa, \mathcal{N})</script></span>: <span><span class="MathJax_Preview">\mathcal{N}=\{\mathsf{att}_1,\ldots,\mathsf{att}_n\}</span><script type="math/tex">\mathcal{N}=\{\mathsf{att}_1,\ldots,\mathsf{att}_n\}</script></span> 为 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个属性，第三方可信机构选择 <span><span class="MathJax_Preview">r_1,r_2,\ldots,r_{2n}\in\mathbb{Z}_p</span><script type="math/tex">r_1,r_2,\ldots,r_{2n}\in\mathbb{Z}_p</script></span> 以及 <span><span class="MathJax_Preview">t_1,t_2,\ldots,t_{2n}\in\mathbb{G}_1</span><script type="math/tex">t_1,t_2,\ldots,t_{2n}\in\mathbb{G}_1</script></span>。对于 <span><span class="MathJax_Preview">k=[2n]</span><script type="math/tex">k=[2n]</script></span>，令 <span><span class="MathJax_Preview">x_k=g_2^{-r_k}</span><script type="math/tex">x_k=g_2^{-r_k}</script></span>，<span><span class="MathJax_Preview">y_k = e(t_k, g_2)</span><script type="math/tex">y_k = e(t_k, g_2)</script></span>。<span><span class="MathJax_Preview">H:\{0,1\}^*\to\mathbb{Z}_p</span><script type="math/tex">H:\{0,1\}^*\to\mathbb{Z}_p</script></span> 为哈希函数，<span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 是在 <span><span class="MathJax_Preview">\{0,1\}^*</span><script type="math/tex">\{0,1\}^*</script></span> 内的 PRF，<span><span class="MathJax_Preview">F_p</span><script type="math/tex">F_p</script></span> 是在 <span><span class="MathJax_Preview">\mathbb{Z}_p</span><script type="math/tex">\mathbb{Z}_p</script></span> 内的 PRF，<span><span class="MathJax_Preview">\mathsf{ABE}</span><script type="math/tex">\mathsf{ABE}</script></span> 为一个一般化的基于属性的加密机制。</p>
+<div>
+<div class="MathJax_Preview">(\mathsf{mpk}_\mathsf{ABE}, \mathsf{msk}_\mathsf{ABE})\gets \mathsf{ABE}.\mathsf{Setup}(1^\kappa, \mathcal{N})</div>
+<script type="math/tex; mode=display">(\mathsf{mpk}_\mathsf{ABE}, \mathsf{msk}_\mathsf{ABE})\gets \mathsf{ABE}.\mathsf{Setup}(1^\kappa, \mathcal{N})</script>
+</div>
+<p>随机选取 <span><span class="MathJax_Preview">F_p</span><script type="math/tex">F_p</script></span> 的密钥 <span><span class="MathJax_Preview">K_x</span><script type="math/tex">K_x</script></span>，<span><span class="MathJax_Preview">K_z</span><script type="math/tex">K_z</script></span>， <span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 的密钥 <span><span class="MathJax_Preview">K_l</span><script type="math/tex">K_l</script></span>，公共参数为：</p>
+<div>
+<div class="MathJax_Preview">\mathsf{PP} = \{g_1, g_2, e, H, F, F_p, \mathsf{mpk}_{\mathsf{ABE}}, \{(x_k, y_k)\}_{k\in[2n]}\}</div>
+<script type="math/tex; mode=display">\mathsf{PP} = \{g_1, g_2, e, H, F, F_p, \mathsf{mpk}_{\mathsf{ABE}}, \{(x_k, y_k)\}_{k\in[2n]}\}</script>
+</div>
+<p>主私钥为：</p>
+<div>
+<div class="MathJax_Preview">\mathsf{MK} = \{\mathsf{msk}_{\mathsf{ABE}}, K_x, K_z, K_l, \{(r_k, t_k)\}_{k\in[2n]}\}</div>
+<script type="math/tex; mode=display">\mathsf{MK} = \{\mathsf{msk}_{\mathsf{ABE}}, K_x, K_z, K_l, \{(r_k, t_k)\}_{k\in[2n]}\}</script>
+</div>
+<p>对于 <span><span class="MathJax_Preview">k\in\{1,\ldots, n\}</span><script type="math/tex">k\in\{1,\ldots, n\}</script></span>，其中 <span><span class="MathJax_Preview">(x_k,y_k)</span><script type="math/tex">(x_k,y_k)</script></span> 与属性 <span><span class="MathJax_Preview">\mathsf{att}_k</span><script type="math/tex">\mathsf{att}_k</script></span> 的 positive type 有关，<span><span class="MathJax_Preview">(x_{k+n}, y_{k+n})</span><script type="math/tex">(x_{k+n}, y_{k+n})</script></span> 与属性 <span><span class="MathJax_Preview">\mathsf{att}_k</span><script type="math/tex">\mathsf{att}_k</script></span> 的 negative type 有关。</p>
+<p>第二步，生成密钥</p>
+<p><span><span class="MathJax_Preview">\mathsf{KeyGen}(\Gamma, \mathsf{MK})</span><script type="math/tex">\mathsf{KeyGen}(\Gamma, \mathsf{MK})</script></span>，authority 从 <span><span class="MathJax_Preview">\mathbb{G}_1</span><script type="math/tex">\mathbb{G}_1</script></span> 中随机选取 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>，对于 <span><span class="MathJax_Preview">i\in[n]</span><script type="math/tex">i\in[n]</script></span>，如果 <span><span class="MathJax_Preview">\mathsf{att}_i^{+}\in\Gamma</span><script type="math/tex">\mathsf{att}_i^{+}\in\Gamma</script></span>，计算 <span><span class="MathJax_Preview">\sigma_i = t_iv^{r_i}</span><script type="math/tex">\sigma_i = t_iv^{r_i}</script></span>，如果 <span><span class="MathJax_Preview">\mathsf{att}_i^+\notin\Gamma</span><script type="math/tex">\mathsf{att}_i^+\notin\Gamma</script></span>，计算 <span><span class="MathJax_Preview">\sigma_i = t_{i+n}v^{r_{i+n}}</span><script type="math/tex">\sigma_i = t_{i+n}v^{r_{i+n}}</script></span>。那么输出私钥 <span><span class="MathJax_Preview">\mathsf{sk}</span><script type="math/tex">\mathsf{sk}</script></span> 为：</p>
+<div>
+<div class="MathJax_Preview">\mathsf{sk} = \{K_x, K_z, K_l, \mathsf{pvk}_{\mathsf{ABE}}, v, \{\sigma_i\}_{i\in[n]}\}</div>
+<script type="math/tex; mode=display">\mathsf{sk} = \{K_x, K_z, K_l, \mathsf{pvk}_{\mathsf{ABE}}, v, \{\sigma_i\}_{i\in[n]}\}</script>
+</div>
+<p>其中，<span><span class="MathJax_Preview">\mathsf{pvk}_{\mathsf{ABE}} \gets \mathsf{ABE}.\mathsf{Extract}(\mathsf{msk}_\mathsf{ABE}, \Gamma)</span><script type="math/tex">\mathsf{pvk}_{\mathsf{ABE}} \gets \mathsf{ABE}.\mathsf{Extract}(\mathsf{msk}_\mathsf{ABE}, \Gamma)</script></span></p>
+<blockquote>
+<p>注：这意思就是对于每一个属性，都算一遍；还有一个问题：authority 如何确定每个人的权限？对应到现实中应该是哪个角色？</p>
+</blockquote>
+<p>总结一下，对于每个用户，相同的部分为 <span><span class="MathJax_Preview">\{K_x, K_z, K_l\}</span><script type="math/tex">\{K_x, K_z, K_l\}</script></span>，其他部分都不同（即使拥有相同属性，因为随机数 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的作用）。</p>
+<p>第三步，加密</p>
+<p><span><span class="MathJax_Preview">\mathsf{Encrypt}(\mathsf{PP}, \mathsf{Doc}, \mathsf{sk}, \mathcal{CC})</span><script type="math/tex">\mathsf{Encrypt}(\mathsf{PP}, \mathsf{Doc}, \mathsf{sk}, \mathcal{CC})</script></span>，对于一个文件 <span><span class="MathJax_Preview">\mathsf{Doc} = (ind, W_{ind})</span><script type="math/tex">\mathsf{Doc} = (ind, W_{ind})</script></span>，访问策略 <span><span class="MathJax_Preview">\mathcal{ACC} = \bigwedge\limits_{\mathsf{att}_i\in I} \mathsf{att}_i</span><script type="math/tex">\mathcal{ACC} = \bigwedge\limits_{\mathsf{att}_i\in I} \mathsf{att}_i</script></span>，其中 <span><span class="MathJax_Preview">\mathsf{att}_i \in \{\mathsf{att}_i^+, \urcorner \mathsf{att}_i\}</span><script type="math/tex">\mathsf{att}_i \in \{\mathsf{att}_i^+, \urcorner \mathsf{att}_i\}</script></span>，计算 <span><span class="MathJax_Preview">xind \gets F_p(K_x, ind)</span><script type="math/tex">xind \gets F_p(K_x, ind)</script></span>，以及 <span><span class="MathJax_Preview">(x_i, y_i)</span><script type="math/tex">(x_i, y_i)</script></span>：</p>
+<div>
+<div class="MathJax_Preview">(x_i, y_i) = \left\{ \begin{array}{ll} (x_i, y_i) = (g_2^{-r_i}, e(t_i, g_2)) &amp; \mbox{ if } \mathsf{att}_i = \mathsf{att}_i^+ \\ (x_{i+n}, y_{i+n}) = (g_2^{-r_i+n}, e(t_{i+n}, g_2)) &amp; \mbox{ if } \mathsf{att}_i=\urcorner \mathsf{att}_i  \end{array} \right..</div>
+<script type="math/tex; mode=display">(x_i, y_i) = \left\{ \begin{array}{ll} (x_i, y_i) = (g_2^{-r_i}, e(t_i, g_2)) & \mbox{ if } \mathsf{att}_i = \mathsf{att}_i^+ \\ (x_{i+n}, y_{i+n}) = (g_2^{-r_i+n}, e(t_{i+n}, g_2)) & \mbox{ if } \mathsf{att}_i=\urcorner \mathsf{att}_i  \end{array} \right..</script>
+</div>
+<p>令 <span><span class="MathJax_Preview">(x_I, y_I) = (\prod\limits_{\mathsf{att}_i\in I} x_i, \prod\limits_{\mathsf{att}_i\in I} y_i)</span><script type="math/tex">(x_I, y_I) = (\prod\limits_{\mathsf{att}_i\in I} x_i, \prod\limits_{\mathsf{att}_i\in I} y_i)</script></span>，对于每个关键词 <span><span class="MathJax_Preview">w\in W_{ind}</span><script type="math/tex">w\in W_{ind}</script></span>，计算：</p>
+<ul>
+<li>计数器 <span><span class="MathJax_Preview">c\gets \mathsf{Get}(\delta, w)</span><script type="math/tex">c\gets \mathsf{Get}(\delta, w)</script></span>，<span><span class="MathJax_Preview">c\gets c+1</span><script type="math/tex">c\gets c+1</script></span>，<span><span class="MathJax_Preview">l\gets F(K_l, c||w)</span><script type="math/tex">l\gets F(K_l, c||w)</script></span>，<span><span class="MathJax_Preview">z\gets F_p(K_z, c||w)</span><script type="math/tex">z\gets F_p(K_z, c||w)</script></span>，运行 <span><span class="MathJax_Preview">\mathsf{Update}(\delta, w, c)</span><script type="math/tex">\mathsf{Update}(\delta, w, c)</script></span> 来更新每个关键词的 counter</li>
+<li>加密 <span><span class="MathJax_Preview">e_0\gets \mathsf{ABE}.\mathsf{Enc}(\mathsf{mpk}_{\mathsf{ABE}}, ind||K_{ind}, \mathcal{ACC})</span><script type="math/tex">e_0\gets \mathsf{ABE}.\mathsf{Enc}(\mathsf{mpk}_{\mathsf{ABE}}, ind||K_{ind}, \mathcal{ACC})</script></span>，<span><span class="MathJax_Preview">e_1 \gets g_2^{z\cdot xind}</span><script type="math/tex">e_1 \gets g_2^{z\cdot xind}</script></span>，<span><span class="MathJax_Preview">e_2\gets x_I^{z\cdot xind}</span><script type="math/tex">e_2\gets x_I^{z\cdot xind}</script></span>。令 <span><span class="MathJax_Preview">\mathsf{EDB}[l] = (\mathcal{ACC}, e_0, e_1, e_2)</span><script type="math/tex">\mathsf{EDB}[l] = (\mathcal{ACC}, e_0, e_1, e_2)</script></span>，并且添加 <span><span class="MathJax_Preview">\mathsf{xtag} = y_I^{H(w)\cdot xind}</span><script type="math/tex">\mathsf{xtag} = y_I^{H(w)\cdot xind}</script></span> 来构建 <span><span class="MathJax_Preview">\mathsf{XSet}</span><script type="math/tex">\mathsf{XSet}</script></span>。</li>
+</ul>
+<p>用户将 <span><span class="MathJax_Preview">(\mathsf{EDB}, \mathsf{XSet})</span><script type="math/tex">(\mathsf{EDB}, \mathsf{XSet})</script></span> 发送给服务器，并将原始文件使用 <span><span class="MathJax_Preview">K_{ind}</span><script type="math/tex">K_{ind}</script></span> 加密发送给云端。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在计算得到每个文件的 <span><span class="MathJax_Preview">(x_I, y_I)</span><script type="math/tex">(x_I, y_I)</script></span> 之后，对该文件中包含的关键词进行计算：</p>
+<ul>
+<li>获取关键词对应的计数，计算新的 <span><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 和 <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> （由 PRF 生成的随机密钥），更新计数；</li>
+<li>使用 ABE 加密文件标识，加密结果和访问策略保存在 EDB 中，生成的 <span><span class="MathJax_Preview">\mathsf{xtag}</span><script type="math/tex">\mathsf{xtag}</script></span> 保存在 XSet 中。</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>为什么需要计数器？（换种说法，为什么这样做就能将静态转换成动态？）</p>
+</div>
+<p>第四步，生成陷门</p>
+<p><span><span class="MathJax_Preview">\mathsf{TrapGen}(Q, \mathsf{sk})</span><script type="math/tex">\mathsf{TrapGen}(Q, \mathsf{sk})</script></span>，查询请求 <span><span class="MathJax_Preview">Q=(w_1\wedge w_2, \wedge \ldots \wedge w_q)</span><script type="math/tex">Q=(w_1\wedge w_2, \wedge \ldots \wedge w_q)</script></span>，用户私钥 <span><span class="MathJax_Preview">\mathsf{sk} = \{K_x, K_z, K_l, \mathsf{pvk}_{\mathsf{ABE}}, v, \{\sigma_i\}_{i\in[n]}\}</span><script type="math/tex">\mathsf{sk} = \{K_x, K_z, K_l, \mathsf{pvk}_{\mathsf{ABE}}, v, \{\sigma_i\}_{i\in[n]}\}</script></span>，对于计数器 <span><span class="MathJax_Preview">c=1,2,\ldots</span><script type="math/tex">c=1,2,\ldots</script></span>，</p>
+<ul>
+<li>计算 <span><span class="MathJax_Preview">l_c\gets F(K_l, c||w_1)</span><script type="math/tex">l_c\gets F(K_l, c||w_1)</script></span>，<span><span class="MathJax_Preview">z_c\gets F(K_z, c||w_1)</span><script type="math/tex">z_c\gets F(K_z, c||w_1)</script></span>，<span><span class="MathJax_Preview">\mathsf{Trap}[c][j] = (v^{H(w_j)/z_c}, \{\sigma_i^{H(w_j)/z_c}\}_{i\in[n]})</span><script type="math/tex">\mathsf{Trap}[c][j] = (v^{H(w_j)/z_c}, \{\sigma_i^{H(w_j)/z_c}\}_{i\in[n]})</script></span>，其中 <span><span class="MathJax_Preview">j=1,\ldots,q</span><script type="math/tex">j=1,\ldots,q</script></span></li>
+<li>发送 <span><span class="MathJax_Preview">\mathsf{Token}[c] = ((l_c, \mathsf{Trap}[c]))</span><script type="math/tex">\mathsf{Token}[c] = ((l_c, \mathsf{Trap}[c]))</script></span>，其中 <span><span class="MathJax_Preview">\mathsf{Trap}[c] = \{\mathsf{Trap}[c][j]\}_{j\in [q]}</span><script type="math/tex">\mathsf{Trap}[c] = \{\mathsf{Trap}[c][j]\}_{j\in [q]}</script></span>，<span><span class="MathJax_Preview">c=1,2,\ldots</span><script type="math/tex">c=1,2,\ldots</script></span></li>
+</ul>
+<p>第五步，搜索</p>
+<p><span><span class="MathJax_Preview">\mathsf{Search}(\mathsf{Token})</span><script type="math/tex">\mathsf{Search}(\mathsf{Token})</script></span>：</p>
+<ul>
+<li>首先初始化作为保存搜索结果的集合 <span><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>，对于计数器 <span><span class="MathJax_Preview">c=1,2,\ldots,</span><script type="math/tex">c=1,2,\ldots,</script></span><ul>
+<li>检索 <span><span class="MathJax_Preview">(\mathcal{ACC}=\bigwedge_{\mathsf{att}_i\in I}\mathsf{att}_i, e_0, e_1, e_2)\gets \mathsf{EDB}[l_c]</span><script type="math/tex">(\mathcal{ACC}=\bigwedge_{\mathsf{att}_i\in I}\mathsf{att}_i, e_0, e_1, e_2)\gets \mathsf{EDB}[l_c]</script></span></li>
+<li>对于 <span><span class="MathJax_Preview">j\in[q]</span><script type="math/tex">j\in[q]</script></span>，判断 <span><span class="MathJax_Preview">e(v^{H(w_j)/z_c}, e_2)\cdot e(\sigma_j, e_1) \in \mathsf{XSet}</span><script type="math/tex">e(v^{H(w_j)/z_c}, e_2)\cdot e(\sigma_j, e_1) \in \mathsf{XSet}</script></span> 是否满足，其中 <span><span class="MathJax_Preview">v^{H(w_j)/z_c}</span><script type="math/tex">v^{H(w_j)/z_c}</script></span> 和 <span><span class="MathJax_Preview">\sigma_j</span><script type="math/tex">\sigma_j</script></span> 来自 <span><span class="MathJax_Preview">\mathsf{Trap}[c][j] = (v^{H(w_j)/z_c}, \{\sigma_i^{H(w_j)/z_c}\}_{i\in[n]})</span><script type="math/tex">\mathsf{Trap}[c][j] = (v^{H(w_j)/z_c}, \{\sigma_i^{H(w_j)/z_c}\}_{i\in[n]})</script></span>。如果对于所有 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 都存在，那么将 <span><span class="MathJax_Preview">e_0</span><script type="math/tex">e_0</script></span> 添加到 <span><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 之中</li>
+</ul>
+</li>
+<li>如果触发终止条件，则停止检索过程。</li>
+</ul>
+<p>第六步，解析结果</p>
+<p><span><span class="MathJax_Preview">\mathsf{Retrieve}(R)</span><script type="math/tex">\mathsf{Retrieve}(R)</script></span>：</p>
+<ul>
+<li>首先解密 <span><span class="MathJax_Preview">e_0</span><script type="math/tex">e_0</script></span>，即 <span><span class="MathJax_Preview">(ind || K_{ind})\gets \mathsf{ABE}.\mathsf{Dec}(\mathsf{pvk}_{\mathsf{ABE}}, e_0)</span><script type="math/tex">(ind || K_{ind})\gets \mathsf{ABE}.\mathsf{Dec}(\mathsf{pvk}_{\mathsf{ABE}}, e_0)</script></span></li>
+<li>发送 <span><span class="MathJax_Preview">inds</span><script type="math/tex">inds</script></span> 给云服务器获取加密文件</li>
+<li>使用 <span><span class="MathJax_Preview">K_{ind}</span><script type="math/tex">K_{ind}</script></span> 解密文件</li>
+</ul>
+<blockquote>
+<p>数据冗余过大</p>
+</blockquote>
                 
               
               
@@ -1362,7 +1732,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../../../ibc/mcs/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../SEandEDB/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1371,19 +1741,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              IBC + MCS
+              可搜索加密与加密数据库
             </div>
           </div>
         </a>
       
       
-        <a href="../../../Review/SmartGrid/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../../ibc/mcs/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              智能电网
+              IBC + MCS
             </div>
           </div>
           <div class="md-footer__button md-icon">
