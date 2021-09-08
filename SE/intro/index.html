@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -550,6 +550,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 多用户
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -619,6 +626,18 @@
           Reviews
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Review/JUSC19/" class="md-nav__link">
+        JUSC19
+      </a>
+    </li>
+  
+
           
             
   
@@ -1463,6 +1482,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 多用户
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1512,7 +1538,7 @@
 <p>如果按照研究的内容来分类的话，我们大概可以从这四个角度来看：</p>
 <ol>
 <li><mark class="critic"><strong>从单关键词到多关键词：</strong></mark> 早期的工作只关注单关键词检索，从 2013 年 Cash 等人<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> 提出了高效的多关键词布尔查询机制之后，越来越多的方案开始考虑支持多关键词查询。多关键词的难点在于两个方面，首先考虑效率因素，不能直接套用单关键词搜索的方案（否则复杂度会线性上升）；其次是隐私保护方面，不能让服务器知道针对每一个关键词对应的文件索引（也就是服务器不能获得额外的信息）；</li>
-<li><mark class="critic"><strong>从准确搜索到模糊搜索：</strong></mark> 早期工作对于给定的关键词只会返回其对应的结果。但考虑到现实中存在 typos，或只知道部分关键词的情况，这时就需要考虑模糊搜索。比如 2015 年 ESORICS 上的一篇工作就考虑了<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> substring 搜索以及通配符搜索。最近也有工作认为单纯只考虑查询关键词的“形似”是不合理的，真正需要考虑的是语义上的相似，因此引申出了语义上的搜索。这一类工作需要考虑的是如何衡量关键词之间的距离，用到的有<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> Locality-sensitive hashing，布隆过滤器这样的工具，复杂一点的用到了自然语言处理的 word2vec。如果考虑多用户场景的话，还需要保证即使模糊搜索，用户也不会得到超过其本身权限的文件信息；</li>
+<li><mark class="critic"><strong>从准确搜索到模糊搜索：</strong></mark> 早期工作对于给定的关键词只会返回其对应的结果。但考虑到现实中存在 typos，或只知道部分关键词的情况，这时就需要考虑模糊搜索。比如 2015 年 ESORICS 上的一篇工作就考虑了<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup> substring 搜索以及通配符搜索。最近也有工作认为单纯只考虑查询关键词的“形似”是不合理的，真正需要考虑的是语义上的相似，因此引申出了语义上的搜索。这一类工作需要考虑的是如何衡量关键词之间的距离，用到的有<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> Locality-sensitive hashing，布隆过滤器这样的工具，复杂一点的用到了自然语言处理的 word2vec。如果考虑多用户场景的话，还需要保证即使模糊搜索，用户也不会得到超过其本身权限的文件信息；</li>
 <li><mark class="critic"><strong>从单用户到多用户：</strong></mark> 在可搜索加密中，用户一般指代查询用户。一般的模型里数据拥有者就假定为一个，多用户指的就是查询用户有很多个。这个场景在现实中非常常见，在这种场景中需要考虑的就是数据拥有者对用户的授权问题（规定可搜索范围），服务器需要对用户进行认证，以及对用户的撤销操作。部分工作采用广播加密或基于属性的加密来为用户分配权限，但还存在效率方面的问题。Du 等人<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> 在 OXT 协议<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>的基础上使用了一个用户列表来记录每个用户的权限信息；</li>
 <li><mark class="critic"><strong>从静态到动态：</strong></mark> 动态可搜索加密是可搜索加密中的难点，动态是指支持对加密数据集进行修改，而不需要有数据拥有者重新初始化再上传。为什么这个问题比较困难呢？是因为一旦有了更新，后面会引发一系列安全相关的问题，也就是前向安全和后向安全。近期有篇工作详细给出了在可搜索加密中前后向安全的定义，并设计了三个不同的动态可搜索加密机制。前向安全需要保证的是新的更新不能与之前的操作关联起来，而后向安全需要确保如果在查询关键词<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 之前，包含关键词 <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 的文档被删除，那么这次查询也不能暴露该删除文档的信息。从这篇文章里我想到另外一个问题，谁可以修改数据？一般意义上只能数据拥有者来修改，但如果考虑现实中情况的话，类似于多人协作的场景，数据查询者有时也需要被赋予修改的权限。</li>
 </ol>
@@ -1522,10 +1548,37 @@
 <h4 id="321">3.2.1 通配符检索</h4>
 <h4 id="322">3.2.2 范围检索</h4>
 <ul>
-<li><em>Rich Queries on Encrypted Data: Beyond Exact Matches</em>, ESORICS '15 <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></li>
-<li><em>CryptDB: Protecting Confidentiality with Encrypted Query Processing</em>, SOSP '11 <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
-<li><em>An Efficiently Searchable Encrypted Data Structure for Range Queries</em>, ESORICS '19<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></li>
+<li><em>Rich Queries on Encrypted Data: Beyond Exact Matches</em>, ESORICS '15 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li><em>CryptDB: Protecting Confidentiality with Encrypted Query Processing</em>, SOSP '11 <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></li>
+<li><em>An Efficiently Searchable Encrypted Data Structure for Range Queries</em>, ESORICS '19<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
 </ul>
+<h3 id="33">3.3 多用户</h3>
+<p>多用户分为两种实现方式，一种基于ABE，另一种基于BE。</p>
+<p>基于ABE的方案：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">方案描述</th>
+<th align="left">特点</th>
+<th align="left">短板</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">TDSC'20<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></td>
+<td align="left">使用ABE加密文件标识和对称密钥</td>
+<td align="left">任何用户都可以上传文件</td>
+<td align="left">需要可信第三方；既然服务器返回的结果是已经筛选过的，那么为什么还需要在解密时使用ABE来解密呢？</td>
+</tr>
+<tr>
+<td align="center">JUCS'19<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></td>
+<td align="left">使用 Server-Side Match Anonymous ABE，即服务器可以筛选出符合用户权限的密文</td>
+<td align="left">服务器侧做匹配，减小通信开销，降低解密成本</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <div class="footnote">
 <hr />
 <ol>
@@ -1533,7 +1586,7 @@
 <p>D. Cash, S. Jarecki, C. Jutla, H. Krawczyk, M.-C. Roşu, and M. Steiner, “Highly-Scalable Searchable Symmetric Encryption with Support for Boolean Queries,” in Advances in Cryptology – CRYPTO 2013, Berlin, Heidelberg, 2013, pp. 353–373, doi: 10.1007/978-3-642-40041-4_20.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>S. Faber, S. Jarecki, H. Krawczyk, Q. Nguyen, M. Rosu, and M. Steiner, “Rich Queries on Encrypted Data: Beyond Exact Matches,” in Computer Security -- ESORICS 2015, Cham, 2015, pp. 123–145, doi: 10.1007/978-3-319-24177-7_7.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>S. Faber, S. Jarecki, H. Krawczyk, Q. Nguyen, M. Rosu, and M. Steiner, “Rich Queries on Encrypted Data: Beyond Exact Matches,” in Computer Security -- ESORICS 2015, Cham, 2015, pp. 123–145, doi: 10.1007/978-3-319-24177-7_7.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p>W. Yang and Y. Zhu, “A Verifiable Semantic Searching Scheme by Optimal Matching Over Encrypted Data in Public Cloud,” IEEE Transactions on Information Forensics and Security, vol. 16, pp. 100–115, 2021, doi: 10.1109/TIFS.2020.3001728.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
@@ -1545,13 +1598,16 @@
 <p>I. Demertzis, J. G. Chamani, D. Papadopoulos, and C. Papamanthou, “Dynamic Searchable Encryption with Small Client Storage,” presented at the Network and Distributed System Security Symposium, San Diego, CA, 2020, doi: 10.14722/ndss.2020.24423.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
-<p>S. Faber, S. Jarecki, H. Krawczyk, Q. Nguyen, M. Rosu, and M. Steiner, “Rich Queries on Encrypted Data: Beyond Exact Matches,” in Computer Security -- ESORICS 2015, Cham, 2015, pp. 123–145. doi: 10.1007/978-3-319-24177-7_7.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p>R. A. Popa, C. M. S. Redfield, N. Zeldovich, and H. Balakrishnan, “CryptDB: protecting confidentiality with encrypted query processing,” in Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles, New York, NY, USA, Oct. 2011, pp. 85–100. doi: 10.1145/2043556.2043566.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p>R. A. Popa, C. M. S. Redfield, N. Zeldovich, and H. Balakrishnan, “CryptDB: protecting confidentiality with encrypted query processing,” in Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles, New York, NY, USA, Oct. 2011, pp. 85–100. doi: 10.1145/2043556.2043566.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>F. Kerschbaum and A. Tueno, “An Efficiently Searchable Encrypted Data Structure for Range Queries,” in Computer Security – ESORICS 2019, Cham, 2019, pp. 344–364. doi: 10.1007/978-3-030-29962-0_17.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:8">
-<p>F. Kerschbaum and A. Tueno, “An Efficiently Searchable Encrypted Data Structure for Range Queries,” in Computer Security – ESORICS 2019, Cham, 2019, pp. 344–364. doi: 10.1007/978-3-030-29962-0_17.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>K. Zhang, M. Wen, R. Lu, and K. Chen, “Multi-client Sub-Linear Boolean Keyword Searching for Encrypted Cloud Storage with Owner-enforced Authorization,” IEEE Transactions on Dependable and Secure Computing, pp. 1–1, 2020, doi: 10.1109/TDSC.2020.2968425.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Y. Wang et al., “Towards multi-user searchable encryption supporting Boolean query and fast decryption,” JUCS-Journal of Universal Computer Science, vol. 25, p. 222, 2019.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1611,6 +1667,7 @@
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
     </div>
@@ -1621,10 +1678,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
