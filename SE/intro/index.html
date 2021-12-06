@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -575,6 +575,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../cate/" class="md-nav__link">
+        论文归类
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../multip/" class="md-nav__link">
         多关键词
       </a>
@@ -586,10 +598,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../OXT/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
         OXT协议
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OXT协议" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          OXT协议
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OXT/OXT/" class="md-nav__link">
+        OXT
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OXT/HXT/" class="md-nav__link">
+        HXT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OXT/ODXT/" class="md-nav__link">
+        ODXT
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -614,14 +677,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
       
-      <label class="md-nav__link" for="__nav_3_5">
+      <label class="md-nav__link" for="__nav_3_6">
         Reviews
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Reviews" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Reviews
         </label>
@@ -644,8 +707,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../Review/TDSC20/" class="md-nav__link">
-        TDSC20
+      <a href="../Review/TDSC20-Zhang/" class="md-nav__link">
+        TDSC20-Zhang
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Review/TDSC20-Yang/" class="md-nav__link">
+        TDSC20-Yang
       </a>
     </li>
   
@@ -653,6 +728,54 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../related/" class="md-nav__link">
+        最新进展
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reflection/" class="md-nav__link">
+        思考
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiuser/" class="md-nav__link">
+        多用户场景
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Summary/" class="md-nav__link">
+        总结
+      </a>
     </li>
   
 
@@ -1554,7 +1677,7 @@
 </ul>
 <h3 id="33">3.3 多用户</h3>
 <p>多用户分为两种实现方式，一种基于ABE，另一种基于BE。</p>
-<p>基于ABE的方案：</p>
+<p><mark class="critic">基于ABE的方案：</mark></p>
 <table>
 <thead>
 <tr>
@@ -1577,8 +1700,93 @@
 <td align="left">服务器侧做匹配，减小通信开销，降低解密成本</td>
 <td align="left"></td>
 </tr>
+<tr>
+<td align="center">TDSC'19<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></td>
+<td align="left">用户需要与其他用户合作生成检索请求</td>
+<td align="left">防止服务器与用户共谋</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">WWW'20<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
 </tbody>
 </table>
+<p><mark class="critic">基于BE的方案：</mark></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">方案描述</th>
+<th align="left">特点</th>
+<th align="left">短板</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">JISA'18<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">TDSC'20<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></td>
+<td align="left"></td>
+<td align="left">使用two-keyword index，加入了可验证功能</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">EIDWT'13<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><mark class="critic">其他方案：</mark></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">方案描述</th>
+<th align="left">特点</th>
+<th align="left">短板</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">TDSC'20<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></td>
+<td align="left">使用集合限制的PRF</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">TSC'21<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">IS'20<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">TDSC'20<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>一些核心问题：</p>
+<ul>
+<li>用户的权限改变会导致系统参数的变化</li>
+<li>用户的属性信息是需要隐私保护的</li>
+</ul>
 <div class="footnote">
 <hr />
 <ol>
@@ -1608,6 +1816,33 @@
 </li>
 <li id="fn:9">
 <p>Y. Wang et al., “Towards multi-user searchable encryption supporting Boolean query and fast decryption,” JUCS-Journal of Universal Computer Science, vol. 25, p. 222, 2019.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>S. Kasra Kermanshahi et al., “Multi-client Cloud-based Symmetric Searchable Encryption,” IEEE Transactions on Dependable and Secure Computing, pp. 1–1, 2019, doi: 10.1109/TDSC.2019.2950934.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>S.-F. Sun et al., “Non-Interactive Multi-Client Searchable Encryption: Realization and Implementation,” IEEE Transactions on Dependable and Secure Computing, pp. 1–1, 2020, doi: 10.1109/TDSC.2020.2973633.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>L. Sun, C. Xu, and Y. Zhang, “A dynamic and non-interactive boolean searchable symmetric encryption in multi-client setting,” Journal of Information Security and Applications, vol. 40, pp. 145–155, Jun. 2018, doi: 10.1016/j.jisa.2018.03.002.&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>X. Liu, G. Yang, Y. Mu, and R. H. Deng, “Multi-User Verifiable Searchable Symmetric Encryption for Cloud Storage,” IEEE Transactions on Dependable and Secure Computing, vol. 17, no. 6, pp. 1322–1332, Nov. 2020, doi: 10.1109/TDSC.2018.2876831.&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>Q. Gan, X. Wang, D. Huang, J. Li, D. Zhou, and C. Wang, “Towards Multi-client Forward Private Searchable Symmetric Encryption in Cloud Computing,” IEEE Transactions on Services Computing, pp. 1–1, 2021, doi: 10.1109/TSC.2021.3087155.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>Z. Liu, Z. Wang, X. Cheng, C. Jia, and K. Yuan, “Multi-user Searchable Encryption with Coarser-Grained Access Control in Hybrid Cloud,” in 2013 Fourth International Conference on Emerging Intelligent Data and Web Technologies, Sep. 2013, pp. 249–255. doi: 10.1109/EIDWT.2013.48.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>L. Du, K. Li, Q. Liu, Z. Wu, and S. Zhang, “Dynamic multi-client searchable symmetric encryption with support for boolean queries,” Information Sciences, vol. 506, pp. 234–257, Jan. 2020, doi: 10.1016/j.ins.2019.08.014.&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>Y. Yang, X. Liu, and R. H. Deng, “Multi-User Multi-Keyword Rank Search Over Encrypted Data in Arbitrary Language,” IEEE Transactions on Dependable and Secure Computing, vol. 17, no. 2, pp. 320–334, Mar. 2020, doi: 10.1109/TDSC.2017.2787588.&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>Q. Cao, Y. Li, Z. Wu, Y. Miao, and J. Liu, “Privacy-preserving conjunctive keyword search on encrypted data with enhanced fine-grained access control,” World Wide Web, vol. 23, no. 2, pp. 959–989, Mar. 2020, doi: 10.1007/s11280-019-00671-3.&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1643,13 +1878,13 @@
         </a>
       
       
-        <a href="../multip/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../cate/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              多关键词
+              论文归类
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1667,7 +1902,6 @@
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
-        
       </div>
       
     </div>
@@ -1678,10 +1912,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

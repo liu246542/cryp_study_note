@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -520,6 +520,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../SE/cate/" class="md-nav__link">
+        论文归类
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../SE/multip/" class="md-nav__link">
         多关键词
       </a>
@@ -531,10 +543,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../SE/OXT/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
         OXT协议
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OXT协议" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          OXT协议
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/OXT/OXT/" class="md-nav__link">
+        OXT
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/OXT/HXT/" class="md-nav__link">
+        HXT
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/OXT/ODXT/" class="md-nav__link">
+        ODXT
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -559,14 +622,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
       
-      <label class="md-nav__link" for="__nav_3_5">
+      <label class="md-nav__link" for="__nav_3_6">
         Reviews
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Reviews" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Reviews
         </label>
@@ -589,8 +652,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../SE/Review/TDSC20/" class="md-nav__link">
-        TDSC20
+      <a href="../SE/Review/TDSC20-Zhang/" class="md-nav__link">
+        TDSC20-Zhang
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/Review/TDSC20-Yang/" class="md-nav__link">
+        TDSC20-Yang
       </a>
     </li>
   
@@ -598,6 +673,54 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/related/" class="md-nav__link">
+        最新进展
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/reflection/" class="md-nav__link">
+        思考
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/multiuser/" class="md-nav__link">
+        多用户场景
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SE/Summary/" class="md-nav__link">
+        总结
+      </a>
     </li>
   
 
@@ -1399,7 +1522,9 @@
 <p>假设 Alice，Bob，Charlie 分别拥有三个秘密值 <span><span class="MathJax_Preview">x_A, x_B, x_C</span><script type="math/tex">x_A, x_B, x_C</script></span>，我们在他们互相不知道对方秘密值的情况下计算出 <span><span class="MathJax_Preview">f(x_A, x_B, x_C) = x_A + x_B + x_C</span><script type="math/tex">f(x_A, x_B, x_C) = x_A + x_B + x_C</script></span>。</p>
 <p>首先 Alice 随机选取 <span><span class="MathJax_Preview">r_{AB}, r_{AC} \gets_R \mathbb{Z}_p</span><script type="math/tex">r_{AB}, r_{AC} \gets_R \mathbb{Z}_p</script></span>，则 <span><span class="MathJax_Preview">(x_A - r_{AB} -r_{AC}, r_{AB}, r_{AC})</span><script type="math/tex">(x_A - r_{AB} -r_{AC}, r_{AB}, r_{AC})</script></span> 记做 Alice 的加法秘密共享，简记为 <span><span class="MathJax_Preview">[x_A]</span><script type="math/tex">[x_A]</script></span>。</p>
 <p>给定 <span><span class="MathJax_Preview">[x_A]</span><script type="math/tex">[x_A]</script></span> 和 <span><span class="MathJax_Preview">[x_B]</span><script type="math/tex">[x_B]</script></span>，很容易计算 <span><span class="MathJax_Preview">[x_A + x_B] = [x_A] + [x_B]</span><script type="math/tex">[x_A + x_B] = [x_A] + [x_B]</script></span></p>
-<details class="note"><summary>Note</summary><p><span><span class="MathJax_Preview">[x_A] = (x_{A,1}, x_{A,2}, x_{A,3})</span><script type="math/tex">[x_A] = (x_{A,1}, x_{A,2}, x_{A,3})</script></span></p>
+<details class="note">
+<summary>Note</summary>
+<p><span><span class="MathJax_Preview">[x_A] = (x_{A,1}, x_{A,2}, x_{A,3})</span><script type="math/tex">[x_A] = (x_{A,1}, x_{A,2}, x_{A,3})</script></span></p>
 <p><span><span class="MathJax_Preview">[x_B]= (x_{B,1}, x_{B,2}, x_{B,3})</span><script type="math/tex">[x_B]= (x_{B,1}, x_{B,2}, x_{B,3})</script></span></p>
 <p><span><span class="MathJax_Preview">[x_A + x_B] = (x_{A,1} + x_{B,1}, x_{A,2} + x_{B,2}, x_{A,3} + x_{B,3})</span><script type="math/tex">[x_A + x_B] = (x_{A,1} + x_{B,1}, x_{A,2} + x_{B,2}, x_{A,3} + x_{B,3})</script></span></p>
 </details>
@@ -1417,7 +1542,9 @@
 <li>每一方都可以计算 <span><span class="MathJax_Preview">[y-b]</span><script type="math/tex">[y-b]</script></span> 并公布他们关于 <span><span class="MathJax_Preview">y-b</span><script type="math/tex">y-b</script></span> 的共享</li>
 <li>所有参与方都可以计算： <span><span class="MathJax_Preview">[z] = [c] + [x](y-b) + [y](x-a) - (x-a)(y-b)</span><script type="math/tex">[z] = [c] + [x](y-b) + [y](x-a) - (x-a)(y-b)</script></span></li>
 </ul>
-<details class="note"><summary>Note</summary><p><span><span class="MathJax_Preview">z= c+ x(y-b) + y(x-a) - (x-a)(y-b) = xy</span><script type="math/tex">z= c+ x(y-b) + y(x-a) - (x-a)(y-b) = xy</script></span></p>
+<details class="note">
+<summary>Note</summary>
+<p><span><span class="MathJax_Preview">z= c+ x(y-b) + y(x-a) - (x-a)(y-b) = xy</span><script type="math/tex">z= c+ x(y-b) + y(x-a) - (x-a)(y-b) = xy</script></span></p>
 </details>
 <p>现在，我们可以在 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 方之间计算任意的算术电路：</p>
 <ol>
@@ -1530,7 +1657,6 @@
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
-        
       </div>
       
     </div>
@@ -1541,10 +1667,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      <script src="../assets/javascripts/bundle.3981fc68.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
